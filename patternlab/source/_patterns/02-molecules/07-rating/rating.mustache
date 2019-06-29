@@ -1,0 +1,16 @@
+<div class="rating {{ styleModifier }} {{# rating_noticeRight }} rating--notice-right {{/ rating_noticeRight }} ">
+  <ul class="rating__list">
+    {{# rating }}
+      {{# isBlue }}
+        <li class="rating__item {{# rating_noticeRight }} rating__item--big {{/ rating_noticeRight }}">{{> atoms-signet(signet_color:"blue") }}</li>
+      {{/ isBlue }}
+      {{^ isBlue }}
+        <li class="rating__item {{# rating_noticeRight }} rating__item--big {{/ rating_noticeRight }}">{{> atoms-signet(signet_color:"gray") }}</li>
+      {{/ isBlue }}
+    {{/ rating }}
+  </ul>
+
+  {{# rating_notice }}
+    <span class="rating__notice {{# rating_noticeRight }} rating__notice--right {{ /rating_noticeRight }}">{{ rating_notice }}</span>
+  {{/ rating_notice }} 
+</div>

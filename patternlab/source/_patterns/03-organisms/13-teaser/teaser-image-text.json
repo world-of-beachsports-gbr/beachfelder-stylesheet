@@ -1,0 +1,12 @@
+{
+  "teaser-image-text_image": "https://dummyimage.com/633x370/000/fff.jpg",
+  "teaser-image-text_title": "some awesome title",
+  "teaser-image-text_paragraphs": [
+    {
+      "paragraph": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+    },
+    {
+      "paragraph": " At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+    }
+  ]
+}

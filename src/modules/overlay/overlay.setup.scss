@@ -1,0 +1,18 @@
+@import '../../setup/common-variables';
+@import '../../setup/pxtorem';
+
+$overlay-z-index: 1 !default;
+$overlay-position: 0 !default;
+$overlay-dimensions: 100% !default;
+$overlay-background-color: rgba($color-palette-green-01, .4) !default;
+
+$overlay-button-position-top: rem(20px) !default;
+$overlay-button-position-right: rem(40px) !default;
+$overlay-button-z-index: 2 !default;
+
+$overlay-input-height: rem(60px) !default;
+$overlay-input-max-width: rem(440px) !default;
+$overlay-input-border-radius: rem(30px) !default;
+$overlay-input-box-shadow: 0 3px 6px rgba($color-palette-black, .16) !default;
+
+$overlay-input-icon-position-right: rem(30px) !default;

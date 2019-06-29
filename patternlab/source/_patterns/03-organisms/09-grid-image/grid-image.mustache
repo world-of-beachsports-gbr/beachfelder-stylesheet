@@ -1,0 +1,23 @@
+<ul class="grid-image {{ styleModifier }}">
+  <li class="grid-image__item grid-image__item--feature">
+    <a href="#" class="grid-image__link">
+      <img class="grid-image__image" src="{{ grid-image_imageOne }}" />
+      {{> organisms-overlay:grid-image__overlay(overlay_isVisible: true, overlay_icon: "maximize", overlay_hasInput: false, overlay_hasButton: false) }}
+    </a>
+  </li>
+  <li class="grid-image__item">
+    <a href="#" class="grid-image__link">
+      <img class="grid-image__image" src="{{ grid-image_imageTwo }}" />
+      {{> organisms-overlay:grid-image__overlay(overlay_isVisible: true, overlay_icon: "maximize", overlay_hasInput: false, overlay_hasButton: false) }}
+    </a>
+  </li>
+  <li class="grid-image__item">
+    <a href="#" class="grid-image__link">
+      <img class="grid-image__image" src="{{ grid-image_imageThree }}" />
+      {{> organisms-overlay:grid-image__overlay(overlay_isVisible: true, overlay_icon: "maximize", overlay_hasInput: false, overlay_hasButton: false) }}
+    </a>
+  </li>
+  {{# grid-image_hasButtons }}
+    {{> organisms-group-link-icon:grid-image__group-link-icon }}
+  {{/ grid-image_hasButtons }}
+</ul>

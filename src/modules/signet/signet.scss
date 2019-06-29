@@ -1,0 +1,24 @@
+@import '../../mixins/text-color.mixin';
+@import '../../mixins/typo.mixin';
+@import 'signet.setup';
+
+.signet {
+  width: $signet-width;
+  height: auto;
+
+  &__path {
+    fill: $signet-path-fill-color-white;
+
+    &--gray {
+      fill: $signet-path-fill-color-gray;
+    }
+    
+    &--blue {
+      fill: $signet-path-fill-color-blue;
+    }
+
+    &--green {
+      fill: $signet-path-fill-color-green;
+    }
+  }
+}

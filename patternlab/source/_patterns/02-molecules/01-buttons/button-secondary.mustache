@@ -1,0 +1,6 @@
+<button type="button" class="button-secondary {{ styleModifier }} {{# button-secondary_isLight }} button-secondary--light {{/button-secondary_isLight }}">
+	{{# button-secondary_icon }}
+		<span class="button-secondary__icon icon icon--{{ button-secondary_icon }} {{# button-secondary_isLight }} button-secondary__icon--light {{/ button-secondary_isLight}}"></span>
+	{{/ button-secondary_icon }}
+	<span class="button-secondary__label {{# button-secondary_icon }}button-secondary__label--icon{{/ button-secondary_icon }} {{# button-secondary_isLight }} button-secondary__label--light {{/ button-secondary_isLight}} ">{{ button-secondary_label }}</span>
+</button>

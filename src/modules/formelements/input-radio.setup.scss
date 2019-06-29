@@ -1,0 +1,14 @@
+@import '../../setup/common-variables';
+@import '../../setup/pxtorem';
+
+$input-radio-label-line-height: 1.5 !default;
+
+$input-radio-label-before-border-radius: rem(2px) !default;
+$input-radio-label-before-dimension: rem(16px) !default;
+$input-radio-label-before-position-left: 0 !default;
+$input-radio-label-before-position-top: 50% !default;
+$input-radio-label-before-border-width: 1px !default;
+$input-radio-label-before-border-color: $color-palette-blue-02 !default;
+
+$input-radio-label-before-border-radius-checked: 50% !default;
+$input-radio-label-before-border-color-disabled: $color-palette-gray-03 !default;

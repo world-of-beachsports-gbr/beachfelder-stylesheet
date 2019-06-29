@@ -1,0 +1,21 @@
+{
+  "bodyClass": "sg-wrapper-light",
+  "rating": [
+    {
+      "isBlue": false
+    },
+    {
+      "isBlue": false
+    },
+    {
+      "isBlue": false
+    },
+    {
+      "isBlue": false
+    },
+    {
+      "isBlue": false
+    }
+  ],
+  "rating_notice": "Momentan liegen noch zu wenig Bewertungen vor"
+}

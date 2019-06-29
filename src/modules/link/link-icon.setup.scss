@@ -1,0 +1,11 @@
+@import '../../setup/common-variables';
+@import '../../setup/pxtorem';
+
+$link-icon-dimension: rem(40px) !default;
+$link-icon-box-shadow: 0 3px 6px rgba($color-palette-black, .16) !default;
+$link-icon-box-shadow-hovered: 0 0 6px rgba($color-palette-black, .16) !default;
+$link-icon-border-radius: 50% !default;
+$link-icon-outer-spacing-left: rem(5px) !default;
+
+$link-icon-icon-text-color-instagram: #D61A7F !default;
+$link-icon-icon-text-color-facebook: #4267B2 !default;

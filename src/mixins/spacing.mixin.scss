@@ -1,0 +1,16 @@
+@import '../setup/pxtorem';
+
+@mixin -spacing-outer($spacing-outer) {
+	margin-top: rem($spacing-outer);
+}
+
+@mixin -spacing-inner($spacing-inner-direction: null, $spacing-inner: 0) {
+
+	@if($spacing-inner-direction) {
+		padding-#{$spacing-inner-direction}: rem($spacing-inner);
+	}
+
+	@else if($spacing-inner-direction == 'all') {
+		padding: rem($spacing-inner);
+	}	
+}

@@ -1,0 +1,54 @@
+{{> organisms-topbar }}
+{{> organisms-image-hero(image-hero_image: "https://images.pexels.com/photos/1263426/pexels-photo-1263426.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", image-hero_hasOverlay: false) }}
+
+<div class="content">
+  <div class="row">
+    <div class="column column--12 -spacing-outer-50">
+      <h2 class="-typo-headline-02 -text-color-blue-01 -font-secondary">
+        {{ news-detail_title }}
+      </h2>
+    </div>
+  </div>
+  <div class="row -spacing-outer-20">
+    <div class="column column--12 column--s-6 column--m-2 -spacing-outer-10">
+      {{> molecules-icon-text(icon-text_icon: "calendar", icon-text_label: "10.10.19") }}
+    </div>
+    <div class="column column--12 column--s-6 column--m-2 -spacing-outer-10">
+      {{> molecules-icon-text(icon-text_icon: "tag", icon-text_label: "Allgemein") }}
+    </div>
+    <div class="column column--12 column--s-6 column--m-2 -spacing-outer-10">
+      {{> molecules-icon-text(icon-text_icon: "tag", icon-text_label: "Beachvolleyball")}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="column column--12 column--m-8 -spacing-outer-50">
+      <p class="-typo-copy -typo-copy--strong -text-color-blue-02 -font-primary">
+        {{ news-detail_intro }}
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="column column--12 column--m-8 -spacing-outer-20">
+      <!-- <img src="{{ news-detail_image }}" alt="{{ news-detail_title }}" class="image"> -->
+    </div>
+  </div>
+  <div class="row">
+    <div class="column column--12 column--m-8 -spacing-outer-30">
+      <p class="-typo-copy -text-color-blue-02 -font-primary">
+        {{ news-detail_paragraphOne }}
+      </p>
+      {{# news-detail_subTitle }}
+        <h5 class="-typo-headline-05 -text-color-blue-01 -font-secondary -spacing-outer-30">
+          {{ news-detail_subTitle }}
+        </h5>
+      {{/ news-detail_subTitle }}
+      <p class="-typo-copy -text-color-blue-02 -font-primary -spacing-outer-10">
+        {{ news-detail_paragraphTwo }}
+      </p>
+    </div>
+  </div>
+  
+  {{> organisms-section-teaser-news:-spacing-outer-100 }}
+</div>
+
+{{> organisms-footer }}

@@ -1,0 +1,7 @@
+{
+	"bodyClass": "sg-wrapper-light",
+	"notification-sticky_icon": "info",
+	"notification-sticky_content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem quidem eligendi quaerat officia accusantium omnis atque, unde consequatur odio asperiores, ut ea ipsum reprehenderit deleniti, suscipit neque iste eveniet excepturi.",
+	"notification-sticky_button": false,
+	"notification-sticky_error": false
+}

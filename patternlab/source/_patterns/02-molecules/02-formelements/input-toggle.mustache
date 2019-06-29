@@ -1,0 +1,6 @@
+<label class="input-toggle {{ styleModifier }}">
+  <input type="hidden" class="input-toggle__hidden">
+  <input type="checkbox" class="input-toggle__field" {{# input-toggle_isChecked }} checked="checked" {{/ input-toggle_isChecked }}>
+  <span class="input-toggle__switch"></span>
+  <span class="input-toggle__label {{# input-toggle_labelSmall }} input-toggle__label--small {{/ input-toggle_labelSmall }}">{{ input-toggle_label }}</span>
+</label>

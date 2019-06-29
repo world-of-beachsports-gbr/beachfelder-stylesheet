@@ -1,0 +1,23 @@
+@import '../../setup/common-variables';
+@import '../../setup/pxtorem';
+
+$input-toggle-switch-border-radius: rem(15px) !default;
+$input-toggle-switch-box-shadow-color: $color-palette-gray-02 !default;
+$input-toggle-switch-height: rem(30px) !default;
+$input-toggle-switch-width: rem(50px) !default;
+
+$input-toggle-switch-before-border-radius: $input-toggle-switch-border-radius !default;
+$input-toggle-switch-before-dimension: $input-toggle-switch-height !default;
+$input-toggle-switch-before-position-reset: 0 !default;
+
+$input-toggle-switch-after-border-radius: $input-toggle-switch-before-border-radius !default;
+$input-toggle-switch-after-dimension: $input-toggle-switch-before-dimension !default;
+$input-toggle-switch-after-position-reset: $input-toggle-switch-before-position-reset !default;
+
+$input-toggle-label-line-height: 1.5 !default;
+$input-toggle-label-small-line-height: 1.35 !default;
+$input-toggle-label-outer-spacing-left: rem(10px) !default;
+$input-toggle-label-max-width: 80% !default;
+
+$input-toggle-switch-before-width-checked: $input-toggle-switch-width !default;
+$input-toggle-switch-after-position-left-checked: rem(20px) !default;

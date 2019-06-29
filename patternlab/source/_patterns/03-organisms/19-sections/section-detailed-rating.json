@@ -1,0 +1,37 @@
+{
+  "rating": [
+    {
+      "isBlue": true
+    },
+    {
+      "isBlue": true
+    },
+    {
+      "isBlue": true
+    },
+    {
+      "isBlue": false
+    },
+    {
+      "isBlue": false
+    }
+  ],
+  
+  "rating-detailed_states": [
+    {
+      "isBlue": true
+    },
+    {
+      "isBlue": true
+    },
+    {
+      "isBlue": true
+    },
+    {
+      "isBlue": false
+    },
+    {
+      "isBlue": false
+    }
+  ]
+}

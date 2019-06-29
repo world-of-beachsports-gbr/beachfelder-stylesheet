@@ -1,0 +1,70 @@
+@import '../setup/common-variables';
+@import 'background-color.mixin';
+@import 'breakpoint.mixin';
+@import 'position.mixin';
+
+@mixin -typo-headline-01 {
+  font-size: $typo-headline-01;
+  text-transform: uppercase;
+  font-weight: normal;
+
+  @include breakpoint('m') {
+    font-size: $typo-headline-01-m;
+  }
+}
+
+@mixin -typo-headline-02 {
+  @include -position(relative);
+
+  font-size: $typo-headline-02;
+  text-transform: uppercase;
+  font-weight: normal;
+
+  &::after {
+    @include -background-color-green-01;
+    @include -position(absolute);
+
+    content: '';
+    height: 3px;
+    width: 50px;
+    bottom: -15px;
+    left: 0;
+  }
+
+  @include breakpoint('s') {
+    font-size: $typo-headline-02-s;
+  }
+}
+
+@mixin -typo-headline-03 {
+  font-size: $typo-headline-03;
+  text-transform: uppercase;
+  font-weight: normal;
+
+  @include breakpoint('m') {
+    font-size: $typo-headline-03-m;
+  }
+}
+
+@mixin -typo-headline-04 {
+  font-size: $typo-headline-04;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+@mixin -typo-headline-05 {
+  font-size: $typo-headline-05;
+  text-transform: uppercase;
+}
+
+@mixin -typo-copy {
+  font-size: $typo-copy;
+  line-height: $line-height-copy;
+  font-weight: normal;
+}
+
+@mixin -typo-copy-strong {
+  font-size: $typo-copy;
+  line-height: $line-height-copy;
+  font-weight: 700;
+}

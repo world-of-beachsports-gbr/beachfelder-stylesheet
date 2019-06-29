@@ -1,0 +1,14 @@
+@import '../../setup/common-variables';
+
+$navigation-accordion-header-border-width: 1px !default;
+$navigation-accordion-header-border-color: darken($color-palette-gray-02, 10%) !default;
+$navigation-accordion-header-inner-spacing-vertical: 0 !default;
+$navigation-accordion-header-inner-spacing-horizontal: .9375rem !default;
+$navigation-accordion-background-color: $color-palette-gray-02 !default;
+
+$navigation-accordion-title-text-color: $color-palette-blue-02 !default;
+$navigation-accordion-title-font-size: 1.5rem !default;
+
+$navigation-accordion-icon-text-color: darken($color-palette-gray-02, 10%) !default;
+$navigation-accordion-icon-safe-area: .625rem !default;
+$navigation-accordion-icon-text-color-hovered: $color-palette-blue-02 !default;

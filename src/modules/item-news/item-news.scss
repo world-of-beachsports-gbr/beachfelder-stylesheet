@@ -1,0 +1,98 @@
+@import '../../mixins/background-color.mixin';
+@import '../../mixins/breakpoint.mixin';
+@import '../../mixins/text-color.mixin';
+@import '../../mixins/animation.mixin';
+@import '../../mixins/font-size.mixin';
+@import '../../mixins/position.mixin';
+@import '../../mixins/spacing.mixin';
+@import '../../mixins/display.mixin';
+@import '../../mixins/typo.mixin';
+
+@import 'item-news.setup';
+
+.item-news {
+  border-radius: $item-news-border-radius;
+  box-shadow: $item-news-box-shadow;
+  overflow: hidden;
+
+  $bem-block: &;
+  
+  &__image-container  {
+    @include -position(relative);
+
+    &:hover #{$bem-block}__overlay {
+      opacity: $item-news-overlay-opacity-hovered;
+      z-index: $item-news-overlay-z-index-hovered;
+    }
+  }
+
+  &__image {
+    width: $item-news-image-width;
+  }
+
+  &__date {
+    @include -background-color-white;
+    @include -position(absolute);
+    @include -spacing-inner('top', 5px);
+    @include -spacing-inner('bottom', 5px);
+    @include -spacing-inner('left', 10px);
+    @include -spacing-inner('right', 10px);
+    @include -font-primary;
+    @include -text-color-blue-02;
+    @include -font-size(14);
+
+    right: $item-news-date-position-right;
+    bottom: $item-news-date-position-bottom;
+    z-index: $item-news-date-z-index;
+  }
+
+  &__overlay {
+    @include -transition(all, .3s);
+
+    opacity: $item-news-overlay-opacity;
+    height: $item-news-overlay-height;
+
+    @include breakpoint('m') {
+      height: $item-news-overlay-height-m;
+    }
+  }
+
+  &__content {
+    @include -spacing-inner('top', 20px);
+    @include -spacing-inner('bottom', 40px);
+    @include -spacing-inner('left', 20px);
+    @include -spacing-inner('right', 20px);
+    @include -background-color-white;
+  }
+
+  &__title {
+    @include -font-primary;
+    @include -text-color-blue-01;
+    @include -font-size(18);
+    @include -display(block);
+
+    font-weight: $item-news-title-font-weight;
+    min-height: $item-news-title-min-height;
+    line-height: $item-news-title-line-height; 
+    text-decoration: none;
+
+    @include breakpoint('s') {
+      @include -font-size(20);
+    }
+  }
+
+  &__copy {
+    @include -typo-copy;
+    @include -font-primary;
+    @include -text-color-blue-02;
+    @include -spacing-outer(5px);
+  }
+
+  &__link {
+    @include -display( inline-block);
+    @include -spacing-outer(20px);
+    @include -font-primary;
+
+    font-weight: $item-news-link-font-weight;
+  }
+}

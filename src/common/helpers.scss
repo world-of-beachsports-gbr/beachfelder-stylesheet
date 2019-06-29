@@ -1,0 +1,68 @@
+@import '../mixins/breakpoint.mixin';
+@import '../mixins/display.mixin';
+
+.-hide {
+
+  @include -display(none);
+
+  &--xxs-xs {
+    @include breakpoint('xxs', 'xs') {
+      @include -display(none);
+    }
+  }
+
+  &--xs-s {
+    @include breakpoint('xs', 's') {
+      @include -display(none);
+    }
+  }
+
+  &--s-m {
+    @include breakpoint('s', 'm') {
+      @include -display(none);
+    }
+  }
+
+  &--m-l {
+    @include breakpoint('m', 'l') {
+      @include -display(none);
+    }
+  }
+
+  &--l-up {
+    @include breakpoint('l') {
+      @include -display(none);
+    }
+  }
+
+  &--xxs-up {
+    @include breakpoint('xxs') {
+      @include -display(none);
+    }
+  }
+
+  &--xs-up {
+    @include breakpoint('xs') {
+      @include -display(none);
+    }
+  }
+
+  &--s-up {
+    @include breakpoint('s') {
+      @include -display(none);
+    }
+  }
+
+  &--m-up {
+    @include breakpoint('m') {
+      @include -display(none);
+    }
+  }
+
+  &--l-up {
+    @include breakpoint('l') {
+      @include -display(none);
+    }
+  }
+  
+}

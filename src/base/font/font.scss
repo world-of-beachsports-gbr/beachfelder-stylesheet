@@ -1,0 +1,32 @@
+@import '../../mixins/font.mixin';
+
+@import 'font.setup';
+
+@font-face {
+  font-family: "OswaldRegular";
+  src: url('oswald-regular/Oswald-regular.eot');
+  src: url('oswald-regular/Oswald-regular.eot?#iefix') format("embedded-opentype"),
+  url('oswald-regular/Oswald-regular.woff') format("woff"),
+  url('oswald-regular/Oswald-regular.ttf') format("truetype"),
+  url('oswald-regular/Oswald-regular.svg#OswaldRegular') format("svg");
+}
+
+@font-face {
+  font-family: "PTSansRegular";
+  src: url('pt-sans-regular/PT-Sans-regular.eot');
+  src: url('pt-sans-regular/PT-Sans-regular.eot?#iefix') format("embedded-opentype"),
+  url('pt-sans-regular/PT-Sans-regular.woff') format("woff"),
+  url('pt-sans-regular/PT-Sans-regular.ttf') format("truetype"),
+  url('pt-sans-regular/PT-Sans-regular.svg#PTSansRegular') format("svg");
+}
+
+.-font {
+
+  &-primary {
+    @include -font-primary;
+  }
+
+  &-secondary {
+    @include -font-secondary;
+  }
+}

@@ -1,0 +1,63 @@
+<section class="section section--detailed-rating {{ styleModifier }}">
+  <div class="row -spacing-outer-30">
+    <div class="column column--12 column--xs-6 column--m-10">
+      <h3 class="-typo-headline-03 -font-secondary -text-color-blue-01">Bewertungen</h3>
+    </div>
+    <div class="column column--12 column--xs-6 column--m-2">
+      {{> molecules-button-primary(button-primary_label: "Jetzt bewerten")}}
+    </div>
+  </div>
+  <div class="row -spacing-outer-30">
+    <div class="column column--12 -spacing-outer-30">
+      {{> molecules-rating(rating_notice:"f.pecher 01.03.19", rating_noticeRight: true) }}
+    </div>
+  </div>
+  <div class="row -spacing-outer-10">
+    <div class="column column--12 column--xs-6 column--m-6 -spacing-outer-10">
+      {{> molecules-rating-detailed(rating-detailed_label:"Sand") }}
+    </div>
+    <div class="column column--12 column--xs-6 column--m-6 -spacing-outer-10">
+      {{> molecules-rating-detailed(rating-detailed_label:"Feld") }}
+    </div>
+  </div>
+  <div class="row -spacing-outer-10">
+    <div class="column column--12 column--xs-6 column--m-6 -spacing-outer-10">
+      {{> molecules-rating-detailed(rating-detailed_label:"Netz") }}
+    </div>
+    <div class="column column--12 column--xs-6 column--m-6 -spacing-outer-10">
+      {{> molecules-rating-detailed(rating-detailed_label:"Umgebung") }}
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="column column--12 -spacing-outer-60">
+      <hr class="divider">
+    </div>
+  </div>
+  <div class="row -spacing-outer-30">
+    <div class="column column--12 -spacing-outer-30">
+      {{> molecules-rating(rating_notice:"masseman 01.01.19", rating_noticeRight: true) }}
+    </div>
+  </div>
+  <div class="row -spacing-outer-10">
+    <div class="column column--12 column--xs-6 column--m-6 -spacing-outer-20">
+      {{> molecules-rating-detailed(rating-detailed_label:"Sand") }}
+    </div>
+    <div class="column column--12 column--xs-6 column--m-6 -spacing-outer-20">
+      {{> molecules-rating-detailed(rating-detailed_label:"Feld") }}
+    </div>
+  </div>
+  <div class="row">
+    <div class="column column--12 column--xs-6 column--m-6 -spacing-outer-20">
+      {{> molecules-rating-detailed(rating-detailed_label:"Netz") }}
+    </div>
+    <div class="column column--12 column--xs-6 column--m-6 -spacing-outer-20">
+      {{> molecules-rating-detailed(rating-detailed_label:"Umgebung") }}
+    </div>
+  </div>
+  <div class="row">
+    <div class="column column--12 -align-center -spacing-outer-80">
+      {{> molecules-button-secondary(button-secondary_label:"mehr Bewertungen", button-secondary_icon:"chevron-down")}}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,20 @@
+{
+  "bodyClass": "sg-wrapper-light",
+  "rating": [
+    {
+      "isBlue": true
+    },
+    {
+      "isBlue": true
+    },
+    {
+      "isBlue": true
+    },
+    {
+      "isBlue": false
+    },
+    {
+      "isBlue": false
+    }
+  ]
+}

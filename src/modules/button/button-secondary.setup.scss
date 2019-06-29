@@ -1,0 +1,33 @@
+@import '../../setup/common-variables';
+@import '../../setup/pxtorem';
+
+$button-secondary-height: rem(50px) !default;
+$button-secondary-width: 100% !default;
+$button-secondary-max-width: rem(205px) !default;
+
+$button-secondary-border-width: 1px !default;
+$button-secondary-border-color: $color-palette-blue-02 !default;
+
+$button-secondary-inner-spacing-horizontal: rem(20px) !default;
+
+$button-secondary-after-position-left: rem(20px) !default;
+$button-secondary-after-position-bottom: 150% !default;
+$button-secondary-after-width: 110% !default;
+$button-secondary-height: 100% !default;
+
+$button-secondary-after-position-bottom-hovered: 0 !default;
+$button-secondary-after-position-left-hovered: $button-secondary-after-position-bottom-hovered !default;
+
+$button-secondary-border-width-left-hovered: 2px !default;
+$button-secondary-border-width-right-hovered: 2px !default;
+$button-secondary-before-after-width-hovered: 100% !default;
+$button-secondary-after-position-z-index-hovered: 1 !default;
+
+$button-secondary-icon-dimension: rem(16px) !default;
+$button-secondary-icon-outer-spacing-right: rem(8px) !default;
+$button-secondary-icon-z-index-hovered: 1 !default;
+
+$button-secondary-label-font-size: rem(14px) !default;
+$button-secondary-label-z-index-hovered: 1 !default;
+
+$button-secondary-border-color-white: $color-palette-white !default;

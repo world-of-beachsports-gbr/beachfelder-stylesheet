@@ -1,0 +1,64 @@
+@import '../../mixins/font.mixin';
+@import '../../mixins/typo.mixin';
+@import '../../mixins/spacing.mixin';
+
+@import 'navigation-tabs.setup';
+
+.navigation-tabs {
+
+	&__title-bar {
+		white-space: nowrap;
+		overflow-x: scroll;
+	}
+
+	&__item {
+		display: inline-block;
+		background: $navigation-tabs-title-background-color;
+		padding: $navigation-tabs-title-inner-spacing-vertical $navigation-tabs-title-inner-spacing-horizontal;
+		cursor: pointer;
+		border-bottom: $navigation-tabs-title-border-width solid transparent;
+
+		&:hover {
+			border-bottom: $navigation-tabs-title-border-width solid $navigation-tabs-title-border-color-hover;
+		}
+
+		&--active {
+			background: $navigation-tabs-title-background-color-active;
+		}
+	}
+
+	&__icon {
+		font-size: $navigation-tabs-icon-font-size;
+		color: $navigation-tabs-icon-text-color;
+		vertical-align: middle;
+		margin-right: $navigation-tabs-icon-spacing-right;
+
+		&--active {
+			color: $navigation-tabs-icon-text-color-active;
+		}
+	}
+
+	&__title {
+		@include -font-secondary;
+		@include -typo-headline-04;
+
+		color: $navigation-tabs-title-text-color;
+		vertical-align: middle;
+
+		&--active {
+			color: $navigation-tabs-title-text-color-active;
+		}
+	}
+
+	&__content {
+		display: none;
+
+		&--active {
+			@include -font-primary;
+			@include -typo-copy;
+
+			display: block;
+			background-color: $navigation-tabs-content-background-color;
+		}
+	}
+}

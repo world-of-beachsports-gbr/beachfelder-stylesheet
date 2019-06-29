@@ -1,0 +1,68 @@
+@import '../../mixins/breakpoint.mixin';
+@import '../../mixins/font-size.mixin';
+@import '../../mixins/animation.mixin';
+@import '../../mixins/position.mixin';
+@import '../../mixins/display.mixin';
+
+@import 'grid-image.setup';
+
+.grid-image {
+  @include -position(relative);
+  @include -font-size(0);
+
+  $bem-block: &;
+  width: $grid-image-width;
+
+  &__item {
+    @include -display(inline-block);
+    @include -position(relative);
+
+    width: $grid-image-item-width;
+    overflow: hidden;
+
+    @include breakpoint('xs') {
+      width: $grid-image-item-width-xs;
+    }
+    
+    @include breakpoint('s') {
+      width: $grid-image-item-width-s;
+    }
+
+    &--feature {
+      width: $grid-image-item-featured-width;
+      float: left;
+
+      @include breakpoint('s') {
+        width: $grid-image-item-featured-width-s;
+      }
+    }
+  }
+
+  &__link {
+    @include -display(block);
+
+    &:hover #{$bem-block}__overlay {
+      opacity: $grid-image-overlay-opacity-hovered;
+      z-index: $grid-image-overlay-z-index;
+    }
+  }
+
+  &__image {
+    width: $grid-image-image-width;
+  }
+
+  &__group-link-icon {
+    @include -position(absolute);
+
+    top: $grid-image-group-link-icon-position-top;
+    right: $grid-image-group-link-icon-position-right;
+    z-index: $grid-image-group-link-icon-z-index;
+  }
+
+  &__overlay {
+    @include -transition(all, .3s);
+
+    opacity: $grid-image-overlay-opacity;
+    z-index: -$grid-image-overlay-z-index;
+  }
+}

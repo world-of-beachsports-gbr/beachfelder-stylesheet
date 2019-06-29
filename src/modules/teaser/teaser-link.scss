@@ -1,0 +1,36 @@
+@import '../../mixins/background-color.mixin';
+@import '../../mixins/breakpoint.mixin';
+@import '../../mixins/text-color.mixin';
+@import '../../mixins/text-align.mixin';
+@import '../../mixins/spacing.mixin';
+@import '../../mixins/font.mixin';
+
+.teaser-link {
+	@include -background-color-gray-03;
+	@include -text-align(center);
+
+	&__icon {
+		@include -typo-headline-02;
+		@include -text-color-blue-02;
+
+		display: block;
+
+		@include breakpoint ('s') {
+			@include -typo-headline-01;
+		}
+	}
+
+	&__title {
+		@include -text-color-blue-02;
+		@include -font-primary;
+		
+		display: block;
+	}
+
+	&__link {
+		@include -text-color-green-01;
+		@include -font-primary;
+
+		display: block;
+	}
+}

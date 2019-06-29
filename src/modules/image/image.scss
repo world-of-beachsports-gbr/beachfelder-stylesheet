@@ -1,0 +1,6 @@
+@import 'image.setup';
+
+.image {
+  width: $image-width;
+  max-width: $image-max-width;
+}

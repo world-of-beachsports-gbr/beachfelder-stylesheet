@@ -1,0 +1,15 @@
+<div class="item-news {{ styleModifier }}">
+  <div class="item-news__image-container">
+    <a href="#">
+      <img src="{{ item-news_image }}" alt="{{ item-news_title }}" class="item-news__image">
+      <div class="item-news__date">{{ item-news_date }}</div>
+      {{> organisms-overlay:item-news__overlay(overlay_isVisible: true, overlay_icon:"maximize") }}
+    </a>
+  </div>
+  <div class="item-news__content">
+    <a href="#" class="item-news__title">{{ item-news_title }}</a>
+    <p class="item-news__copy">{{ item-news_copy }}</p>
+    
+    {{> molecules-link-icon-text:item-news__link(link-icon-text_icon:"chevron-right", link-icon-text_label: "weiterlesen") }}
+  </div>
+</div>

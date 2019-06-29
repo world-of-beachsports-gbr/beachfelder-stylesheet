@@ -1,0 +1,44 @@
+@import '../../mixins/breakpoint.mixin';
+@import '../../mixins/text-color.mixin';
+@import '../../mixins/font-size.mixin';
+@import '../../mixins/display.mixin';
+
+@import 'rating-detailed.setup';
+
+.rating-detailed {
+
+  @include breakpoint('m') {
+    @include -flex;
+  }
+
+  &__label {
+    @include -display(inline-block);
+    @include -text-color-blue-02;
+    @include -font-size(16);
+    @include -font-primary;
+
+    font-weight: $rating-detailed-label-font-weight;
+
+    @include breakpoint('m') {
+      width: $rating-detailed-label-width-m;
+    }
+  }
+
+  &__list {
+    @include breakpoint('m') {
+      width: $rating-detailed-list-width-m;
+    }
+  }
+
+  &__item {
+    @include -display(inline-block);
+    @include -spacing-outer(10);
+
+    width: $rating-detailed-item-dimension;
+    height: $rating-detailed-item-dimension;
+
+    @include breakpoint('m') {
+      @include -spacing-outer(0);
+    }
+  }
+}

@@ -1,0 +1,20 @@
+@import '../../setup/pxtorem';
+
+$grid-image-width: 100% !default;
+
+$grid-image-item-width: 100% !default;
+$grid-image-item-width-xs: 50% !default;
+$grid-image-item-width-s: 33.33% !default;
+
+$grid-image-item-featured-width: 100% !default;
+$grid-image-item-featured-width-s: 66.66% !default;
+
+$grid-image-image-width: 100% !default;
+
+$grid-image-group-link-icon-position-top: rem(10px) !default;
+$grid-image-group-link-icon-position-right: $grid-image-group-link-icon-position-top !default;
+$grid-image-group-link-icon-z-index: 2 !default;
+
+$grid-image-overlay-opacity: 0 !default;
+$grid-image-overlay-opacity-hovered: 1 !default;
+$grid-image-overlay-z-index: 1 !default; 

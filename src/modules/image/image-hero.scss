@@ -1,0 +1,14 @@
+@import '../../mixins/position.mixin';
+
+@import 'image-hero.setup';
+
+.image-hero {
+  @include -position(relative);
+  
+  width: $image-hero-width;
+  height: $image-hero-height;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}

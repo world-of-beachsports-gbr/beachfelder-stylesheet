@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="column column--12 {{ styleModifier }}">
+    <h2 class="-typo-headline-02 -text-color-blue-01 -font-secondary">
+      {{ section-teaser-news_title }}
+    </h2>
+  </div>
+</div>
+<div class="row -spacing-outer-40">
+  <div class="column column--12 column--s-6 column--m-4 -spacing-outer-20">
+    {{> organisms-item-news(item-news_image:"https://images.pexels.com/photos/1263426/pexels-photo-1263426.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", item-news_title:"Dreifacher Nachwuchs im Haus von Kira Walkenhorst", item-news_copy: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.", item-news_date: "10.10.19") }}
+  </div>
+  <div class="column column--12 column--s-6 column--m-4 -spacing-outer-20">
+    {{> organisms-item-news(item-news_image:"https://www.beach-volleyball.de/uploads/pics/kunst_mueller_u_18_gold_auf_knie_c_cev.jpg", item-news_title:"some awesome longer title", item-news_copy: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.", item-news_date: "14.06.19") }}
+  </div>
+  <div class="column column--12 column--s-6 column--m-4 -spacing-outer-20">
+    {{> organisms-item-news(item-news_image:"https://media.tag24.de/1/0/b/0b05718f85b2bc05cd4a.jpg", item-news_title:"some awesome longer title", item-news_copy: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.", item-news_date: "07.02.18") }}
+  </div>
+</div>
+{{# section-teaser-news_hasButton }}
+  <div class="row -spacing-outer-70">
+    <div class="column column--12 -align-center">
+      {{> molecules-button-secondary(button-secondary_label:"weitere News erfahren") }}
+    </div>
+  </div>
+{{/ section-teaser-news_hasButton }}

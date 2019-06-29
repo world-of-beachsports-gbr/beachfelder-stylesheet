@@ -1,0 +1,15 @@
+{
+  "section-information_title": "Informationen",
+  "section-information_informations": [
+    {
+      "headline": "some title",
+      "copy": "some copy text",
+      "copy2": ""
+    },
+    {
+      "headline": "some title",
+      "copy": "some copy text",
+      "copy2": "some copy 2 text"
+    }
+  ]
+}

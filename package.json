@@ -1,0 +1,99 @@
+{
+  "name": "beachfelder-stylesheet",
+  "version": "0.16.0",
+  "description": "beachfelder Stylesheet contains all neccessary styles for the patternlab components",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "lint:scss": "sass-lint -c .sass-lint.yml -v",
+    "build:watch": "npm-watch",
+    "build:all": "better-npm-run build:all",
+    "build:all:dev": "better-npm-run build:all:dev",
+    "build:all:prod": "better-npm-run build:all:prod",
+    "postcss:dev": "better-npm-run postcss:dev",
+    "postcss:prod": "better-npm-run postcss:prod",
+    "postinstall": "[ -d \"./patternlab\" ] && node patternlab/scripts/postinstall.js || echo",
+    "gulp": "gulp -- ",
+    "version:patch": "gulp bump-patch",
+    "version:minor": "gulp bump-minor",
+    "deploy": "gulp deploy",
+    "help": "gulp patternlab:help",
+    "build": "gulp patternlab:build",
+    "serve": "gulp patternlab:serve"
+  },
+  "betterScripts": {
+    "build:all": {
+      "command": "node build.js"
+    },
+    "build:all:dev": {
+      "command": "node build.js | better-npm-run postcss:dev"
+    },
+    "build:all:prod": {
+      "command": "node build.js | better-npm-run postcss:prod",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    },
+    "postcss:dev": {
+      "command": "postcss dist/beachfelder-stylesheet.css --config postcss.config.json"
+    },
+    "postcss:prod": {
+      "command": "postcss dist/beachfelder-stylesheet.min.css --config postcss.config.prod.json",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  },
+  "watch": {
+    "build:all:dev": {
+      "patterns": [
+        "src"
+      ],
+      "extensions": "scss"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "scss",
+    "Pattern Lab",
+    "Atomic Web Design",
+    "Node",
+    "Gulp",
+    "Javascript",
+    "css"
+  ],
+  "author": "Fabian Pecher <pecher@beachfelder.der>",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^6.6.1",
+    "better-npm-run": "0.0.14",
+    "exorcist": "^0.4.0",
+    "fs-extra": "^1.0.0",
+    "gulp-bump": "^2.7.0",
+    "node-sass": "^4.2.0",
+    "npm-watch": "^0.1.7",
+    "postcss": "^5.2.9",
+    "postcss-cli": "^2.6.0",
+    "postcss-flexboxfixer": "0.0.5",
+    "postcss-gradientfixer": "0.0.6",
+    "postcss-unprefix": "^1.0.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.0.0",
+    "gulp": "git+https://github.com/gulpjs/gulp#4.0",
+    "gulp-run": "^1.7.1",
+    "gulp-util": "^3.0.8",
+    "minimist": "^1.2.0",
+    "patternlab-node": "^2.0.0",
+    "plugin-node-clipboard": "^1.0.0",
+    "plugin-node-data-inheritance": "git+https://github.com/Altinn/plugin-node-data-inheritance.git",
+    "plugin-node-tab": "^2.0.0",
+    "sass-lint": "^1.10.2",
+    "styleguidekit-assets-default": "^3.0.0",
+    "styleguidekit-mustache-default": "^3.0.0",
+    "vinyl-ftp": "^0.6.0"
+  }
+}

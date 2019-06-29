@@ -1,0 +1,15 @@
+<div class="navigation-tabs {{ styleModifier }}">
+	<ul class="navigation-tabs__title-bar">
+		{{# navigation-tabs }}
+			<li class="navigation-tabs__item {{# active }} navigation-tabs__item--active {{/ active }}">
+				{{# icon }} <span class="navigation-tabs__icon icon icon--{{ icon }} {{# active }} navigation-tabs__icon--active {{/ active }}"></span> {{/ icon }}
+				<span class="navigation-tabs__title {{# active }} navigation-tabs__title--active {{/ active }}">{{ title }}</span>
+			</li>
+			{{/ navigation-tabs }}
+	</ul>
+	{{# navigation-tabs }}
+		<div class="navigation-tabs__content {{# active }} navigation-tabs__content--active {{/ active }}">
+			{{ content }}
+		</div>
+	{{/ navigation-tabs }}
+</div>

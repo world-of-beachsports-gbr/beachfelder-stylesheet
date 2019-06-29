@@ -1,0 +1,9 @@
+{
+	"bodyClass":"sg-wrapper-light",
+
+	"navigation-footer": [
+		{
+			"linkTitle":"Link Item 1"
+		}
+	]
+}

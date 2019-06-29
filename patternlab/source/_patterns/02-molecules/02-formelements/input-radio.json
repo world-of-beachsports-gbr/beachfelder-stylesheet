@@ -1,0 +1,7 @@
+{
+	"bodyClass": "sg-wrapper-light",
+	"input-radio_name": "Some name",
+	"input-radio_label": "Some label",
+	"input-radio_isChecked": false,
+	"input-radio_isDisabled": false
+}

@@ -1,0 +1,21 @@
+{
+  "bodyClass": "sg-wrapper-light",
+  "rating-detailed_label": "some detailed label",
+  "rating-detailed_states": [
+    {
+      "isBlue": false
+    },
+    {
+      "isBlue": false
+    },
+    {
+      "isBlue": false
+    },
+    {
+      "isBlue": false
+    },
+    {
+      "isBlue": false
+    }
+  ]
+}

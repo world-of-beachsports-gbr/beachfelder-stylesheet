@@ -1,0 +1,23 @@
+{
+	"list-beachcourt": [
+		{
+			"title": "Beachcourt Name",
+			"added": "01.01.2001",
+			"coordinatesTitle": "Anfahrt",
+			"longitude": "48.806320",
+			"latitude": "8.820813",
+			"image": "https://dummyimage.com/180x130/f1f1f1/333.jpg",
+			"benefits": [
+				{
+					"icon": "shower"
+				},
+				{
+					"icon": "eating"
+				},
+				{
+					"icon": "parking"
+				}
+			]
+		}
+	]
+}

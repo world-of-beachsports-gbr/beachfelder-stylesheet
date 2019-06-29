@@ -1,0 +1,79 @@
+@import '../../mixins/background-color.mixin';
+@import '../../mixins/breakpoint.mixin';
+@import '../../mixins/text-color.mixin';
+@import '../../mixins/position.mixin';
+@import '../../mixins/spacing.mixin';
+@import '../../mixins/typo.mixin';
+
+@import 'item-beachcourt.setup';
+
+.item-beachcourt {
+  @include -position(relative);
+  border: $item-beachcourt-border-width $item-beachcourt-border-color solid;
+  border-radius: $item-beachcourt-border-radius;
+  
+  @include breakpoint('xs') {
+    border: none;
+  }
+
+  &__image-box {
+    @include -position(relative);
+
+    border-radius: $item-beachcourt-image-box-border-radius;
+    z-index: -$item-beachcourt-image-box-z-index;
+  }
+
+  &__image {
+    width: $item-beachcourt-image-width;
+    border-radius: $item-beachcourt-image-box-border-radius;
+  }
+
+  &__distance {
+    @include -position(absolute);
+    @include -background-color-white;
+    @include -spacing-inner('left', 20px);
+    @include -spacing-inner('right', 20px);
+    @include -spacing-inner('top', 10px);
+    @include -spacing-inner('bottom', 10px);
+
+    left: $item-beachcourt-distance-position-reset;
+    top: $item-beachcourt-distance-position-reset;
+    border-radius: $item-beachcourt-distance-border-radius;
+  }
+
+  &__content {
+    @include -background-color-white;
+    @include -spacing-inner('left', 20px);
+    @include -spacing-inner('right', 20px);
+    @include -spacing-inner('top', 10px);
+    @include -spacing-inner('bottom', 20px);
+    
+    @include breakpoint('xs') {
+      @include -spacing-inner('top', 30px);
+
+      margin: auto;
+      margin-top: -$item-beachcourt-content-position-top;
+      border-radius: $item-beachcourt-content-border-radius;
+      width: $item-beachcourt-content-width;
+      z-index: $item-beachcourt-content-z-index;
+      box-shadow: $item-beachcourt-content-box-shadow;
+    }
+  }
+
+  &__title {
+    @include -text-color-blue-01;
+    @include -typo-headline-04;
+    @include -font-secondary;
+
+    line-height: $item-beachcourt-title-line-height;
+    text-decoration: none;
+  }
+
+  &__button {
+    @include -spacing-outer(20);
+
+    @include breakpoint('xs') {
+      max-width: $item-beachcourt-button-max-width-s;
+    }
+  }
+}

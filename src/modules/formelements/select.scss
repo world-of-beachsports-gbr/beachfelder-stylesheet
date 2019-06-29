@@ -1,0 +1,45 @@
+@import '../../mixins/background-color.mixin';
+@import '../../mixins/text-color.mixin';
+@import '../../mixins/position.mixin';
+@import '../../mixins/display.mixin';
+@import '../../mixins/typo.mixin';
+
+@import 'select.setup';
+
+.select {
+  @include -position(relative);
+  @include -display(block);
+
+	$bem-block: &;
+
+  &__field {
+    @include -background-color-gray-02;
+    @include -text-color-blue-02;
+    @include -display(block);
+    @include -font-primary;
+    @include -typo-copy;
+
+    width: $select-field-width;
+    height: $select-field-height;
+    padding: $select-field-inner-spacing-vertical $select-field-inner-spacing-horizontal;
+    border-radius: $select-field-border-radius;
+    outline: none;
+    appearance: none;
+    box-sizing: border-box;
+    border: none;
+    cursor: pointer;
+
+    &:hover ~ #{$bem-block}__icon {
+			@include -text-color-green-01;
+    }
+  }
+
+  &__icon {
+    @include -position(absolute);
+    @include -text-color-blue-02;
+    
+    top: $select-icon-position-top;
+    right: $select-icon-positon-right;
+    transform: translate($select-icon-position-vertical, -$select-icon-position-top);
+  }
+}

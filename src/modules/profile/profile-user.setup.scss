@@ -1,0 +1,23 @@
+@import '../../setup/common-variables';
+
+$profile-user-image-background-color: rgba($color-palette-green-01, .8) !default;
+
+$profile-user-label-width: 40% !default;
+$profile-user-label-inner-spacing-horizontal: .9375rem !default;
+$profile-user-label-margin-right: .625rem;
+
+$profile-user-info-inner-spacing-horizontal: .9375rem !default;
+$profile-user-info-inner-spacing-vertical: 2.5rem !default;
+
+$profile-user-image-edit-icon-text-color: $color-palette-white !default;
+$profile-user-image-edit-label-font-size: 1.125rem !default;
+$profile-user-image-edit-label-color: $color-palette-white !default;
+$profile-user-image-edit-label-margin: .625rem !default;
+
+$profile-user-icon-edit-position-top: 1.1875rem !default;
+$profile-user-icon-edit-position-right: .5rem !default;
+$profile-user-image-edit-height: 3.125rem !default;
+
+$profile-user-image-container-max-height: 25rem !default;
+$profile-user-image-image-width: 100% !default;
+$profile-user-image-mfm-position-top: 1rem !default;

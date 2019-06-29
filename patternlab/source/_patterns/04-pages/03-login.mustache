@@ -1,0 +1,54 @@
+<div class="page-divided">
+  <div class="page-divided__box page-divided__box--left">
+    <img src="{{ page-divided_image }}" class="page-divided__image">
+  </div>
+  <div class="page-divided__box page-divided__box--right">
+    <div class="content">
+      <div class="row">
+        <div class="column column--12">
+          <h2 class="-typo-headline-02 -text-color-blue-02 -font-secondary">{{ page-divided_title }}</h2>
+        </div>
+      </div>
+      <div class="row -spacing-outer-30">
+        <div class="column column--12 column--s-6 -spacing-outer-10">
+          {{> molecules-button-primary(button-primary_label: "mit Facebook anmelden", button-primary_icon: "facebook", button-primary_backgroundColor: "fb-blue") }}
+        </div>
+        <div class="column column--12 column--s-6 -spacing-outer-10">
+          {{> molecules-button-primary(button-primary_label: "mit Google anmelden", button-primary_icon: "google", button-primary_backgroundColor: "red") }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="column column--12 -align-center -spacing-outer-30">
+          <h4 class="-typo-headline-04 -text-color-blue-01 -font-secondary">oder</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column column--12 -spacing-outer-10">
+          {{> molecules-input(input_label: "Deine E-Mail Adresse", input_icon: "mail") }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="column column--12 -spacing-outer-10">
+          {{> molecules-input(input_label: "Dein Passwort", input_icon: "eye", input_type: "password") }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="column column--12 -spacing-outer-20 -align-center">
+          {{> molecules-link-icon-text(link-icon-text_label: "Passwort vergessen?", link-icon-text_icon: "lock") }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="column column--12 -spacing-outer-50">
+          {{> molecules-button-primary(button-primary_label: "Einloggen") }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="column column--12 -spacing-outer-20 -align-center">
+          <p class="-typo-copy -text-color-blue-02 -font-primary">
+            Noch nicht angemeldet? Dann {{> molecules-link-text(link-text_linkName: "registriere") }} dich gleich.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

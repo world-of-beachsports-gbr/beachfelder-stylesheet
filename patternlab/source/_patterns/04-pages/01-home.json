@@ -1,0 +1,59 @@
+{
+  "home_titleFields": "Unsere neuesten Felder",
+  "home_titleCities": "Entdecke deutsche Städte",
+  "image-hero_hasOverlay": true,
+  "image-hero_image": "http://world-of-beachsports.com/images/martin-misere-BVB-3683.jpg",
+
+  "overlay_hasInput": false,
+  "overlay_hasButton": false,
+  "input_label": "Wo willst du dein nächstes Match spielen?",
+  "input_type": "text",
+  "input_icon": "search",
+
+  "teaser-image-text_image": "http://world-of-beachsports.com/images/martin-misere-BVB-4408_cropped.jpg",
+  "teaser-image-text_title": "Beachvolleyball is a lifestyle",
+  "teaser-image-text_paragraphs": [
+    {
+      "paragraph": "beachfelder.de ist die Suchmaschine mit der größten und umfangreichsten Datenbank an Beachvolleyball-Feldern."
+    },
+    {
+      "paragraph": "Auf beachfelder.de kannst du deine Felder bewerten, dir Favoriten speichern und uns neue Beachvolleyballfelder vorschlagen."
+    }
+  ],
+
+  "section-teaser-news_title": "News aus der Szene",
+  "section-teaser-news_hasButton": true,
+
+  "navigation-main_items": [
+    {
+      "linkName": "Berlin"
+    },
+    {
+      "linkName": "Frankfurt"
+    },
+    {
+      "linkName": "München"
+    },
+    {
+      "linkName": "Hamburg"
+    },
+    {
+      "linkName": "Dresden"
+    }
+  ],
+
+  "navigation-footer": [
+    {
+      "linkTitle": "FAQ"
+    },
+    {
+      "linkTitle": "Kontakt"
+    },
+    {
+      "linkTitle": "Impressum"
+    },
+    {
+      "linkTitle": "Datenschutz"
+    }
+  ]
+}

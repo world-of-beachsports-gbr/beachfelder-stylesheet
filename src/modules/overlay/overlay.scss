@@ -1,0 +1,63 @@
+@import '../../mixins/text-color.mixin';
+@import '../../mixins/font-size.mixin';
+@import '../../mixins/position.mixin';
+@import '../../mixins/spacing.mixin';
+@import '../../mixins/display.mixin';
+@import '../../mixins/flex.mixin';
+
+@import 'overlay.setup';
+
+
+.overlay {
+	@include -flex;
+	@include -flex-justify-content(center);
+	@include -flex-align-items(center);
+  @include -position(absolute);
+
+  padding: 0 7%;
+  left: $overlay-position;
+  top: $overlay-position;
+  height: $overlay-dimensions;
+  width: $overlay-dimensions;
+  z-index: $overlay-z-index;
+  background-color: $overlay-background-color;
+
+  &__icon {
+    @include -text-color-white;
+    @include -font-size(25);
+  }
+
+  &__button {
+    @include -position(absolute);
+
+    top: $overlay-button-position-top;
+    right: $overlay-button-position-right;
+    z-index: $overlay-button-z-index;
+  }
+
+  &__input {
+    max-width: $overlay-input-max-width;
+    border-radius: $overlay-input-border-radius;
+    box-shadow: $overlay-input-box-shadow;
+    height: $overlay-input-height;
+
+    .input__field {
+      @include -spacing-inner('left', 30px);
+      @include -spacing-inner('right', 30px);
+    }
+    
+    .input__label {
+      @include -display(none);
+    }
+
+    .input__icon {
+      @include -text-color-blue-01;
+
+      right: $overlay-input-icon-position-right;
+    }
+
+    .input__border {
+      @include -display(none);
+    }
+  }
+}

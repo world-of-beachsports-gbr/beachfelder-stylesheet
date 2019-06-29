@@ -1,0 +1,28 @@
+@import '../../setup/common-variables';
+@import '../../setup/pxtorem';
+
+$input-width: 100% !default;
+$input-height: rem(50px) !default;
+
+$input-field-width: 100% !default;
+$input-field-height: 100% !default;
+$input-field-border-width: 1px !default;
+$input-field-border-color: $color-palette-gray-02 !default;
+
+$input-label-position-left: 0 !default;
+$input-label-position-top: 50% !default;
+$input-label-line-height: 1.5 !default;
+$input-label-opacity: 0 !default;
+
+$input-border-width: 0 !default;
+$input-border-width-focused: 100% !default;
+$input-border-height: 2px !default;
+$input-border-position-reset: 0 !default;
+
+$input-icon-position-right: rem(10px) !default;
+$input-icon-height: rem(20px) !default;
+$input-icon-position-top: 50% !default;
+$input-icon-opacity: 1 !default;
+
+$input-label-opacity-focused: 1 !default;
+$input-label-position-top-focused: rem(8px) !default;

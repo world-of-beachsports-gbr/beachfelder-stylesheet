@@ -1,0 +1,14 @@
+{{# overlay_isVisible }}
+  <div class="overlay {{ styleModifier }}">
+    {{# overlay_icon }}
+      <span class="overlay__icon icon icon--{{overlay_icon}}"></span>
+    {{/ overlay_icon }}
+    {{# overlay_hasInput }}
+      {{> molecules-input:overlay__input }}
+    {{/ overlay_hasInput }}
+
+    {{# overlay_hasButton }}
+      {{> molecules-button-secondary:overlay__button(button-secondary_label:"Einloggen / Registrieren") }}
+    {{/ overlay_hasButton }}
+  </div>
+{{/ overlay_isVisible }}

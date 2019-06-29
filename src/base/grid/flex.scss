@@ -1,0 +1,21 @@
+@import '../../mixins/flex.mixin';
+
+.flex {
+  @include -flex;
+
+  &-xs {
+    @include breakpoint('xs') { @include -flex; }
+  }
+
+  &-s {
+    @include breakpoint('s') { @include -flex; }
+  }
+
+  &-m {
+    @include breakpoint('m') { @include -flex; }
+  }
+
+  &-l {
+    @include breakpoint('l') { @include -flex; }
+  }
+}

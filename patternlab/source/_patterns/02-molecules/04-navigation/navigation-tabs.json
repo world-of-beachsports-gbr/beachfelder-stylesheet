@@ -1,0 +1,22 @@
+{
+	"navigation-tabs": [
+		{
+			"icon": "",
+			"title": "Tab Title 1",
+			"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam maxime iusto tempore porro a, voluptas laborum, unde esse rerum culpa nobis, nulla ut consectetur ipsam id mollitia ullam tempora ea.",
+			"active": true
+		},
+		{
+			"icon": "",
+			"title": "Tab Title 2",
+			"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam maxime iusto tempore porro a, voluptas laborum, unde esse rerum culpa nobis, nulla ut consectetur ipsam id mollitia ullam tempora ea.",
+			"active": false
+		},
+		{
+			"icon": "",
+			"title": "Tab Title 3",
+			"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam maxime iusto tempore porro a, voluptas laborum, unde esse rerum culpa nobis, nulla ut consectetur ipsam id mollitia ullam tempora ea.",
+			"active": false
+		}
+	]
+}

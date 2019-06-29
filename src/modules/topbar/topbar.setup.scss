@@ -1,0 +1,16 @@
+@import '../../setup/common-variables';
+@import '../../setup/pxtorem';
+
+$topbar-width: 100% !default;
+
+$topbar-fixed-position-top: 0 !default;
+$topbar-fixed-position-left: 0 !default;
+$topbar-fixed-z-index: 10 !default;
+$topbar-fixed-box-shadow: 0 0 rem(5px) 0 rgba($color-palette-black, 0.2) !default;
+
+$topbar-signet-max-width: rem(45px) !default;
+
+$topbar-input-field-background-color: #f5f5f5 !default;
+$topbar-input-field-border-radius: rem(4px) !default;
+$topbar-input-label-position-left: rem(10px) !default;
+$topbar-input-icon-color: #bdbdbd !default;

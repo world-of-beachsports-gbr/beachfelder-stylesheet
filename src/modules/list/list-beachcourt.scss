@@ -1,0 +1,104 @@
+@import '../../mixins/breakpoint.mixin';
+@import '../../mixins/font.mixin';
+@import '../../mixins/typo.mixin';
+@import '../../mixins/text-align.mixin';
+@import '../../mixins/text-color.mixin';
+
+@import 'list-beachcourt.setup';
+
+.list-beachcourt {
+
+	&__link {
+		display: block;
+
+		&:not(:first-child) {
+	    margin-top: $list-beachcourt-item-margin-top;
+	  }
+	}
+
+	&__item {
+		@include -flex;
+		@include -flex-justify-content(center);
+
+	  justify-content: space-between;
+	  background: $list-beachcourt-item-background-color;
+	  height: $list-beachcourt-item-height;
+	  width: $list-beachcourt-item-width;
+	  padding: $list-beachcourt-item-padding;
+
+	  @include breakpoint('s') {
+	  	padding: $list-beachcourt-item-padding-s;
+	  }
+	}
+
+	&__image {
+	  width: $list-beachcourt-image-width;
+	  overflow: hidden;
+	  display: none;
+
+	  @include breakpoint('s') {
+	  	display: inline;
+	  }
+
+	  img {
+	    width: $list-beachcourt-image-width;
+	    height: $list-beachcourt-image-height;
+	  }
+	}
+
+	&__coordinates-container {
+		@include -text-align(center);
+		display: none;
+
+		@include breakpoint('xs') {
+			display: inline;
+		}
+	}
+
+	&__benefits {
+		display: none;
+
+		@include breakpoint('m') {
+			display: inline;
+		}
+	}
+
+	&__title {
+		@include -typo-headline-05;
+		@include -text-color-green-01;
+		@include -font-secondary;
+	}
+
+	&__date {
+		@include -typo-copy;
+		@include -text-color-blue-02;
+		@include -font-primary;
+	}
+
+	&__coordinates {
+		@include -typo-copy;
+		@include -text-color-blue-02;
+		@include -font-primary;
+	}
+
+	&__icon-list {
+
+    li {
+      display: inline-block;
+      margin: $list-beachcourt-icon-list-margin-horizontal $list-beachcourt-icon-list-margin-vertical;
+      color: $list-beachcourt-icon-list-font-color;
+    }
+  }
+
+  &__action {
+  	height: $list-beachcourt-action-height;
+  }
+
+  &__button {
+  	height: $list-beachcourt-action-height;
+  }
+
+  &__form {
+  	height: $list-beachcourt-action-height;
+  }
+}

@@ -1,0 +1,25 @@
+@import '../../mixins/background-color.mixin';
+@import '../../mixins/animation.mixin';
+@import '../../mixins/display.mixin';
+
+@import 'navigation-line.setup';
+
+.navigation-line {
+  &__item {
+    @include -background-color-blue-02;
+    @include -display(inline-block);
+    @include -transition(all, .3s);
+    
+    height: $navigation-line-item-height;
+    width: $navigation-line-item-width;
+    float: left;
+
+    &:not(:first-of-type) {
+      margin-left: $navigation-line-item-spacing-outer-left;
+    }
+
+    &--active {
+      @include -background-color-green-01;
+    }
+  }
+}

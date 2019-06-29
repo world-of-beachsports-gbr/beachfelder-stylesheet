@@ -1,0 +1,23 @@
+@import '../../setup/common-variables';
+@import '../../setup/pxtorem';
+
+$input-range-width: 100% !default;
+
+$input-range-field-border-radius: rem(4px) !default;
+$input-range-field-width: 65% !default;
+$input-range-field-height: rem(10px) !default;
+
+$input-range-field-slider-thumb-dimension: rem(20px) !default;
+$input-range-field-slider-border-radius: 50% !default;
+$input-range-field-slider-border-reset: 0 !default;
+
+$input-range-value-border-radius: rem(3px) !default;
+$input-range-value-line-height: rem(20px) !default;
+$input-range-value-width: rem(45px) !default;
+$input-range-value-outer-spacing-left: rem(13px) !default;
+
+$input-range-value-after-position-top: rem(8px) !default;
+$input-range-value-after-position-left: rem(7px) !default;
+$input-range-value-after-dimension: 0 !default;
+$input-range-value-after-border-width: rem(7px) !default;
+$input-range-value-after-border-right-color: $color-palette-blue-01 !default;

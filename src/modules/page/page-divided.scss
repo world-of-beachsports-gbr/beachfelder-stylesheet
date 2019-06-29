@@ -1,0 +1,56 @@
+@import '../../mixins/breakpoint.mixin';
+@import '../../mixins/position.mixin';
+@import '../../mixins/spacing.mixin';
+@import '../../mixins/flex.mixin';
+
+@import 'page-divided.setup';
+
+.page-divided {
+  @include -flex;
+  @include -flex-direction(column);
+  @include -flex-wrap(wrap);
+
+  @include breakpoint('s') {
+    @include -flex-direction(row);
+  }
+
+  &__box {
+    @include -position(relative);
+    
+    width: $page-divided-box-width;
+    height: auto;
+    overflow: hidden;
+
+    &--left {
+      height: $page-divided-box-left-height;
+    }
+
+    &--right {
+      @include -spacing-inner('top', 20px);
+      @include -spacing-inner('bottom', 20px);
+
+      @include breakpoint('s') {
+        @include -spacing-inner('top', 40px);
+      }
+    }
+
+    @include breakpoint('s') {
+      height: $page-divided-box-height-s;
+      width: $page-divided-box-width-s;
+    }
+  }
+
+  &__image {
+    @include -position(absolute);
+    height: auto;
+    
+    left: $page-divided-image-position-reset;
+    top: $page-divided-image-position-reset;
+    width: $page-divided-image-width;
+
+    @include breakpoint('s') {
+      height: $page-divided-image-dimension-s;
+      width: auto;
+    }
+  }
+}

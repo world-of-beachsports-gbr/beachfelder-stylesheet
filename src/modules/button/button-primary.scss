@@ -1,0 +1,85 @@
+@import '../../mixins/background-color.mixin';
+@import '../../mixins/text-color.mixin';
+@import '../../mixins/text-align.mixin';
+@import '../../mixins/animation.mixin';
+@import '../../mixins/display.mixin';
+@import '../../mixins/typo.mixin';
+@import 'button-primary.setup';
+
+.button-primary {
+  @include -transition(background, .2s);
+  @include -background-color-blue-01;
+  @include -display(inline-block);
+  @include -text-align(center);
+
+  border: none;
+  appearance: none;
+  outline: none;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  
+  text-decoration: none;
+  transform: none;
+  border-radius: $button-primary-border-radius;
+  width: $button-primary-width;
+  padding: {
+    top: $button-primary-inner-spacing-vertical;
+    bottom: $button-primary-inner-spacing-vertical;
+    left: $button-primary-inner-spacing-horizontal;
+    right: $button-primary-inner-spacing-horizontal;
+  }
+
+  &--red {
+    @include -background-color-red-01;
+  }
+  
+  &--fb-blue {
+    background-color: $button-primary-background-color-fb-blue;
+  }
+
+  &--white {
+    @include -background-color-gray-03;
+  }
+  
+  &:not(:disabled):hover &__label {
+    @include -text-color-white;
+
+    opacity: $button-primary-label-opacity-hovered;
+    transform: translateY(-$button-primary-label-positon-hovered);
+  }
+
+  &:not(:disabled):hover &__label--hover {
+    opacity: $button-primary-label-hover-opacity-hovered;
+    top: $button-primary-label-hover-position-top-hovered;
+    transform: translateY(-$button-primary-label-hover-position-top-hovered);
+    
+  }
+
+  &:disabled {
+    @include -background-color-blue-02;
+    
+    cursor: default;
+  }
+
+  &__label {
+    @include -transition(all, .4s);
+    @include -text-color-white;
+    @include -display(block);
+    @include -font-primary;
+    @include -typo-copy;
+    
+    font-size: $button-primary-label-font-size;
+    width: $button-primary-label-width;
+    
+
+    &--hover {
+      opacity: $button-primary-label-hover-opacity;
+      position: absolute;
+      left: $button-primary-label-hover-position-left;
+      top: $button-primary-label-hover-position-top;
+      z-index: $button-primary-label-hover-z-index;
+    }
+  }
+}

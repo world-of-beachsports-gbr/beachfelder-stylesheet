@@ -1,0 +1,107 @@
+@import '../../mixins/flex.mixin';
+@import '../../mixins/typo.mixin';
+@import '../../mixins/text-color.mixin';
+@import '../../mixins/background-color.mixin';
+@import '../../mixins/text-align.mixin';
+@import '../../mixins/font.mixin';
+@import '../../mixins/spacing.mixin';
+
+@import 'image-profile.setup';
+
+.image-profile {
+
+	$bem-block: &;
+
+	height: $image-profile-dimension;
+	width: $image-profile-dimension;
+	position: absolute;
+	top: $image-profile-position-top;
+	left: $image-profile-position-left;
+	transform: translateX(-$image-profile-position-left);
+	overflow: hidden;
+	border-radius: $image-profile-border-radius;
+	border: $image-profile-border-width solid $image-profile-border-color;
+
+	&:hover #{$bem-block}__overlay {
+		@include -flex;
+	}
+
+	&__image {
+		width: auto;
+		position: absolute;
+		height: $image-profile-image-height;
+		left: $image-profile-image-position;
+		top: $image-profile-image-position;
+		transform: translate(-$image-profile-image-position, -$image-profile-image-position);
+	}
+
+	&__overlay {
+		@include -flex;
+		@include -flex-align-items(center);
+		@include -flex-justify-content(center);
+
+		display: none;
+		position: absolute;
+		top: $image-profile-overlay-position;
+		left: $image-profile-overlay-position;
+		width: $image-profile-overlay-dimension;
+		height: $image-profile-overlay-dimension;
+		background: $image-profile-overlay-background-color;
+		box-sizing: border-box;
+
+	}
+
+	&__upload {
+		@include -flex;
+		@include -flex-align-items(center);
+		@include -flex-justify-content(center);
+
+		width: $image-profile-upload-dimension;
+		height: $image-profile-upload-dimension;
+		cursor: pointer;
+	}
+
+	&__field {
+		opacity: $image-profile-field-opacity;
+		overflow: hidden;
+		position: absolute;
+		z-index: -$image-profile-field-z-index;
+	}
+
+	&__label {
+		@include -typo-copy;
+		@include -text-color-white;
+		@include -font-primary;
+	}
+
+	&__icon {
+		@include -text-color-white;
+		@include -typo-headline-03;
+	}
+
+	&__button {
+		@include -text-color-white;
+		@include -text-align(center);
+		@include -background-color-red-01;
+
+		padding: $image-profile-button-inner-spacing;
+		position: absolute;
+		bottom: $image-profile-button-position-bottom;
+		left: $image-profile-button-position-left;
+		transform: translate(-$image-profile-button-position-left);
+		width: $image-profile-button-width;
+		z-index: $image-profile-button-z-index;
+		cursor: pointer;
+
+		&:hover {
+			background: $image-profile-button-background-color-hovered;
+		}
+
+		&--save {
+			@include -background-color-blue-02;
+			border: none;
+			display: none;
+		}
+	}
+
+}

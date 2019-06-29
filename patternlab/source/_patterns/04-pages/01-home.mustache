@@ -1,0 +1,53 @@
+{{> organisms-topbar }}
+{{> organisms-image-hero }}
+<div class="content">
+  <div class="row">
+    <div class="column column--12 -spacing-outer-70">
+      <h2 class="-typo-headline-02 -text-color-blue-01 -font-secondary">
+        {{ home_titleFields }}
+      </h2>
+    </div>
+  </div>
+  <div class="row -spacing-outer-40">
+    <div class="column column--12 column--s-6 column--m-4 -spacing-outer-10">
+      {{> organisms-item-beachcourt(item-beachcourt_title: "Tiefenbronn", item-beachcourt_distance: false, item-beachcourt_image: "https://maps.googleapis.com/maps/api/staticmap?center=53.229016,8.913553&zoom=19&scale=2&size=347x180&maptype=satellite&format=jpg&visual_refresh=true&key=AIzaSyAXZ7GDxm_FJ5g5yVdkawywTg7swA1rVeE") }}
+    </div>
+    <div class="column column--12 column--s-6 column--m-4 -spacing-outer-10">
+      {{> organisms-item-beachcourt(item-beachcourt_title: "Neuhausen-Steinegg", item-beachcourt_distance: false, item-beachcourt_image: "https://maps.googleapis.com/maps/api/staticmap?center=53.229016,8.913553&zoom=19&scale=2&size=347x180&maptype=satellite&format=jpg&visual_refresh=true&key=AIzaSyAXZ7GDxm_FJ5g5yVdkawywTg7swA1rVeE") }}
+    </div>
+    <div class="column column--12 column--s-6 column--m-4 -spacing-outer-10">
+      {{> organisms-item-beachcourt(item-beachcourt_title: "Heimsheim", item-beachcourt_distance: false, item-beachcourt_image: "https://maps.googleapis.com/maps/api/staticmap?center=53.229016,8.913553&zoom=19&scale=2&size=347x180&maptype=satellite&format=jpg&visual_refresh=true&key=AIzaSyAXZ7GDxm_FJ5g5yVdkawywTg7swA1rVeE") }}
+    </div>
+  </div>
+  <div class="row -spacing-outer-70">
+    <div class="column column--12 -align-center">
+      {{> molecules-button-secondary(button-secondary_label:"weitere Felder finden") }}
+    </div>
+  </div>
+</div>
+
+{{> organisms-teaser-image-text:-spacing-outer-60 }}
+
+<div class="content">
+  <div class="row -spacing-outer-70">
+    <div class="column column--12 column--s-6 -spacing-outer-30">
+      <h2 class="-typo-headline-02 -text-color-blue-01 -font-secondary">{{ home_titleCities }}</h2>
+    </div>
+    <div class="column column--12 column--s-6 -spacing-outer-30">
+      <p class="-typo-copy -font-primary -text-color-blue-02">In fast jeder Stadt gibt es Beachvolleyballfelder. Doch ist es oft so, dass man nicht weiß, wo sich welche befinden.
+      Wir haben daher für euch die 10 größten deutschen Städte hier zusammengestellt.</p>
+    </div>
+  </div>
+  <div class="row -spacing-outer-60">
+    <div class="column column--12 column--s-6 -spacing-outer-10">
+      {{> organisms-image-text(image-text_title:"Hamburg", image-text_subtitle:"567 Beachvolleyballfelder", image-text_image:"https://images.pexels.com/photos/167676/pexels-photo-167676.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") }}
+    </div>
+    <div class="column column--12 column--s-6 -spacing-outer-10">
+      {{> organisms-image-text(image-text_title:"München", image-text_subtitle:"234 Beachvolleyballfelder", image-text_image:"https://images.pexels.com/photos/163405/munich-olympia-mountain-olympic-stadium-view-163405.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") }}
+    </div>
+  </div>
+
+ {{> organisms-section-teaser-news:-spacing-outer-100 }} 
+  
+</div>
+{{> organisms-footer }}

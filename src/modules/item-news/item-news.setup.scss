@@ -1,0 +1,23 @@
+@import '../../setup/common-variables';
+@import '../../setup/pxtorem';
+
+$item-news-border-radius: rem(4px) !default; 
+$item-news-box-shadow: 0 0 15px 1px rgba($color-palette-black, .05) !default;
+
+$item-news-image-width: 100% !default;
+
+$item-news-date-position-right: 0 !default;
+$item-news-date-position-bottom: rem(20px) !default;
+$item-news-date-z-index: 2 !default;
+
+$item-news-overlay-opacity: 0 !default;
+$item-news-overlay-opacity-hovered: 1 !default;
+$item-news-overlay-z-index-hovered: 1 !default;
+$item-news-overlay-height: 98.5% !default;
+$item-news-overlay-height-m: 97.59% !default;
+
+$item-news-title-font-weight: 700 !default;
+$item-news-title-min-height: rem(50px) !default;
+$item-news-title-line-height: 1.25 !default;
+
+$item-news-link-font-weight: 700 !default;

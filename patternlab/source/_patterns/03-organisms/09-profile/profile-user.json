@@ -1,0 +1,39 @@
+{
+	"profile-user_image": "https://www.xing.com/image/0_c_3_3fce34b38_15444149_3/fabian-pecher-foto.1024x1024.jpg",
+	"profile-user_title": "Allgemeine Informationen",
+
+	"profile-user_information": [
+		{
+			"label": "Username",
+			"value": "iamanusername"
+		},
+		{
+			"label": "Vorname",
+			"value": "Max"
+		},
+		{
+			"label": "Nachname",
+			"value": "Mustermann"
+		},
+		{
+			"label": "Geburtsdatum",
+			"value": "01.01.2001"
+		},
+		{
+			"label": "E-Mail Adresse",
+			"value": "max@mustermann.de"
+		},
+		{
+			"label": "PLZ",
+			"value": "12345"
+		},
+		{
+			"label": "Wohnort",
+			"value": "Musterstadt"
+		},
+		{
+			"label": "Passwort",
+			"value": "*******"
+		}
+	]
+}

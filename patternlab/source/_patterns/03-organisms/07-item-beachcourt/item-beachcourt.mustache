@@ -1,0 +1,22 @@
+<div class="item-beachcourt {{ styleModifier }}">
+  <a href="#">
+    <div class="item-beachcourt__image-box">
+      {{# item-beachcourt_distance }}
+        <div class="item-beachcourt__distance">
+          {{> molecules-icon-text(icon-text_icon:"navigation", icon-text_label:"23km entfernt") }}
+        </div>
+      {{/ item-beachcourt_distance }}
+      <img src="{{ item-beachcourt_image }}" class="item-beachcourt__image">
+    </div>
+  </a>
+  <div class="item-beachcourt__content">
+    <a href="#" class="item-beachcourt__title">{{ item-beachcourt_title }}</a>
+
+    {{> molecules-rating:-spacing-outer-15 }}
+    
+    {{> molecules-icon-text:-spacing-outer-10(icon-text_icon:"map-pin", icon-text_label:"12345", icon-text_labelSecond:"Musterstadt") }}
+    {{> molecules-icon-text:-spacing-outer-10(icon-text_icon:"map-pin", icon-text_label:"Muster Straße 789") }}
+
+    {{> molecules-button-primary:item-beachcourt__button(button-primary_label:"mehr erfahren") }}
+  </div>
+</div>

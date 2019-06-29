@@ -1,0 +1,44 @@
+@import '../../mixins/breakpoint.mixin';
+@import '../../mixins/text-color.mixin';
+@import '../../mixins/position.mixin';
+@import '../../mixins/spacing.mixin';
+@import '../../mixins/typo.mixin';
+@import '../../mixins/font.mixin';
+
+@import 'image-text.setup';
+
+.image-text {
+  @include -position(relative);
+
+  border-radius: $image-text-border-radius;
+  overflow: hidden;
+
+  &__image {
+    border-radius: $image-text-image-border-radius;
+    width: $image-text-image-width;
+
+    @include breakpoint('s') {
+     height: 350px;
+    }
+  }
+
+  &__content {
+    @include -position(absolute);
+
+    left: $image-text-content-position-left;
+    top: $image-text-content-position-top;
+  }
+
+  &__title {
+    @include -typo-headline-04;
+    @include -text-color-white;
+    @include -font-secondary;
+    line-height: $image-text-title-line-height;
+  }
+
+  &__subtitle {
+    @include -typo-copy;
+    @include -font-primary;
+    @include -text-color-white;
+  }
+}

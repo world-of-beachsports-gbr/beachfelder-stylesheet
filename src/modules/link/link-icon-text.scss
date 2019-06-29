@@ -1,0 +1,48 @@
+@import '../../mixins/text-color.mixin';
+@import '../../mixins/animation.mixin';
+@import '../../mixins/position.mixin';
+
+@import 'link-icon-text.setup';
+
+.link-icon-text {
+  @include -transition(color, .2s);
+  @include -position(relative);
+  
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer; 
+
+  &::before {
+    @include -background-color-gray-02;
+    @include -transition(width, .3s);
+    @include -position(absolute);
+
+    content: '';
+    width: $link-icon-text-before-width;
+    height: $link-icon-text-before-height;
+    
+    left: $link-icon-text-before-position-reset;
+    bottom: $link-icon-text-before-position-reset;
+    z-index: -$link-icon-text-before-z-index;
+  }
+
+  &:hover::before {
+    width: $link-icon-text-before-width-hovered;
+  }
+
+  &__icon {
+    @include -text-color-blue-02;
+    @include -display(inline-block);
+    
+    width: $link-icon-text-icon-dimension;
+    height: $link-icon-text-icon-dimension;
+    margin-right: $link-icon-text-icon-outer-spacing-right;
+    vertical-align: middle;
+  }
+
+  &__copy {
+    @include -display(inline-block);
+    @include -text-color-blue-02;
+    @include -font-primary;
+  }
+}

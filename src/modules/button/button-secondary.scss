@@ -1,0 +1,112 @@
+@import '../../mixins/breakpoint.mixin';
+@import '../../mixins/text-align.mixin';
+@import '../../mixins/text-color.mixin';
+@import '../../mixins/animation.mixin';
+@import '../../mixins/font-size.mixin';
+@import '../../mixins/position.mixin';
+@import '../../mixins/spacing.mixin';
+@import '../../mixins/display.mixin';
+@import '../../mixins/font.mixin';
+@import '../../mixins/typo.mixin';
+
+@import 'button-secondary.setup';
+
+.button-secondary {
+	@include -display(inline-block);
+	@include -transition(all, .3s);
+	@include -position(relative);
+
+	$bem-block: &;
+
+  border: 0;
+  appearance: none;
+  background: transparent;
+  outline: none;
+  border: $button-secondary-border-width solid $button-secondary-border-color;
+  height: $button-secondary-height;
+  width: $button-secondary-width;
+  max-width: $button-secondary-max-width;
+  cursor: pointer;
+  overflow: hidden;
+  padding: {
+    left: $button-secondary-inner-spacing-horizontal;
+    right: $button-secondary-inner-spacing-horizontal;
+  }
+
+  &::after {
+		@include -background-color-blue-02;
+		@include -transition(all, .5s);
+		@include -position(absolute);
+    
+    content: '';
+    left: -$button-secondary-after-position-left;
+    bottom: -$button-secondary-after-position-bottom;
+    width: $button-secondary-after-width;
+    height: $button-secondary-height;
+    
+    transform: rotate(10deg);
+  }
+
+  &--light {
+    border-color: $button-secondary-border-color-white;
+
+    &::after {
+      @include -background-color-white;
+    }
+  }
+
+  &:hover {
+    &::after {
+      bottom: $button-secondary-after-position-bottom-hovered;
+      left: $button-secondary-after-position-left-hovered;
+			z-index: -$button-secondary-after-position-z-index-hovered;
+			transform: rotate(0deg);
+    }
+    
+    #{$bem-block}__icon {
+      @include -text-color-white;
+
+      z-index: $button-secondary-icon-z-index-hovered;
+
+      &--light {
+        @include -text-color-blue-02;
+      }
+    }
+
+    #{$bem-block}__label {
+      @include -text-color-white;
+
+      z-index: $button-secondary-label-z-index-hovered;
+
+      &--light {
+        @include -text-color-blue-02;
+      }
+    }
+  }
+  
+  &__icon {
+    @include -text-color-blue-02;
+
+    width: $button-secondary-icon-dimension;
+    height: $button-secondary-icon-dimension;
+    margin-right: $button-secondary-icon-outer-spacing-right;
+    vertical-align: middle;
+
+    &--light {
+      @include -text-color-white;
+    }
+  }
+  
+  &__label {
+		@include -text-color-blue-02;
+		@include -position(relative);
+    @include -font-primary;
+    
+    font-size: $button-secondary-label-font-size;
+    vertical-align: middle;
+
+    &--light {
+      @include -text-color-white;
+    }
+  }
+}

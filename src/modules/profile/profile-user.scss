@@ -1,0 +1,78 @@
+@import '../../mixins/breakpoint.mixin';
+@import '../../mixins/typo.mixin';
+@import '../../mixins/text-color.mixin';
+@import '../../mixins/font.mixin';
+@import '../../mixins/flex.mixin';
+@import '../../mixins/spacing.mixin';
+
+@import 'profile-user.setup';
+
+.profile-user {
+
+	position: relative;
+
+	&__title {
+		@include -typo-headline-04;
+		@include -text-color-blue-02;
+		@include -font-secondary;
+
+		@include breakpoint('s') {
+			@include -spacing-outer(0);
+		}
+	}
+
+	&__details {
+		column-count: 1;
+
+		@include breakpoint('s') {
+			column-count: 2;
+		}
+	}
+
+	&__label {
+		@include -typo-copy;
+		@include -font-primary;
+		@include -text-color-blue-02;
+		float: left;
+		width: $profile-user-label-width;
+		margin-right: $profile-user-label-margin-right;
+		padding: $profile-user-label-inner-spacing-horizontal 0;
+	}
+
+	&__info {
+		@include -typo-copy;
+		@include -font-primary;
+		@include -text-color-gray-01;
+
+		position: relative;
+		padding: $profile-user-info-inner-spacing-horizontal $profile-user-info-inner-spacing-vertical $profile-user-info-inner-spacing-horizontal 0;
+	}
+
+	&__icon {
+		@include -background-color-white;
+		@include -text-color-gray-02;
+
+		position: absolute;
+		right: $profile-user-icon-edit-position-right;
+		top: $profile-user-icon-edit-position-top;
+		cursor: pointer;
+
+		&:hover {
+			@include -text-color-green-01;
+		}
+	}
+
+	&__image-container {
+		overflow: hidden;
+		position: relative;
+		max-height: $profile-user-image-container-max-height;
+	}
+
+	&__image {
+		width: $profile-user-image-image-width;
+	}
+
+	&__multifunctional-menu {
+		top: $profile-user-image-mfm-position-top;
+	}
+}

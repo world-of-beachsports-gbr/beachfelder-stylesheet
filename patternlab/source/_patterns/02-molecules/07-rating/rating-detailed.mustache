@@ -1,0 +1,15 @@
+<div class="rating-detailed {{ styleModifier }}">
+  <span class="rating-detailed__label">{{ rating-detailed_label }}</span>
+  <ul class="rating-detailed__list">
+    {{# rating-detailed_states }}
+    {{# isBlue }}
+    <li class="rating-detailed__item">
+      {{> atoms-signet(signet_color:"blue") }}</li>
+    {{/ isBlue }}
+    {{^ isBlue }}
+    <li class="rating-detailed__item">
+      {{> atoms-signet(signet_color:"gray") }}</li>
+    {{/ isBlue }}
+    {{/ rating-detailed_states }}
+  </ul>
+</div>

@@ -1,0 +1,84 @@
+{{> organisms-topbar(topbar_isFixed: false ) }}
+<div class="content">
+  <div class="row -spacing-outer-50">
+    <div class="column column--12">
+      <h1 class="-typo-headline-01 -text-color-blue-02 -font-secondary">
+        {{ beachcourt-detail_title }}
+      </h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="column column--12 -spacing-outer-10">
+      {{> molecules-icon-text }}
+    </div>
+  </div>
+  <div class="row">
+    <div class="column column--12 column--xs-6 column--s-8 -spacing-outer-30">
+      {{> molecules-rating(rating_noticeRight: true) }}
+    </div>
+    <div class="column column--12 column--xs-6 column--s-4 -spacing-outer-30 -align-right">
+      {{> molecules-link-icon-text }}
+    </div>
+  </div>
+  <div class="row">
+    <div class="column column--12 -spacing-outer-10">
+      <hr class="divider">
+    </div>
+  </div>
+</div>
+{{# beachcourt-detail_hasImages }}
+  <div class="content content--fullwidth">
+    <div class="row row--zero -spacing-outer-40">
+      <div class="column column--zero column--12">
+        {{> organisms-grid-image }}
+      </div>
+    </div>
+  </div>
+{{/ beachcourt-detail_hasImages }}
+
+{{^ beachcourt-detail_hasImages }}
+  <div class="content">
+    <div class="row -spacing-outer-20">
+      <div class="column column--12 column--m-6 -spacing-outer-20">
+        <img src="{{ beachcourt-detail_image }}" alt="{{ beachcourt-detail_title }}" class="image image--max-width">
+      </div>
+      <div class="column column--12 column--m-6 -spacing-outer-20">
+        <h3 class="-typo-headline-03 -text-color-blue-01 -font-secondary">Hilf uns!</h3>
+        <p class="-typo-copy -font-primary -text-color-blue-02 -spacing-outer-30">
+          Von diesem Beachfeld haben wir noch keine Detailbilder vorliegen. Bitte hilf uns, den Service zu verbessern, indem du
+          uns Fotos des Beachfelds schickst.
+        </p>
+        {{> molecules-button-secondary:-spacing-outer-50(button-secondary_label: "Fotos einreichen", button-secondary_icon: "camera") }}
+      </div>
+    </div>
+  </div>
+{{/ beachcourt-detail_hasImages }}
+{{# beachcourt-detail_hasImages }}
+  <div class="content">
+    <div class="row -spacing-outer-50 -align-center">
+      <div class="column column--12">
+        {{> molecules-button-secondary(button-secondary_label: "mehr Bilder ansehen") }}
+      </div>
+    </div>
+  </div>
+{{/ beachcourt-detail_hasImages }}
+
+{{> organisms-section-information:-spacing-outer-70 }}
+{{> organisms-map }}
+<div class="content">
+  <div class="row">
+    <div class="column column--12">
+      <hr class="divider -spacing-outer-100">
+    </div>
+  </div>
+  
+  {{> organisms-section-detailed-rating:-spacing-outer-50 }}
+
+  <div class="row">
+    <div class="column column--12">
+      <hr class="divider -spacing-outer-100">
+    </div>
+  </div>
+</div>
+{{> organisms-section-additional-fields:-spacing-outer-50 }}
+{{> organisms-footer }}

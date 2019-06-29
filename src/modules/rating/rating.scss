@@ -1,0 +1,46 @@
+@import '../../mixins/breakpoint.mixin';
+@import '../../mixins/text-color.mixin';
+@import '../../mixins/font-size.mixin';
+@import '../../mixins/display.mixin';
+@import '../../mixins/flex.mixin';
+
+@import 'rating.setup';
+
+.rating {
+  
+  &--notice-right {
+    @include breakpoint('s') {
+      @include -flex;
+      @include -flex-align-items(center);
+    }
+  }
+
+  &__item {
+    @include -display(inline-block);
+
+    width: $rating-item-dimension;
+    height: $rating-item-dimension;
+
+    &--big {
+      width: $rating-item-dimension-big;
+      height: $rating-item-dimension-big;
+    }
+  }
+
+  &__notice {
+    @include -text-color-blue-02;
+    @include -font-primary;
+    @include -display(block);
+    @include -font-size(12);
+
+    &--right {
+
+      @include breakpoint('s') {
+        @include -display(inline-block);
+        @include -font-size(16);
+        
+        margin-left: $rating-notice-right-outer-spacing;
+      }
+    }
+  }
+}

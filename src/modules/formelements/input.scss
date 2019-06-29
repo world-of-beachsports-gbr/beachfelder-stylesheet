@@ -1,0 +1,105 @@
+@import '../../mixins/text-color.mixin';
+@import '../../mixins/breakpoint.mixin';
+@import '../../mixins/font-size.mixin';
+@import '../../mixins/animation.mixin';
+@import '../../mixins/position.mixin';
+@import '../../mixins/spacing.mixin';
+@import '../../mixins/display.mixin';
+@import '../../mixins/typo.mixin';
+@import '../../mixins/font.mixin';
+
+@import 'input.setup';
+
+.input {
+	@include -display(block);
+	@include -position(relative);
+	
+	width: $input-width;
+  height: $input-height;
+	overflow: hidden;
+	border: none;
+
+	&__field {
+		@include -spacing-inner('left', 0);
+		@include -spacing-inner('right', 45);
+		@include -spacing-inner('top', 20);
+		@include -spacing-inner('bottom', 20);
+		@include -text-color-gray-01;
+		@include -font-size(16);
+		@include -font-primary;
+		
+		outline: none;
+		appearance: none;
+		border: none;
+		border-bottom: $input-field-border-width $input-field-border-color solid;
+		width: $input-field-width;
+		height: $input-field-height;
+	}
+
+	&__label {
+		@include -font-primary;
+		@include -font-size(18);
+		@include -display(block);
+		@include -position(absolute);
+		@include -text-color-blue-02;
+		@include -transition(all, .2s);
+
+		top: $input-label-position-top;
+		left: $input-label-position-left;
+		line-height: $input-label-line-height;
+		transform: translateY(-$input-label-position-top);
+    opacity: $input-label-opacity; 
+	}
+
+	&__icon {
+		@include -position(absolute);
+		@include -text-color-gray-02;
+		@include -font-size(20);
+		
+		height: $input-icon-height;
+		right: $input-icon-position-right;
+		top: $input-icon-position-top;
+		transform: translateY(-$input-icon-position-top);
+		opacity: $input-icon-opacity;
+	}
+
+	&__border {
+		@include -background-color-green-01;
+		@include -position(absolute);
+		@include -transition(width, .2s);
+		
+		width: $input-border-width;
+    height: $input-border-height;
+    bottom: $input-border-position-reset;
+    left: $input-border-position-reset;
+	}
+
+	&__field:not(:placeholder-shown) {
+		@include -spacing-inner('top', 25);
+	}
+
+	&__field:not(:placeholder-shown) ~ &__label {
+		@include -font-size(12);
+		top: $input-label-position-top-focused;
+		opacity: $input-label-opacity-focused;
+	}
+
+	&__field:focus ~ &__border {
+		width: $input-border-width-focused;
+	}
+
+	&__field:focus:not(:placeholder-shown) ~ &__label {
+		@include -font-size(12);
+		top: $input-label-position-top-focused;
+		opacity: $input-label-opacity-focused;
+	}
+
+	&__field:not(:placeholder-shown) ~ &__border {
+		width: $input-border-width-focused;
+	}
+
+	&__field:not(:placeholder-shown) ~ &__icon {
+		@include -text-color-green-01;
+	}
+	
+}

@@ -1,0 +1,24 @@
+{
+  "bodyClass": "sg-wrapper-light",
+  "topbar_isLoggedIn": false,
+  "topbar_isFixed": false,
+  "topbar_hideNavigation": false,
+
+  "navigation-main_items": [
+    {
+      "linkName": "Berlin"
+    },
+    {
+      "linkName": "Frankfurt"
+    },
+    {
+      "linkName": "München"
+    },
+    {
+      "linkName": "Hamburg"
+    },
+    {
+      "linkName": "Dresden"
+    }
+  ]
+}

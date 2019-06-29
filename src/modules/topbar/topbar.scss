@@ -1,0 +1,54 @@
+@import '../../mixins/background-color.mixin';
+@import '../../mixins/spacing.mixin';
+
+@import 'topbar.setup';
+
+.topbar {
+  @include -spacing-inner('top', 15);
+  @include -spacing-inner('bottom', 15);
+  @include -spacing-inner('left', 15);
+  @include -spacing-inner('right', 15);
+
+  background: transparent;
+  width: $topbar-width;
+  
+  &--fixed {
+    @include -position(fixed);
+    @include -background-color-white;
+
+    top: $topbar-fixed-position-top;
+    left: $topbar-fixed-position-left;
+    box-shadow: $topbar-fixed-box-shadow;
+    z-index: $topbar-fixed-z-index;
+  }
+
+  &__signet {
+    max-width: $topbar-signet-max-width;
+  }
+
+  &__input .input__field {
+    @include -spacing-inner('left', 10px);
+    
+    background: $topbar-input-field-background-color;
+    border-radius: $topbar-input-field-border-radius;
+  }
+
+  &__input .input__label {
+    left: $topbar-input-label-position-left;
+  }
+
+  &__input .input__icon {
+    color: $topbar-input-icon-color;
+  }
+
+  &__input .input__field:not(:placeholder-shown) ~ .input__label {
+    left: $topbar-input-label-position-left;
+  }
+
+  &__column {
+    
+    &--hidden {
+      @include -display(none);
+    }
+  }
+}

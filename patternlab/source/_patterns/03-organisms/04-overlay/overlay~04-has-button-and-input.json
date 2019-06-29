@@ -1,0 +1,8 @@
+{
+  "overlay_hasButton": true,
+  "overlay_hasInput": true,
+  
+  "input_label": "Wo willst du dein nächstes Match spielen?",
+  "input_type": "text",
+  "input_icon": "search"
+}

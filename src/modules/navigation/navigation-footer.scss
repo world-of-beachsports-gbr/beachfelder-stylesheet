@@ -1,0 +1,47 @@
+@import '../../mixins/background-color.mixin';
+@import '../../mixins/breakpoint.mixin';
+@import '../../mixins/position.mixin';
+@import '../../mixins/display.mixin';
+@import '../../mixins/spacing.mixin';
+@import '../../mixins/font.mixin';
+
+@import 'navigation-footer.setup';
+
+.navigation-footer {
+	$bem-block: &;
+
+	&__item {
+		@include -spacing-inner('left', 4);
+		@include -spacing-inner('right', 4);
+		@include -display(inline-block);
+		@include -position(relative);
+		@include -font-size(14);
+		@include -font-primary;
+
+		&:hover #{$bem-block}__link {
+			@include -text-color-green-01;
+		}
+
+		&:not(:first-of-type) {
+			&::before {
+				@include -background-color-blue-02;
+				@include -position(absolute);
+				
+				content: '';
+				left: -$navigation-footer-item-before-position-left;
+				top: $navigation-footer-item-before-position-top;
+				height: $navigation-footer-item-before-height;
+				width: $navigation-footer-item-before-width;
+				transform: translateY(-$navigation-footer-item-before-position-top);
+			}
+		}
+	}
+
+	&__link {
+		@include -transition(all, .3s);
+		@include -text-color-blue-02;
+		@include -display(block);
+		
+		text-decoration: none;
+	}
+}

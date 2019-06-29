@@ -1,0 +1,23 @@
+@import '../../mixins/text-color.mixin';
+@import '../../mixins/animation.mixin';
+@import '../../mixins/font-size.mixin';
+@import '../../mixins/spacing.mixin';
+
+@import 'navigation-main.setup';
+
+.navigation-main {
+  height: $navigation-main-height;
+
+  &__item {
+    @include -spacing-inner('left', 10px);
+    @include -spacing-inner('right', 10px);
+    @include -transition(color, .2s);
+    @include -text-color-blue-02;
+    @include -font-primary;
+    @include -font-size(16);
+
+    &:hover {
+      @include -text-color-green-01;
+    }
+  }
+}

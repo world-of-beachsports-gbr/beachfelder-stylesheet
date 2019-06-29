@@ -1,0 +1,10 @@
+@import '../../setup/pxtorem';
+
+$image-text-border-radius: rem(4px) !default;
+$image-text-image-border-radius: $image-text-border-radius !default;
+$image-text-image-width: 100% !default;
+
+$image-text-content-position-left: rem(30px) !default;
+$image-text-content-position-top: rem(40px) !default;
+
+$image-text-title-line-height: 1 !default;

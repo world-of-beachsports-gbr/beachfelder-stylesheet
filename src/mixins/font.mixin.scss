@@ -1,0 +1,11 @@
+@mixin -font-primary {
+  font-family: 'PTSansRegular', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+@mixin -font-secondary {
+  font-family: 'OswaldRegular', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}

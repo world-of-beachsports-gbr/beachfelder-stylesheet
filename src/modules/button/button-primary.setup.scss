@@ -1,0 +1,23 @@
+@import '../../setup/common-variables';
+@import '../../setup/pxtorem';
+
+$button-primary-background-color-hovered: darken($color-palette-blue-01, 10%);
+$button-primary-border-radius: rem(4px) !default;
+$button-primary-width: 100% !default;
+$button-primary-inner-spacing-vertical: rem(10px) !default;
+$button-primary-inner-spacing-horizontal: rem(20px) !default;
+
+$button-primary-label-font-size: rem(14px) !default;
+$button-primary-label-opacity-hovered: 0 !default;
+$button-primary-label-positon-hovered: 200% !default;
+
+$button-primary-label-hover-opacity: 0 !default;
+$button-primary-label-hover-position-left: 0 !default;
+$button-primary-label-hover-position-top: 100% !default;
+$button-primary-label-hover-z-index: 1 !default;
+
+$button-primary-label-hover-opacity-hovered: 1 !default;
+$button-primary-label-hover-position-top-hovered: 50% !default;
+$button-primary-label-width: 100% !default;
+
+$button-primary-background-color-fb-blue: #3b5998 !default;

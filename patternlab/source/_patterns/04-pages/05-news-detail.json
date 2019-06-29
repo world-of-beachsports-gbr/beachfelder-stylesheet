@@ -1,0 +1,43 @@
+{
+  "news-detail_title": "Dreifacher Nachwuchs im Haus von Kira Walkenhorst",
+  "news-detail_intro": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
+  "news-detail_paragraphOne": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+  "news-detail_paragraphTwo": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+  "news-detail_subTitle": "A super cool sub headline",
+  "news-detail_image": "https://images.pexels.com/photos/1263426/pexels-photo-1263426.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+  
+  "section-teaser-news_title": "Mehr News aus dieser Kategorie",
+  "section-teaser-news_hasButton": false,
+
+  "navigation-main_items": [
+    {
+      "linkName": "Berlin"
+    },
+    {
+      "linkName": "Frankfurt"
+    },
+    {
+      "linkName": "München"
+    },
+    {
+      "linkName": "Hamburg"
+    },
+    {
+      "linkName": "Dresden"
+    }
+  ],
+  "navigation-footer": [
+    {
+      "linkTitle": "FAQ"
+    },
+    {
+      "linkTitle": "Kontakt"
+    },
+    {
+      "linkTitle": "Impressum"
+    },
+    {
+      "linkTitle": "Datenschutz"
+    }
+  ]
+}

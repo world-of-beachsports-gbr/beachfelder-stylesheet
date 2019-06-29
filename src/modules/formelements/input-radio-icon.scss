@@ -1,0 +1,90 @@
+@import '../../mixins/background-color.mixin';
+@import '../../mixins/text-align.mixin';
+@import '../../mixins/text-color.mixin';
+@import '../../mixins/font-size.mixin';
+@import '../../mixins/animation.mixin';
+@import '../../mixins/position.mixin';
+@import '../../mixins/spacing.mixin';
+@import '../../mixins/display.mixin';
+
+@import 'input-radio-icon.setup';
+
+.input-radio-icon {
+  @include -text-align(center);
+  @include -display(inline-block);
+
+  $bem-block: &;
+
+  width: $input-radio-icon-width;
+  cursor: pointer;
+
+  &__field {
+    @include -display(none);
+  }
+
+  &__icon {
+    @include -transition(color, .3s);
+    @include -text-color-blue-02;
+    @include -display(block);
+    
+    width: $input-radio-icon-icon-dimension;
+    height: $input-radio-icon-icon-dimension;
+    margin: auto;
+  }
+
+  &__container {
+    @include -background-color-gray-02;
+    @include -spacing-inner('top', 15);
+    @include -spacing-inner('bottom', 15);
+    @include -spacing-inner('left', 15);
+    @include -spacing-inner('right', 15);
+    @include -transition(background, .3s);
+    
+    border-radius: $input-radio-icon-container-border-radius;
+  }
+
+  &__label {
+    @include -transition(color, .3s);
+    @include -text-color-blue-02;
+    @include -spacing-outer(5px);
+    @include -font-primary;
+    @include -display(block);
+    @include -font-size(16);
+
+    line-height: $input-radio-icon-label-line-height;
+  }
+
+  &:hover &__field:not(:checked):not(:disabled) {
+		& ~ #{$bem-block}__container {
+			@include -background-color-blue-02;
+		}
+
+		& ~ #{$bem-block}__container #{$bem-block}__icon {
+			@include -text-color-white;
+		}
+
+		& ~ #{$bem-block}__container #{$bem-block}__label {
+			@include -text-color-white;
+		}
+	}
+
+	&__field:checked {
+		& ~ #{$bem-block}__container {
+			@include -background-color-blue-01;
+		}
+
+		& ~ #{$bem-block}__container #{$bem-block}__icon {
+			@include -text-color-white;
+		}
+
+		& ~ #{$bem-block}__container #{$bem-block}__label {
+			@include -text-color-white;
+		}
+	}
+
+	&:hover &__field:checked:not(:disabled) {
+		& ~ #{$bem-block}__container {
+			@include -background-color-blue-01;
+		}
+	}
+}

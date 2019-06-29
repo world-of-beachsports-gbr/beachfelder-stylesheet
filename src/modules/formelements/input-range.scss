@@ -1,0 +1,107 @@
+@import '../../mixins/background-color.mixin';
+@import '../../mixins/text-color.mixin';
+@import '../../mixins/text-align.mixin';
+@import '../../mixins/font-size.mixin';
+@import '../../mixins/animation.mixin';
+@import '../../mixins/position.mixin';
+@import '../../mixins/spacing.mixin';
+@import '../../mixins/display.mixin';
+
+@import 'input-range.setup';
+
+.input-range {
+	@include -display(inline-block);
+	
+	width: $input-range-width;
+	
+	&__field {
+		@include -background-color-gray-02;
+		border-radius: $input-range-field-border-radius ;
+		width: $input-range-field-width;
+		height: $input-range-field-height;
+		appearance: none;
+		outline: none;
+
+		&::-webkit-slider-thumb {
+			@include -background-color-blue-01;
+			@include -transition(background, .15s);
+
+			appearance: none;
+			width: $input-range-field-slider-thumb-dimension;
+			height: $input-range-field-slider-thumb-dimension;
+			border-radius: $input-range-field-slider-border-radius;
+			cursor: pointer;
+
+			&:hover {
+				@include -background-color-green-01;
+			}
+		}
+
+		&::-moz-range-thumb {
+			@include -background-color-blue-01;
+			@include -transition(background, .15s);
+			
+			width: $input-range-field-slider-thumb-dimension;
+			height: $input-range-field-slider-thumb-dimension;
+			border-radius: $input-range-field-slider-border-radius;
+			border: $input-range-field-slider-border-reset;
+			cursor: pointer;
+
+			&:hover {
+				@include -background-color-green-01;
+			}
+		}
+
+		&:active::-webkit-slider-thumb {
+			@include -background-color-green-01;
+		}
+
+		&:active::-moz-range-thumb {
+			@include -background-color-green-01;
+		}
+	}
+
+	&__value {
+		@include -background-color-blue-01;
+		@include -spacing-inner('top', 5px);
+		@include -spacing-inner('bottom', 5px);
+		@include -spacing-inner('left', 10px);
+		@include -spacing-inner('right', 10px);
+		@include -display(inline-block);
+		@include -position(relative);
+		@include -text-align(center);
+		@include -text-color-white;
+		@include -font-size(16);
+		@include -font-primary;
+		
+		border-radius: $input-range-value-border-radius;
+		line-height: $input-range-value-line-height;
+		
+		width: $input-range-value-width;
+		margin-left: $input-range-value-outer-spacing-left;
+
+		&::after {
+			@include -position(absolute);
+
+			content: '';
+			
+			top: $input-range-value-after-position-top;
+			left: -$input-range-value-after-position-left;
+			width: $input-range-value-after-dimension;
+			height: $input-range-value-after-dimension;
+			border-top: $input-range-value-after-border-width solid transparent;
+			border-right: $input-range-value-after-border-width solid $input-range-value-after-border-right-color;
+			border-bottom: $input-range-value-after-border-width solid transparent;
+		}
+	}
+}
+
+::-moz-range-track {
+	@include -background-color-gray-02;
+	border: $input-range-field-slider-border-reset; 
+}
+
+input::-moz-focus-inner,
+input::-moz-focus-outer {
+	border: $input-range-field-slider-border-reset;
+}

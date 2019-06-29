@@ -1,0 +1,14 @@
+{
+	"navigation-accordion_items": [
+		{
+			"open": true,
+			"title": "Accordion Title 1",
+			"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa sequi blanditiis eos explicabo nostrum cupiditate unde velit officiis, saepe quidem ipsum obcaecati necessitatibus, deleniti molestiae earum reiciendis consequatur, itaque! Dignissimos!"
+		},
+		{
+			"open": false,
+			"title": "Accordion Title 2",
+			"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa sequi blanditiis eos explicabo nostrum cupiditate unde velit officiis, saepe quidem ipsum obcaecati necessitatibus, deleniti molestiae earum reiciendis consequatur, itaque! Dignissimos!"
+		}
+	]
+}

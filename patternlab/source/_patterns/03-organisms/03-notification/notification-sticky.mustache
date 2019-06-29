@@ -1,0 +1,20 @@
+<div class="notification-sticky {{ styleModifier }} {{# notification-sticky_error }} notification-sticky--error {{/ notification-sticky_error }}">
+	<div class="content notification-sticky__content">
+		{{# notification-sticky_icon }}
+			<span class="notification-sticky__icon icon icon--{{ notification-sticky_icon }}"></span>
+		{{/ notification-sticky_icon }}
+
+		<span class="notification-sticky__text"> {{ notification-sticky_content }} </span>
+		{{# notification-sticky_button }}
+			{{# notification-sticky_error }}
+				{{> molecules-button:notification-sticky__button|notification-sticky__button--error(button_label: "Ok") }}
+			{{/ notification-sticky_error }}
+			{{^ notification-sticky_error }}
+				{{> molecules-button:notification-sticky__button(button_label: "Ok") }}
+			{{/ notification-sticky_error }}
+		{{/ notification-sticky_button }}
+	</div>
+	{{^ notification-sticky_button }}
+		<span class="notification-sticky__icon notification-sticky__icon--close icon icon--close"></span>
+	{{/ notification-sticky_button }}
+</div>

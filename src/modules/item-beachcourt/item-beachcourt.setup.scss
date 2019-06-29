@@ -1,0 +1,22 @@
+@import '../../setup/common-variables';
+@import '../../setup/pxtorem';
+
+$item-beachcourt-border-width: 1px !default;
+$item-beachcourt-border-color: $color-palette-gray-02 !default;
+$item-beachcourt-border-radius: rem(4px) !default;
+
+$item-beachcourt-distance-position-reset: 0 !default;
+$item-beachcourt-distance-border-radius: 0 0 4px 0 !default;
+
+$item-beachcourt-image-box-z-index: 1 !default;
+$item-beachcourt-image-box-border-radius: rem(4px) !default;
+$item-beachcourt-image-width: 100% !default;
+
+$item-beachcourt-content-position-top: rem(40px) !default;
+$item-beachcourt-content-border-radius: rem(4px) !default;
+$item-beachcourt-content-z-index: 1 !default;
+$item-beachcourt-content-width: 95% !default;
+$item-beachcourt-content-box-shadow: 0 0 15px 1px rgba($color-palette-black, .05);
+
+$item-beachcourt-title-line-height: 1.25 !default;
+$item-beachcourt-button-max-width-s: rem(185px) !default;

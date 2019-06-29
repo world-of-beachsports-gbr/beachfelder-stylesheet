@@ -1,0 +1,17 @@
+{
+  "bodyClass": "sg-wrapper-light",
+  "select_items": [
+  	{
+			"label": "Some Label 1"
+		},
+		{
+			"label": "Some Label 2"
+		},
+		{
+			"label": "Some Label 3"
+		},
+		{
+			"label": "Some Label 4"
+		}
+  ]
+}

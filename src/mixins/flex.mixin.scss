@@ -1,0 +1,23 @@
+@mixin -flex {
+  display: flex;
+}
+
+@mixin -flex-direction ($direction) {
+  flex-direction: $direction;
+}
+
+@mixin -flex-grow($grow) {
+  flex-grow: $grow;
+}
+
+@mixin -flex-justify-content($justify-content) {
+  justify-content: $justify-content;
+}
+
+@mixin -flex-align-items($align-items) {
+  align-items: $align-items;
+}
+
+@mixin -flex-wrap($wrap) {
+	flex-wrap: $wrap;
+}

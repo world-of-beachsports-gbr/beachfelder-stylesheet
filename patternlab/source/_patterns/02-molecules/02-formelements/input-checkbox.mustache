@@ -1,0 +1,11 @@
+<label class="input-checkbox {{ styleModifier }}">
+  <input class="input-checkbox__field"
+         type="input-checkbox"
+         {{# input-checkbox_isChecked }} checked="checked" {{/ input-checkbox_isChecked }}
+         {{# input-checkbox_isDisabled }} disabled="disabled" readonly {{/ input-checkbox_isDisabled }}>
+
+  <span class="input-checkbox__icon icon icon--check"></span>
+  {{# input-checkbox_label }}
+    <span class="input-checkbox__label">{{ input-checkbox_label }}</span>
+  {{/ input-checkbox_label }}
+</label>

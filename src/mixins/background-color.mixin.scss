@@ -1,0 +1,37 @@
+@import '../setup/common-variables';
+
+@mixin -background-color-black {
+  background-color: $color-palette-black;
+}
+
+@mixin -background-color-white {
+  background-color: $color-palette-white;
+}
+
+@mixin -background-color-blue-01 {
+  background-color: $color-palette-blue-01;
+}
+
+@mixin -background-color-blue-02 {
+  background-color: $color-palette-blue-02;
+}
+
+@mixin -background-color-green-01 {
+  background-color: $color-palette-green-01;
+}
+
+@mixin -background-color-red-01 {
+  background-color: $color-palette-red-01;
+}
+
+@mixin -background-color-gray-01 {
+  background-color: $color-palette-gray-01;
+}
+
+@mixin -background-color-gray-02 {
+  background-color: $color-palette-gray-02;
+}
+
+@mixin -background-color-gray-03 {
+  background-color: $color-palette-gray-03;
+}

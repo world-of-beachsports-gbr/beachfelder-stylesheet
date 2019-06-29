@@ -1,0 +1,37 @@
+@import 'pxtorem';
+
+//  COLORS
+$color-palette-white:               #fff !default;
+$color-palette-black:               #000 !default;
+
+$color-palette-gray-01:             #595556 !default;
+$color-palette-gray-02:             #f3f3f3 !default;
+$color-palette-gray-03:             #e0e0e0 !default;
+
+$color-palette-blue-01:             #457b8c !default;
+$color-palette-blue-02:             #798796 !default;
+
+$color-palette-green-01:            #08b8b8 !default;
+
+$color-palette-red-01:							#cf4135 !default;
+
+// SIZES
+$typo-headline-01:                  rem(25px) !default;
+$typo-headline-01-m:                rem(40px) !default;
+
+$typo-headline-02:                  rem(30px) !default;
+$typo-headline-02-s:                rem(35px) !default;
+
+$typo-headline-03:                  rem(28px) !default;
+$typo-headline-03-m:                rem(30px) !default;
+
+$typo-headline-04:                  rem(25px) !default;
+$typo-headline-05:                  rem(20px) !default;
+$typo-headline-06:                  rem(18px) !default;
+
+$typo-copy:                         rem(16px) !default;
+$line-height-copy:                  rem(24px) !default;
+
+//CONTENT SIZES
+$content-spacing-inner-horizontal:  7% !default;
+$content-max-width:                 rem(1376px) !default;

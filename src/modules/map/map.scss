@@ -1,0 +1,12 @@
+@import '../../mixins/flex.mixin';
+@import '../../mixins/typo.mixin';
+@import '../../mixins/font.mixin';
+@import '../../mixins/text-color.mixin';
+
+@import 'map.setup';
+
+.map {
+	width: $map-width;
+	height: $map-height;
+	position: relative;
+}

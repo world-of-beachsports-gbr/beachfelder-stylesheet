@@ -1,0 +1,70 @@
+@import '../../mixins/font.mixin';
+@import '../../mixins/typo.mixin';
+@import '../../mixins/flex.mixin';
+@import '../../mixins/spacing.mixin';
+
+@import 'navigation-accordion.setup';
+
+.navigation-accordion {
+
+	&__header {
+		@include -flex;
+		@include -flex-justify-content(center);
+		
+		position: relative;
+		justify-content: space-between;
+		background: $navigation-accordion-background-color;
+		border-top: $navigation-accordion-header-border-width solid $navigation-accordion-header-border-color;
+
+		&:nth-last-child {
+			border-bottom: $navigation-accordion-header-border-width solid $navigation-accordion-header-border-color;
+		}
+	}
+
+	&__title {
+		@include -font-secondary;
+
+		text-transform: uppercase;
+		font-size: $navigation-accordion-title-font-size;
+		color: $navigation-accordion-title-text-color;
+	}
+
+	&__icon {
+		@include -typo-headline-03;
+
+		color: $navigation-accordion-icon-text-color;
+		cursor: pointer;
+		position: relative;
+		transform: rotate(0deg);
+
+		&:after { // safe clickable area
+		  content: '';
+		  position: absolute;
+		  top: -$navigation-accordion-icon-safe-area;
+		  right: -$navigation-accordion-icon-safe-area;
+		  bottom: -$navigation-accordion-icon-safe-area;
+		  left: -$navigation-accordion-icon-safe-area;
+		}
+
+		&:hover {
+			transform: rotate(180deg);
+			color: $navigation-accordion-icon-text-color-hovered;
+		}
+
+		&--open {
+			transform: rotate(180deg);
+		}
+	}
+
+	&__content {
+		@include -typo-copy;
+		@include -font-primary;
+
+		display: none;
+
+		&--open {
+			display: block;
+		}
+	}
+
+}

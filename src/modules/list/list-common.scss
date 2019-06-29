@@ -1,0 +1,19 @@
+@import '../../mixins/text-color.mixin';
+@import '../../mixins/typo.mixin';
+@import '../../mixins/font.mixin';
+
+@import 'list-common.setup';
+
+.list-common {
+	&__item {
+		@include -text-color-blue-02;
+		@include -font-primary;
+		@include -typo-copy;
+	}
+
+	&__icon {
+		@include -text-color-blue-01;
+
+		margin-right: $list-common-icon-spacing-right;
+	}
+}

@@ -1,0 +1,14 @@
+<div class="teaser-link {{ styleModifier }}">
+	{{# teaser-link_icon }}
+		<span class="teaser-link__icon icon icon--{{ teaser-link_icon }}"></span>
+	{{/ teaser-link_icon }}
+	<p class="teaser-link__title">{{ teaser-link_title }}</p>
+	{{# teaser-link_link }}
+		<p class="teaser-link__link">
+			<a href="#"> {{ teaser-link_link }} </a>
+		</p>
+	{{/ teaser-link_link }}
+	{{# teaser-link_button }}
+		{{> molecules-button:-spacing-static-c(button_label:'Button label', button_icon:'plus')}}
+	{{/ teaser-link_button }}
+</div>

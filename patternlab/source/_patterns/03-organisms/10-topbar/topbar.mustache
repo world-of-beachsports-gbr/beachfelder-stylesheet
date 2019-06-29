@@ -1,0 +1,33 @@
+<div class="topbar {{ styleModifier }} {{# topbar_isFixed }} topbar--fixed {{/ topbar_isFixed }}">
+  <div class="content content--fullwidth">
+    <div class="row">
+      <div class="column column--2 column--xs-2 column--s-2">
+        <a href="#">
+          {{> atoms-signet:topbar__signet(signet_color: "green") }}
+        </a>
+      </div>
+      <div class="column column--10 column--xs-8 column--s-8">
+        {{> molecules-input:topbar__input(input_label: "Suche", input_type: "text", input_icon: "search")}}
+      </div>
+      <div class="column column--12 column--xs-2 column--s-2 -align-right -hide--xxs-xs -hide--xs-s">
+        {{# topbar_isLoggedIn }}
+          bin drin
+        {{/ topbar_isLoggedIn }}
+        {{^ topbar_isLoggedIn }}
+          {{> molecules-link-icon(link-icon_icon:"heart", link-icon_hasShadow: false) }}
+          {{> molecules-link-icon(link-icon_icon:"user", link-icon_hasShadow: false) }}
+        {{/ topbar_isLoggedIn }}
+      </div>
+    </div>
+    <div class="row topbar__column {{# topbar_hideNavigation }} topbar__column--hidden {{/ topbar_hideNavigation }}">
+      <div class="column column--12 -spacing-outer-10">
+        <hr class="divider">
+      </div>
+    </div>
+    <div class="row topbar__column {{# topbar_hideNavigation }} topbar__column--hidden {{/ topbar_hideNavigation }}">
+      <div class="column column--12 -align-center -spacing-outer-10">
+        {{> molecules-navigation-main }}
+      </div>
+    </div>
+  </div>
+</div>

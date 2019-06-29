@@ -1,0 +1,24 @@
+@import '../mixins/spacing.mixin';
+
+.-spacing {
+  &-outer-5 { @include -spacing-outer(5); }
+  &-outer-10 { @include -spacing-outer(10); }
+  &-outer-15 { @include -spacing-outer(15); }
+  &-outer-20 { @include -spacing-outer(20); }
+  &-outer-25 { @include -spacing-outer(25); }
+  &-outer-30 { @include -spacing-outer(30); }
+  &-outer-35 { @include -spacing-outer(35); }
+  &-outer-40 { @include -spacing-outer(40); }
+  &-outer-45 { @include -spacing-outer(45); }
+  &-outer-50 { @include -spacing-outer(50); }
+  &-outer-55 { @include -spacing-outer(55); }
+  &-outer-60 { @include -spacing-outer(60); }
+  &-outer-70 { @include -spacing-outer(70); }
+  &-outer-80 { @include -spacing-outer(80); }
+  &-outer-90 { @include -spacing-outer(90); }
+  &-outer-100 { @include -spacing-outer(100); }
+  &-outer-125 { @include -spacing-outer(125); }
+  &-outer-150 { @include -spacing-outer(150); }
+  &-outer-175 { @include -spacing-outer(175); }
+  &-outer-200 { @include -spacing-outer(200); }
+}

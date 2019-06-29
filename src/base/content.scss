@@ -1,0 +1,15 @@
+@import '../setup/common-variables';
+@import '../mixins/position.mixin';
+
+.content {
+  @include -position(relative);
+
+  padding: 0 $content-spacing-inner-horizontal 0 $content-spacing-inner-horizontal;
+  max-width: $content-max-width;
+  margin: 0 auto;
+
+  &--fullwidth {
+    max-width: unset;
+    padding: 0;
+  }
+}

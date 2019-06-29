@@ -1,0 +1,24 @@
+<section class="section section--informations {{ styleModifier }}">
+  <div class="content">
+    <div class="row">
+      <div class="column column--12">
+        <h2 class="section__title">{{ section-information_title }}</h2>
+      </div>
+    </div>
+    {{# section-information_informations }}
+      <div class="row">
+        <div class="column column--12 -spacing-outer-60">
+          <h5 class="-typo-headline-05 -text-color-blue-01 -font-secondary">{{ headline }}</h5>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column column--12">
+          <p class="-typo-copy -text-color-blue-02 -font-primary">{{ copy }}</p>
+          {{# copy2 }} 
+            <p class="-typo-copy -text-color-blue-02 -font-primary">{{ copy2 }}</p>
+          {{/ copy2 }}
+        </div>
+      </div>
+    {{/ section-information_informations }}
+  </div>
+</section>

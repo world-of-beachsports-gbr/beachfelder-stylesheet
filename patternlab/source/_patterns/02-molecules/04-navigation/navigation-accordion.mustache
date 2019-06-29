@@ -1,0 +1,14 @@
+<ul class="navigation-accordion {{ styleModifier }}">
+	{{# navigation-accordion_items }}
+		<li class="navigation-accordion__item {{# open }} navigation-accordion__item--open {{/ open }}">
+			<div class="navigation-accordion__header">
+				<p class="navigation-accordion__title"> {{ title }} </p>
+				<span class="navigation-accordion__icon icon icon--arrow-down {{# open }} navigation-accordion__icon--open {{/ open }}"></span>
+			</div>
+
+			<div class="navigation-accordion__content {{# open }} navigation-accordion__content--open {{/ open }}">
+				{{ content }}
+			</div>
+		</li>
+	{{/ navigation-accordion_items }}
+</ul>

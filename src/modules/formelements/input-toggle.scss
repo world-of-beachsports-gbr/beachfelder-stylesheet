@@ -1,0 +1,92 @@
+@import '../../mixins/background-color.mixin';
+@import '../../mixins/text-color.mixin';
+@import '../../mixins/animation.mixin';
+@import '../../mixins/font-size.mixin';
+@import '../../mixins/position.mixin';
+@import '../../mixins/display.mixin';
+
+@import 'input-toggle.setup';
+
+.input-toggle {
+	@include -display(inline-block);
+	
+	$bem-block: &;
+
+	&__field {
+		@include -display(none);
+	}
+
+	&__hidden {
+		@include -display(none);
+	}
+
+	&__switch {
+		@include -display(inline-block);
+		@include -position(relative);
+
+		border-radius: $input-toggle-switch-border-radius;
+		box-shadow: inset 0 0 0px 1px $input-toggle-switch-box-shadow-color;
+		height: $input-toggle-switch-height;
+		width: $input-toggle-switch-width;
+		vertical-align: middle;
+		cursor: pointer;
+
+		&::before {
+			@include -background-color-gray-02;
+			@include -transition(all, .25s);
+			@include -position(absolute);
+			@include -display(block);
+
+			content: '';
+			border-radius: $input-toggle-switch-before-border-radius;
+			height: $input-toggle-switch-before-dimension;
+			width: $input-toggle-switch-before-dimension;
+			top: $input-toggle-switch-before-position-reset;
+			left: $input-toggle-switch-before-position-reset;
+		}
+
+		&::after {
+			@include -background-color-white;
+			@include -transition(all, .25s);
+			@include -position(absolute);
+			@include -display(block);
+
+			border-radius: $input-toggle-switch-after-border-radius;
+			content: '';
+
+			height: $input-toggle-switch-after-dimension;
+			width: $input-toggle-switch-after-dimension;
+			top: $input-toggle-switch-after-position-reset;
+			left: $input-toggle-switch-after-position-reset;
+			box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2);
+		}
+	}
+
+	&__label {
+		@include -text-color-blue-02;
+		@include -display(inline-block);
+		@include -font-primary;
+		@include -font-size(16);
+
+		line-height: $input-toggle-label-line-height;
+		margin-left: $input-toggle-label-outer-spacing-left;
+		max-width: $input-toggle-label-max-width;
+		vertical-align: middle;
+		cursor: pointer;
+
+		&--small {
+			@include -font-size(13);
+			line-height: $input-toggle-label-small-line-height;
+		}
+	}
+
+	#{$bem-block}__field:checked + #{$bem-block}__switch::before {
+		@include -background-color-green-01;
+		width: $input-toggle-switch-before-width-checked;
+	}
+
+	#{$bem-block}__field:checked + #{$bem-block}__switch::after {
+  	left: $input-toggle-switch-after-position-left-checked;
+		box-shadow: inset 0 0 0 1px #08b8b8, 0 2px 4px rgba(0, 0, 0, 0.2);
+	}
+}

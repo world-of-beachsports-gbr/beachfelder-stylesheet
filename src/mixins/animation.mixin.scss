@@ -1,0 +1,3 @@
+@mixin -transition($which, $duration) {
+	transition: $which $duration ease-in-out;
+}

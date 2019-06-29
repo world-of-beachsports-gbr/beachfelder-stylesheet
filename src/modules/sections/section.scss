@@ -1,0 +1,36 @@
+@import '../../mixins/background-color.mixin';
+@import '../../mixins/breakpoint.mixin';
+@import '../../mixins/text-align.mixin';
+@import '../../mixins/text-color.mixin';
+@import '../../mixins/spacing.mixin';
+@import '../../mixins/typo.mixin';
+
+.section {
+  
+  &__title {
+    @include -typo-headline-02;
+    @include -text-color-blue-01;
+    @include -font-secondary;
+
+    @include breakpoint('s') {
+      @include -text-align(center);
+
+      &::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    }
+  }
+
+  &--informations {
+    @include -background-color-gray-02;
+    @include -spacing-inner('top', 30px);
+    @include -spacing-inner('bottom', 30px);
+
+    @include breakpoint('s') {
+      @include -spacing-inner('top', 60px);
+      @include -spacing-inner('bottom', 60px);
+      @include -text-align(center)
+    }
+  }
+}

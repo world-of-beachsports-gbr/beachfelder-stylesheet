@@ -1,0 +1,26 @@
+@import '../../setup/common-variables';
+
+$notification-sticky-position: 0 !default;
+$notification-sticky-background-color: $color-palette-green-01 !default;
+$notification-sticky-z-index: 1000;
+
+$notification-sticky-icon-text-color: $color-palette-white !default;
+$notification-sticky-icon-font-size: 2rem !default;
+$notification-sticky-icon-font-size-s: 2.5rem !default;
+$notification-sticky-icon-spacing-right: 1.5rem !default;
+
+$notification-sticky-icon-close-safe-area: .937rem !default;
+$notification-sticky-icon-spacing-right-close: 0 !default;
+$notification-sticky-icon-font-size-close: 1.5rem !default;
+$notification-sticky-icon-text-color-close: darken($color-palette-white, 5%) !default;
+$notification-sticky-icon-text-color-close-hover: darken($color-palette-white, 10%) !default;
+
+$notification-sticky-text-color: $color-palette-white !default;
+$notification-sticky-text-spacing-right: 1.5rem !default;
+
+$notification-sticky-button-max-width: 6.25rem !default;
+
+//** error state **//
+$notification-sticky-background-color-error: $color-palette-red-01 !default;
+$notification-sticky-button-background-color-error: darken($color-palette-red-01, 5%) !default;
+$notification-sticky-button-background-color-error-hover: darken($color-palette-red-01, 10%) !default;

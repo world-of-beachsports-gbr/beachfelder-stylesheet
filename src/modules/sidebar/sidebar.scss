@@ -1,0 +1,22 @@
+@import '../../mixins/background-color.mixin';
+@import '../../mixins/breakpoint.mixin';
+@import '../../mixins/position.mixin';
+@import '../../mixins/display.mixin';
+
+@import 'sidebar.setup';
+
+.sidebar {
+  @include -background-color-blue-01;
+  @include -position(fixed);
+  @include -display(none);
+
+  top: $sidebar-position-reset;
+  left: $sidebar-position-reset;
+  width: $sidebar-width;
+  height: $sidebar-height;
+  z-index: $sidebar-z-index;
+
+  @include breakpoint('xs') {
+    @include -display(block);
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "beachcourt-detail_title": "Beachvolleyballfeld in Tiefenbronn",
+  "beachcourt-detail_hasImages": false,
+  "beachcourt-detail_image": "https://maps.googleapis.com/maps/api/staticmap?center=52.707141,13.546506&zoom=19&scale=2&size=500x350&maptype=satellite&format=jpg&visual_refresh=true&key=AIzaSyAXZ7GDxm_FJ5g5yVdkawywTg7swA1rVeE",
+  "icon-text_icon": "map-pin",
+  "icon-text_label": "75233 Tiefenbronn // Lehninger Straße",
+  
+  "link-icon-text_label": "Bewertung abgeben",
+  "link-icon-text_icon": "thumbs-up",
+
+  "grid-image_imageOne": "http://world-of-beachsports.com/images/slide-image-01-retina.jpg",
+  "grid-image_imageTwo": "http://world-of-beachsports.com/images/slide-image-02-retina.jpg",
+  "grid-image_imageThree": "http://world-of-beachsports.com/images/slide-image-03-retina.jpg",
+  "grid-image_hasButtons": true,
+
+  "rating": [
+    {
+      "isBlue": true
+    },
+    {
+      "isBlue": true
+    },
+    {
+      "isBlue": true
+    },
+    {
+      "isBlue": false
+    },
+    {
+      "isBlue": false
+    }
+  ],
+  "rating_notice": "Vorläufige Bewertung von beachfelder.de",
+  "rating_noticeRight": false,
+
+  "section-information_title": "Informationen",
+  "section-information_informations": [
+    {
+      "headline": "Betreiber des Feldes",
+      "copy": "Gemeinde Tiefenbronn",
+      "copy2": "http://tiefenbronn.de"
+    },
+    {
+      "headline": "IST DAS FELD ÖFFENTLICH ZUGÄNGLICH?",
+      "copy": "Ja, das Feld ist für jedermann zugänglich.",
+      "copy2": ""
+    },
+    {
+      "headline": "WAS KOSTET DIE BENUTZUNG DES FELDES?",
+      "copy": "Das Spielen auf diesem Feld ist kostenfrei.",
+      "copy2": "Geh gleich los und spiele eine Runde oder zwei!"
+    },
+    {
+      "headline": "WIE VIELE FELDER GIB ES?",
+      "copy": "Felder outdoor: 2",
+      "copy2": "Felder indoor: 0"
+    }
+  ],
+
+  "section-additional-fields_title": "Weitere Felder in der Nähe von Tiefenbronn",
+
+  "navigation-footer": [
+    {
+      "linkTitle": "FAQ"
+    },
+    {
+      "linkTitle": "Kontakt"
+    },
+    {
+      "linkTitle": "Impressum"
+    },
+    {
+      "linkTitle": "Datenschutz"
+    }
+  ]
+  
+}

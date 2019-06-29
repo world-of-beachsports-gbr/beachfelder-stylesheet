@@ -1,0 +1,36 @@
+@import '../../mixins/animation.mixin';
+@import '../../mixins/position.mixin';
+@import '../../mixins/font.mixin';
+
+@import 'link-text.setup';
+
+.link-text {
+  @include -position(relative);
+  @include -transition(color, .2s);
+  @include -font-primary;
+
+  text-decoration: underline;
+  color: inherit;
+  cursor: pointer;
+
+  &::before {
+    @include -background-color-gray-02;
+    @include -transition(width, .3s);
+    @include -position(absolute);
+
+    content: '';
+    width: $link-text-before-width;
+    height: $link-text-before-height;
+    left: $link-text-before-position-reset;
+    bottom: $link-text-before-position-reset;
+    z-index: -$link-text-before-z-index;
+  }
+
+  &:hover {
+    @include -text-color-gray-01;
+    
+    &::before {
+      width: $link-text-before-width-hovered;
+    }
+  }
+}

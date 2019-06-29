@@ -1,0 +1,57 @@
+@import '../../mixins/background-color.mixin';
+@import '../../mixins/text-color.mixin';
+@import '../../mixins/font-size.mixin';
+@import '../../mixins/animation.mixin';
+@import '../../mixins/display.mixin';
+@import '../../mixins/flex.mixin';
+
+@import 'link-icon.setup';
+
+.link-icon {
+  @include -background-color-white;
+  @include -text-color-blue-01;
+  @include -display(inline-flex);
+  @include -flex-justify-content(center);
+  @include -flex-align-items(center);
+  @include -transition(all, .2s);
+
+  width: $link-icon-dimension;
+  height: $link-icon-dimension;
+  border-radius: $link-icon-border-radius;
+  
+  &:not(:first-of-type) {
+    margin-left: $link-icon-outer-spacing-left;
+  }
+
+  &:hover {
+    box-shadow: $link-icon-box-shadow-hovered;
+  }
+
+  &--has-shadow {
+    box-shadow: $link-icon-box-shadow;
+  }
+
+  &--green {
+    @include -background-color-green-01;
+  }
+
+  &--red {
+    @include -background-color-red-01;
+  }
+
+  &__icon {
+    @include -font-size(18);
+
+    &--white {
+      @include -text-color-white;
+    }
+
+    &--instagram {
+      color: $link-icon-icon-text-color-instagram;
+    }
+    
+    &--facebook {
+      color: $link-icon-icon-text-color-facebook;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@import '../../setup/pxtorem';
+
+$select-field-width: 100% !default;
+$select-field-height: rem(60px) !default;
+$select-field-border-radius: rem(4px) !default;
+$select-field-inner-spacing-vertical: rem(6px) !default;
+$select-field-inner-spacing-horizontal: rem(18px) !default;
+
+$select-icon-position-top: 50% !default;
+$select-icon-positon-right: rem(20px) !default;
+$select-icon-position-vertical: 0 !default;
