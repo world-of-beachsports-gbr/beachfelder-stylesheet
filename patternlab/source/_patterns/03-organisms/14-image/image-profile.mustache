@@ -1,15 +1,14 @@
 <div class="image-profile {{ styleModifier }}">
-	{{# image-profile_additionalInfo }}
-		<div class="image-profile__info">
-			<span class="image-profile__title">{{ image-profile_title }}</span>
-			{{# image-profile_links }}
-				<a href="#" class="image-profile__link">{{ linkName }}</a>
-			{{/ image-profile_links }}
-		</div>
-	{{/ image-profile_additionalInfo }}
-	<div class="image-profile__image-content">
-		<a href="#">
-			<img src="{{ image-profile_image }}" class="image-profile__image">
-		</a>
+	<img src="{{ image-profile_image }}" class="image image-profile__image">
+
+	<div class="image-profile__overlay">
+		<label class="image-profile__upload">
+			<input type="file" name="" class="image-profile__field" data-multiple-caption="{count} files selected" />
+			<span class="icon icon--camera image-profile__icon"></span>
+			<span class="image-profile__label"></span>
+		</label>
+
+		<span class="icon icon--delete image-profile__button"></span>
 	</div>
+
 </div>

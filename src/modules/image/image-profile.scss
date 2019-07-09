@@ -1,54 +1,107 @@
-@import '../../mixins/text-color.mixin';
-@import '../../mixins/text-align.mixin';
-@import '../../mixins/spacing.mixin';
-@import '../../mixins/position.mixin';
 @import '../../mixins/flex.mixin';
 @import '../../mixins/typo.mixin';
+@import '../../mixins/text-color.mixin';
+@import '../../mixins/background-color.mixin';
+@import '../../mixins/text-align.mixin';
+@import '../../mixins/font.mixin';
+@import '../../mixins/spacing.mixin';
 
 @import 'image-profile.setup';
 
 .image-profile {
-	@include -flex;
-	@include -flex-align-items(center);
 
-	&__info {
-		@include -text-align(right);
-	}
-	
-	&__title {
-		@include -display(block);
-		@include -font-size(16);
-		@include -text-color-blue-02;
-		@include -font-primary;
-		font-weight: 700;
-	}
+	$bem-block: &;
 
-	&__link {
-		@include -display(block);
-		@include -font-size(16);
-		@include -font-primary;
-		@include -text-color-blue-02;
-		line-height: 1.2;
-	}
+	height: $image-profile-dimension;
+	width: $image-profile-dimension;
+	position: absolute;
+	top: $image-profile-position-top;
+	left: $image-profile-position-left;
+	transform: translateX(-$image-profile-position-left);
+	overflow: hidden;
+	border-radius: $image-profile-border-radius;
+	border: $image-profile-border-width solid $image-profile-border-color;
 
-	&__image-content {
-		@include -position(relative);
-
-		height: $image-profile-image-content-dimension;
-		width: $image-profile-image-content-dimension;
-		border-radius: $image-profile-image-content-border-radius;
-		margin-left: $image-profile-image-content-outer-spacing-left;
-		overflow: hidden;
-		cursor: pointer;
+	&:hover #{$bem-block}__overlay {
+		@include -flex;
 	}
 
 	&__image {
-		@include -position(absolute);
-		
-		top: $image-profile-image-position;
+		width: auto;
+		position: absolute;
+		height: $image-profile-image-height;
 		left: $image-profile-image-position;
-		width: $image-profile-image-width;
+		top: $image-profile-image-position;
 		transform: translate(-$image-profile-image-position, -$image-profile-image-position);
-		
 	}
+
+	&__overlay {
+		@include -flex;
+		@include -flex-align-items(center);
+		@include -flex-justify-content(center);
+
+		display: none;
+		position: absolute;
+		top: $image-profile-overlay-position;
+		left: $image-profile-overlay-position;
+		width: $image-profile-overlay-dimension;
+		height: $image-profile-overlay-dimension;
+		background: $image-profile-overlay-background-color;
+		box-sizing: border-box;
+
+	}
+
+	&__upload {
+		@include -flex;
+		@include -flex-align-items(center);
+		@include -flex-justify-content(center);
+
+		width: $image-profile-upload-dimension;
+		height: $image-profile-upload-dimension;
+		cursor: pointer;
+	}
+
+	&__field {
+		opacity: $image-profile-field-opacity;
+		overflow: hidden;
+		position: absolute;
+		z-index: -$image-profile-field-z-index;
+	}
+
+	&__label {
+		@include -typo-copy;
+		@include -text-color-white;
+		@include -font-primary;
+	}
+
+	&__icon {
+		@include -text-color-white;
+		@include -typo-headline-03;
+	}
+
+	&__button {
+		@include -text-color-white;
+		@include -text-align(center);
+		@include -background-color-red-01;
+
+		padding: $image-profile-button-inner-spacing;
+		position: absolute;
+		bottom: $image-profile-button-position-bottom;
+		left: $image-profile-button-position-left;
+		transform: translate(-$image-profile-button-position-left);
+		width: $image-profile-button-width;
+		z-index: $image-profile-button-z-index;
+		cursor: pointer;
+
+		&:hover {
+			background: $image-profile-button-background-color-hovered;
+		}
+
+		&--save {
+			@include -background-color-blue-02;
+			border: none;
+			display: none;
+		}
+	}
+
 }

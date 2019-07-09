@@ -8,10 +8,7 @@ var gulp = require('gulp'),
   	browserSync = require('browser-sync').create(),
   	argv = require('minimist')(process.argv.slice(2))
   	run = require('gulp-run'),
-  	gutil = require('gulp-util'),
-  	ftp = require( 'vinyl-ftp' ),
-  	bump = require('gulp-bump'),
- 		ftpconfig = require('./ftpconfig');
+  	gutil = require('gulp-util');
 
 function resolvePath(pathInput) {
   return path.resolve(pathInput).replace(/\\/g, "/");

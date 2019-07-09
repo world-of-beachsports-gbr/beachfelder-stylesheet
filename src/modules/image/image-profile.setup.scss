@@ -1,13 +1,30 @@
 @import '../../setup/common-variables';
-@import '../../setup/pxtorem';
 
 
 $image-profile-reset: 0 !default;
-$image-profile-width: 100% !default;
 
-$image-profile-image-content-border-radius: 50% !default;
-$image-profile-image-content-dimension: rem(50px) !default;
-$image-profile-image-content-outer-spacing-left: rem(20px) !default;
+$image-profile-dimension: 9.375rem !default;
+$image-profile-position-top: $image-profile-reset !default;
+$image-profile-position-left: $image-profile-reset !default;
+$image-profile-border-radius: 50% !default;
+$image-profile-border-width: 4px !default;
+$image-profile-border-color: $color-palette-white !default;
 
-$image-profile-image-width: 100% !default;
+$image-profile-image-height: 100% !default;
 $image-profile-image-position: 50% !default;
+
+$image-profile-overlay-dimension: 100% !default;
+$image-profile-overlay-position: $image-profile-reset !default;
+$image-profile-overlay-background-color: rgba($color-palette-green-01, .7);
+
+$image-profile-field-opacity: $image-profile-reset !default;
+$image-profile-field-z-index: 999 !default;
+
+$image-profile-upload-dimension: 100% !default;
+
+$image-profile-button-inner-spacing: .5rem !default;
+$image-profile-button-width: 100% !default;
+$image-profile-button-position-bottom: 0 !default;
+$image-profile-button-position-left: 50% !default;
+$image-profile-button-z-index: 100;
+$image-profile-button-background-color-hovered: darken($color-palette-red-01, 5%) !default;

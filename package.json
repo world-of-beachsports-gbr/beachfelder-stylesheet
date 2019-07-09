@@ -83,7 +83,7 @@
   },
   "devDependencies": {
     "browser-sync": "^2.0.0",
-    "gulp": "git+https://github.com/gulpjs/gulp#4.0",
+    "gulp": "git+https://github.com/gulpjs/gulp",
     "gulp-run": "^1.7.1",
     "gulp-util": "^3.0.8",
     "minimist": "^1.2.0",
