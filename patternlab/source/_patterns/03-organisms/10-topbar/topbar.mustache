@@ -11,7 +11,7 @@
       </div>
       <div class="column column--12 column--xs-2 column--s-2 -align-right -hide--xxs-xs -hide--xs-s">
         {{# topbar_isLoggedIn }}
-          bin drin
+          {{> organisms-image-profile }}
         {{/ topbar_isLoggedIn }}
         {{^ topbar_isLoggedIn }}
           {{> molecules-link-icon(link-icon_icon:"heart", link-icon_hasShadow: false) }}

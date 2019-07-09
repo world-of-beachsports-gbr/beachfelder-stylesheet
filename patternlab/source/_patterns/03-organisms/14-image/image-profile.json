@@ -1,5 +1,14 @@
 {
-	"bodyClass": "sg-wrapper-dark",
+	"bodyClass": "sg-wrapper-light",
 	"image-profile_image": "https://www.xing.com/image/0_c_3_3fce34b38_15444149_3/fabian-pecher-foto.1024x1024.jpg",
-	"image-profile_icon": "camera"
+	"image-profile_additionalInfo": true,
+	"image-profile_title": "Fabi",
+	"image-profile_links": [
+		{
+			"linkName": "Link name 1"
+		},
+		{
+			"linkName": "Link name 2"
+		}
+	]
 }
