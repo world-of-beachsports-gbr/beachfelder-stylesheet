@@ -1,0 +1,50 @@
+@import '../../mixins/background-color.mixin';
+@import '../../mixins/breakpoint.mixin';
+@import '../../mixins/text-color.mixin';
+@import '../../mixins/spacing.mixin';
+@import '../../mixins/typo.mixin';
+@import '../../mixins/flex.mixin';
+
+@import 'teaser-text.setup';
+
+.teaser-text {
+    @include -background-color-gray-02;
+    @include -spacing-inner('top', 20px);
+    @include -spacing-inner('bottom', 40px);
+
+    width: $teaser-text-width;
+
+    &__row {
+        @include -flex;
+        @include -flex-direction(column);
+
+        @include breakpoint('m') {
+            @include -flex-direction(row);
+        }
+    }
+
+    &__column {
+        @include breakpoint('m') {
+            &:last-of-type {
+                @include -flex-align-self(flex-end);
+            }
+        }
+    }
+
+    &__title {
+        @include -typo-headline-02;
+        @include -font-secondary;
+        @include -text-color-blue-01;
+    }
+
+    &__paragraph {
+        @include -spacing-outer(50);
+        @include -text-color-blue-02;
+        @include -font-primary;
+        @include -typo-copy;
+    }
+
+    &__button {
+        @include -spacing-outer(30);
+    }
+}

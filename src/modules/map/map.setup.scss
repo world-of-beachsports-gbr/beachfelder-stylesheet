@@ -1,8 +1,7 @@
-@import '../../setup/common-variables';
+@import '../../setup/pxtorem';
 
 $map-width: 100% !default;
-$map-height: 28.125rem !default;
+$map-height: 100% !default;
 
-$map-overlay-position: 0 !default;
-$map-overlay-dimension: 100% !default;
-$map-overlay-background-color: rgba($color-palette-green-01, .7) !default;
+$map-height-fullscreen: 100vh !default;
+$map-canvas-height: 100% !default;

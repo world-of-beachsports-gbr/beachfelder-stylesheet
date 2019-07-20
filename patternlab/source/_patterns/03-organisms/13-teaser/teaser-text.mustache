@@ -1,0 +1,18 @@
+<div class="teaser-text {{ styleModifier }}">
+    <div class="content">
+        <div class="row teaser-text__row">
+            <div class="column column--12 column--s-8 -spacing-outer-10 teaser-text__column">
+                <h3 class="teaser-text__title">{{ teaser-text_title }}</h3>
+                <p class="teaser-text__paragraph">{{ teaser-text_paragraph }}</p>
+            </div>
+            <div class="column column--12 column--s-4 -spacing-outer-10 teaser-text__column">
+                {{# teaser-text_hasButton }}
+                    {{> molecules-button-secondary:teaser-text__button }}
+                {{/ teaser-text_hasButton }}
+                {{^ teaser-text_hasButton }}
+                    {{> molecules-link-text }}
+                {{/ teaser-text_hasButton }}
+            </div>
+        </div>
+    </div>
+</div>
