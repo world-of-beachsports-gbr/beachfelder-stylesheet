@@ -1,5 +1,5 @@
 ---
-title: map
+title: Teaser Text
 state: inprogress
 ---
 

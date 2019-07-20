@@ -1,0 +1,8 @@
+@import '../../setup/common-variables';
+
+$marker-map-border-radius: 50% !default;
+$marker-map-border-width: 1px !default;
+$marker-map-border-color: $color-palette-white !default;
+
+$marker-map-background-color-hovered: lighten($color-palette-green-01, 10%) !default;
+$marker-map-background-color-active: $marker-map-background-color-hovered !default;

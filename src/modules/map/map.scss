@@ -1,7 +1,3 @@
-@import '../../mixins/flex.mixin';
-@import '../../mixins/typo.mixin';
-@import '../../mixins/font.mixin';
-@import '../../mixins/text-color.mixin';
 
 @import 'map.setup';
 
@@ -9,4 +5,12 @@
 	width: $map-width;
 	height: $map-height;
 	position: relative;
+
+	&--fullscreen {
+		height: $map-height-fullscreen;
+	}
+
+	&__canvas {
+		height: $map-canvas-height;
+	}
 }

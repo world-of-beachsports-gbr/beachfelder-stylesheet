@@ -1,0 +1,23 @@
+@import '../../mixins/background-color.mixin';
+@import '../../mixins/dimension.mixin';
+@import '../../mixins/opacity.mixin';
+
+@import 'marker-map.setup';
+
+.marker-map {
+    @include -dimension(20px);
+    @include -background-color-green-01;
+    
+    border-radius: $marker-map-border-radius;
+    border: $marker-map-border-width $marker-map-border-color solid;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $marker-map-background-color-hovered;
+    }
+
+    &--is-active {
+        background-color: $marker-map-background-color-active;
+    }
+}

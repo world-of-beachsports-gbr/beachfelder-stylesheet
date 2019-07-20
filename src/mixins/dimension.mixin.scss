@@ -1,0 +1,6 @@
+@import '../setup/pxtorem';
+
+@mixin -dimension($width, $height: $width) {
+  width: rem($width);
+  height: rem($height);
+}
