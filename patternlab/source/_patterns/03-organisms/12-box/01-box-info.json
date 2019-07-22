@@ -1,0 +1,23 @@
+{
+    "box-info_title": "Some box title",
+    "box-info_suptitle": "some suptitle",
+    "box-info_subtitle": "some subtitle",
+
+    "rating": [
+        {
+            "isBlue": true
+        },
+        {
+            "isBlue": true
+        },
+        {
+            "isBlue": true
+        },
+        {
+            "isBlue": false
+        },
+        {
+            "isBlue": false
+        }
+    ]
+}

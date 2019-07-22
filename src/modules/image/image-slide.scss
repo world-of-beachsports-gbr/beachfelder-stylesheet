@@ -1,0 +1,40 @@
+@import '../../mixins/breakpoint.mixin';
+@import '../../mixins/text-color.mixin';
+@import '../../mixins/font-size.mixin';
+@import '../../mixins/position.mixin';
+
+@import 'image-slide.setup';
+
+.image-slide {
+
+    &__image {
+        width: $image-slide-image-width;
+    }
+
+    &__arrow {
+        @include -position(absolute);
+        @include -font-size(30);
+        @include -text-color-white;
+
+        top: $image-slide-arrow-position-top;
+        transform: translateY(-$image-slide-arrow-position-top);
+        outline: none;
+        border: none;
+        -webkit-appearance: none;
+        background: transparent;
+        text-shadow: $image-slide-arrow-text-shadow;
+        cursor: pointer;
+
+        @include breakpoint('m') {
+            @include -font-size(40);
+        }
+
+        &--left {
+            left: $image-slide-arrow-left-position-left;
+        }
+
+        &--right {
+            right: $image-slide-arrow-left-position-right;
+        }
+    }
+}

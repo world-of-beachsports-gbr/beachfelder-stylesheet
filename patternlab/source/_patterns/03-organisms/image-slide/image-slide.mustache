@@ -1,0 +1,17 @@
+<div class="image-slide glide {{ styleModifier }}">
+    <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+            {{# image-slide_items }}
+            <li class="glide__slide">
+                <img src="{{ image }}" class="image-slide__image">
+            </li>
+            {{/ image-slide_items }}
+        </ul>
+    </div>
+    {{# image-slide_showArrows }}
+    <div class="image-slide__arrows glide__arrows" data-glide-el="controls">
+        <button class="image-slide__arrow image-slide__arrow--left glide__arrow glide__arrow--left" data-glide-dir="<"><span class="icon icon--chevron-left" ></span> </button>
+        <button class="image-slide__arrow image-slide__arrow--right glide__arrow glide__arrow--right" data-glide-dir=">"><span class="icon icon--chevron-right" ></span></button>
+    </div>
+    {{/ image-slide_showArrows }}
+</div>

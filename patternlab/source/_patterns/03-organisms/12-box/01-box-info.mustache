@@ -1,0 +1,23 @@
+<div class="box-info">
+    <div class="box-info__media">
+		{{> organisms-image-slide }}
+        <!-- <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+                <li class="glide__slide"><img src="http://world-of-beachsports.com/images/slide-image-01-retina.jpg" class="box-info__image"></li>
+            </ul>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><span class="" data-feather="chevron-left"></span> </button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><span class="" data-feather="chevron-right"></span></button>
+        </div> -->
+	</div>
+    <div class="box-info__content">
+        <p class="box-info__suptitle">{{ box-info_suptitle }}</p>
+        <h3 class="box-info__title">{{ box-info_title }}</h3>
+        <p class="box-info__subtitle"> {{ box-info_subtitle }} </p>
+		
+		{{> molecules-rating:box-info__rating }}
+
+		{{> molecules-button-primary:box-info__button(button-primary_label: "Details") }}
+    </div>
+</div>

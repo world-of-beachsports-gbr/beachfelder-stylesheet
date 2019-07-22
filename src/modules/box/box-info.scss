@@ -1,0 +1,68 @@
+@import '../../mixins/responsive-ratio.mixin';
+@import '../../mixins/background-color.mixin';
+@import '../../mixins/text-color.mixin';
+@import '../../mixins/font-size.mixin';
+@import '../../mixins/spacing.mixin';
+
+@import 'box-info.setup';
+
+.box-info {
+    $bem-block: &;
+    
+    @include -background-color-white;
+
+    height: auto;
+    border-radius: $box-info-border-radius;
+    overflow: hidden;
+    transition: .4s ease-in-out;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.05);
+    
+    &__media {
+        position: relative;
+        width: $box-info-media-width;
+    }
+    
+    &__image {
+        width: $box-info-image-width;
+    }
+    
+    &__content {
+        @include -spacing-inner('top', 30px);
+        @include -spacing-inner('right', 15px);
+        @include -spacing-inner('bottom', 15px);
+        @include -spacing-inner('left', 15px);
+    }
+    
+    &__suptitle {
+      @include -font-primary;
+      @include -text-color-blue-02;
+      @include -font-size(14);
+    }
+    
+    &__title {
+      @include -font-secondary;
+      @include -text-color-blue-01;
+      @include -spacing-outer(10);
+      @include -font-size(20);
+
+      text-transform: uppercase;
+      white-space: nowrap; 
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    
+    &__subtitle {
+      @include -font-primary;
+      @include -text-color-blue-02;
+      @include -spacing-outer(5);
+      @include -font-size(16);
+    }
+    
+    &__rating {
+        @include -spacing-outer(15);
+    }
+    
+    &__button {
+        @include -spacing-outer(30);
+    }
+  }

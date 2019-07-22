@@ -1,5 +1,5 @@
 ---
-title: sidebar
+title: Box Info
 state: inprogress
 ---
 
