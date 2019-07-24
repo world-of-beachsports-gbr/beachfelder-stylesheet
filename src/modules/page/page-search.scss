@@ -1,0 +1,12 @@
+@import '../../mixins/spacing.mixin';
+
+@import 'page-search.setup';
+
+.page-search {
+
+	&__map {
+		@include -spacing-outer(50);
+
+		height: $page-search-map-height;
+	}
+}

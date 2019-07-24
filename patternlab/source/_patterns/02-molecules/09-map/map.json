@@ -1,5 +1,6 @@
 {
 	"bodyClass": "sg-wrapper-light",
-	"map-iframeHeight": "100%",
-	"map-isFullScreen": false
+	"map_iframeHeight": "100%",
+	"map_isFullScreen": false,
+	"map_hasMarker": true
 }

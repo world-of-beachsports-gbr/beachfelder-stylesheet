@@ -1,11 +1,39 @@
+@import '../mixins/breakpoint.mixin';
 @import '../mixins/text-align.mixin';
 
 .-align {
 
-  &-left { @include -text-align(left); }
+  &-left {
+    @include -text-align(left); 
+    
+    &--xxs-up { @include breakpoint('xxs') { @include -text-align(left) } }
+    &--xs-up { @include breakpoint('xs') { @include -text-align(left) } }
+    &--s-up { @include breakpoint('s') { @include -text-align(left) } }
+    &--m-up { @include breakpoint('m') { @include -text-align(left) } }
+    &--l-up { @include breakpoint('l') { @include -text-align(left) } }
+    
+  }
 
-  &-center { @include -text-align(center); }
+  &-center {
+    @include -text-align(center);
 
-  &-right { @include -text-align(right); }
+    &--xxs-up { @include breakpoint('xxs') { @include -text-align(center) } }
+    &--xs-up { @include breakpoint('xs') { @include -text-align(center) } }
+    &--s-up { @include breakpoint('s') { @include -text-align(center) } }
+    &--m-up { @include breakpoint('m') { @include -text-align(center) } }
+    &--l-up { @include breakpoint('l') { @include -text-align(center) } }
+  }
+
+  &-right {
+    @include -text-align(right);
+
+    &--xxs-up { @include breakpoint('xxs') { @include -text-align(right) } }
+    &--xs-up { @include breakpoint('xs') { @include -text-align(right) } }
+    &--s-up { @include breakpoint('s') { @include -text-align(right) } }
+    &--m-up { @include breakpoint('m') { @include -text-align(right) } }
+    &--l-up { @include breakpoint('l') { @include -text-align(right) } }
+  }
+
+  
 
 }

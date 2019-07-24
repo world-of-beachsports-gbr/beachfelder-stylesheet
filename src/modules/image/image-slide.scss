@@ -29,6 +29,10 @@
             @include -font-size(40);
         }
 
+        &:hover {
+            @include -text-color-green-01;
+        }
+
         &--left {
             left: $image-slide-arrow-left-position-left;
         }

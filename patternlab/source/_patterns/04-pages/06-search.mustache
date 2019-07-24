@@ -1,0 +1,60 @@
+{{> organisms-topbar }}
+
+<div class="page-search">
+	<div class="content page-search__content">
+		<div class="row">
+			<div class="column column--12 -spacing-outer-50">
+				<h2 class="-typo-headline-02 -text-color-blue-01 -font-secondary"> {{ search_title }} <span class="-text-color-green-01"> {{ search_titleSearchString }} </span> </h2>
+			</div>
+		</div><!-- .row ENDE -->
+		<div class="row -spacing-outer-40">
+			<div class="column column--12 column--m-4 -spacing-outer-10">
+				<p class="-typo-copy -text-color-blue-02 -font-primary">Entfernung in km</p>
+				{{> molecules-input-range:-spacing-outer-10(input-range_minValue: "0", input-range_maxValue: "100", input-range_value: "15") }}
+			</div>
+			<div class="column column--12 column--m-4 -spacing-outer-10">
+					<p class="-typo-copy -text-color-blue-02 -font-primary">Bewertung (in beachfelder.de-Bällen)</p>
+					{{> molecules-input-range:-spacing-outer-10(input-range_minValue: "0", input-range_maxValue: "5", input-range_value: "0") }}
+			</div>
+			<div class="column column--12 column--m-4 -spacing-outer-10 -align-right--m-up">
+				{{> molecules-button-secondary:-spacing-outer-20(button-secondary_label: "mehr Filter", button-secondary_icon: "filter") }}
+			</div>
+		</div>
+		<div class="row">
+			<div class="column column--12 -spacing-outer-40">
+				<hr class="divider">
+			</div>
+		</div>
+	</div> <!-- .content ENDE -->
+
+	{{> molecules-map:page-search__map }}
+
+	<div class="content">
+		<div class="row -spacing-outer-90">
+			<div class="column column--12 column--s-6 column--m-4 -spacing-outer-10">
+				{{> organisms-item-beachcourt(item-beachcourt_title: "Tiefenbronn", item-beachcourt_distance: true, item-beachcourt_image: "https://maps.googleapis.com/maps/api/staticmap?center=53.229016,8.913553&zoom=19&scale=2&size=347x180&maptype=satellite&format=jpg&visual_refresh=true&key=AIzaSyAXZ7GDxm_FJ5g5yVdkawywTg7swA1rVeE") }}
+			</div>
+			<div class="column column--12 column--s-6 column--m-4 -spacing-outer-10">
+				{{> organisms-item-beachcourt(item-beachcourt_title: "Neuhausen-Steinegg", item-beachcourt_distance: true, item-beachcourt_image: "https://maps.googleapis.com/maps/api/staticmap?center=53.229016,8.913553&zoom=19&scale=2&size=347x180&maptype=satellite&format=jpg&visual_refresh=true&key=AIzaSyAXZ7GDxm_FJ5g5yVdkawywTg7swA1rVeE") }}
+			</div>
+			<div class="column column--12 column--s-6 column--m-4 -spacing-outer-10">
+				{{> organisms-item-beachcourt(item-beachcourt_title: "Heimsheim", item-beachcourt_distance: true, item-beachcourt_image: "https://maps.googleapis.com/maps/api/staticmap?center=53.229016,8.913553&zoom=19&scale=2&size=347x180&maptype=satellite&format=jpg&visual_refresh=true&key=AIzaSyAXZ7GDxm_FJ5g5yVdkawywTg7swA1rVeE") }}
+			</div>
+		</div>
+		<div class="row -spacing-outer-90">
+			<div class="column column--12 column--s-6 column--m-4 -spacing-outer-10">
+				{{> organisms-item-beachcourt(item-beachcourt_title: "Tiefenbronn", item-beachcourt_distance: true, item-beachcourt_image: "https://maps.googleapis.com/maps/api/staticmap?center=53.229016,8.913553&zoom=19&scale=2&size=347x180&maptype=satellite&format=jpg&visual_refresh=true&key=AIzaSyAXZ7GDxm_FJ5g5yVdkawywTg7swA1rVeE") }}
+			</div>
+			<div class="column column--12 column--s-6 column--m-4 -spacing-outer-10">
+				{{> organisms-item-beachcourt(item-beachcourt_title: "Neuhausen-Steinegg", item-beachcourt_distance: true, item-beachcourt_image: "https://maps.googleapis.com/maps/api/staticmap?center=53.229016,8.913553&zoom=19&scale=2&size=347x180&maptype=satellite&format=jpg&visual_refresh=true&key=AIzaSyAXZ7GDxm_FJ5g5yVdkawywTg7swA1rVeE") }}
+			</div>
+			<div class="column column--12 column--s-6 column--m-4 -spacing-outer-10">
+				{{> organisms-item-beachcourt(item-beachcourt_title: "Heimsheim", item-beachcourt_distance: true, item-beachcourt_image: "https://maps.googleapis.com/maps/api/staticmap?center=53.229016,8.913553&zoom=19&scale=2&size=347x180&maptype=satellite&format=jpg&visual_refresh=true&key=AIzaSyAXZ7GDxm_FJ5g5yVdkawywTg7swA1rVeE") }}
+			</div>
+		</div>
+	</div>
+</div>
+
+{{> organisms-teaser-text:-spacing-outer-100 }}
+
+{{> organisms-footer }}
