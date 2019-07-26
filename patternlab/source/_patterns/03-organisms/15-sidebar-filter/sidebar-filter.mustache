@@ -1,0 +1,27 @@
+<div class="sidebar-filter {{ styleModifier }} {{# sidebar-filter_isVisible }} sidebar-filter--open {{/ sidebar-filter_isVisible }}">
+	<span class="icon icon--x-circle sidebar-filter__icon"></span>
+	<h3 class="sidebar-filter__title">{{ sidebar-filter_title }} </h3>
+
+	<div class="sidebar-filter__option">
+		<p class="sidebar-filter__subtitle">Indoor oder Outdoor?</p>
+		
+		{{> molecules-input-radio:sidebar-filter__input(input-radio_label: "nur Indoor-Felder") }}
+		{{> molecules-input-radio:sidebar-filter__input(input-radio_label: "nur Outdoor-Felder") }}
+		{{> molecules-input-radio:sidebar-filter__input(input-radio_label: "Alle anzeigen") }}
+	</div>
+	
+	<div class="sidebar-filter__option">
+		<p class="sidebar-filter__subtitle">Zugang</p>
+		
+		{{> molecules-input-radio:sidebar-filter__input(input-radio_label: "nur Indoor-Felder") }}
+		{{> molecules-input-radio:sidebar-filter__input(input-radio_label: "nur Outdoor-Felder") }}
+		{{> molecules-input-radio:sidebar-filter__input(input-radio_label: "Alle anzeigen") }}
+	</div>
+	
+	<div class="sidebar-filter__option">
+		<p class="sidebar-filter__subtitle">Beach & Swim</p>
+		
+		{{> molecules-input-radio:sidebar-filter__input(input-radio_label: "nur Felder an einem See oder in einem Freibad") }}
+		{{> molecules-input-radio:sidebar-filter__input(input-radio_label: "Alle anzeigen") }}
+	</div>
+</div>

@@ -1,0 +1,18 @@
+@import '../../setup/pxtorem';
+
+
+$sidebar-filter-position-right: 200% !default;
+$sidebar-filter-position-right-open: 0 !default;
+
+$sidebar-filter-position-top: 0 !default;
+$sidebar-filter-height: 100vh !default;
+$sidebar-filter-width: 100% !default;
+$sidebar-filter-width-m: 50% !default;
+$sidebar-filter-z-index: 10 !default;
+$sidebar-filter-z-index-open: 100 !default;
+
+$sidebar-filter-icon-position-right: rem(10px) !default;
+$sidebar-filter-icon-position-top: $sidebar-filter-icon-position-right !default;
+
+$sidebar-filter-option-border-width: 1px !default;
+$sidebar-filter-option-border-color: $color-palette-blue-02 !default;

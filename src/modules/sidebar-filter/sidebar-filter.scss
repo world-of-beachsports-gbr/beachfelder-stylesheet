@@ -1,0 +1,90 @@
+@import '../../mixins/background-color.mixin';
+@import '../../mixins/breakpoint.mixin';
+@import '../../mixins/text-color.mixin';
+@import '../../mixins/font-size.mixin';
+@import '../../mixins/position.mixin';
+@import '../../mixins/spacing.mixin';
+@import '../../mixins/display.mixin';
+
+@import 'sidebar-filter.setup';
+
+.sidebar-filter {
+	@include -position(fixed);
+	@include -spacing-inner('top', 40px);
+	@include -spacing-inner('bottom', 40px);
+	@include -spacing-inner('left', 40px);
+	@include -spacing-inner('right', 40px);
+	@include -background-color-gray-02;
+
+	right: -$sidebar-filter-position-right;
+	top: $sidebar-filter-position-top;
+	height: $sidebar-filter-height;
+	width: $sidebar-filter-width;
+	overflow-y: auto;
+	z-index: $sidebar-filter-z-index;
+	
+	transition: all .5s ease-in-out;
+
+	@include breakpoint('m') {
+		width: $sidebar-filter-width-m;
+		box-shadow: -11px 0px 10px -6px rgba(166,166,166,.5);
+	}
+
+	&--open {
+		right: $sidebar-filter-position-right-open;
+    z-index: $sidebar-filter-z-index-open;
+	}
+
+	&__title {
+		@include -text-color-green-01;
+		@include -font-secondary;
+		@include -font-size(20);
+
+		text-transform: uppercase;
+
+		@include breakpoint('m') {
+			@include -font-size(25);
+		}
+	}
+	
+	&__subtitle {
+		@include -text-color-blue-02;
+		@include -font-primary;
+		@include -typo-copy-strong;
+	}
+
+	&__icon {
+		@include -position(absolute);
+		@include -text-color-blue-02;
+		@include -font-size(30);
+
+    right: $sidebar-filter-icon-position-right;
+		top: $sidebar-filter-icon-position-top;
+		
+		cursor: pointer;
+		
+		&:hover {
+			@include -text-color-green-01;
+		}
+	}
+
+	&__option {
+		@include -spacing-inner('bottom', 30px);
+		@include -spacing-outer(30);
+		
+		border-bottom: $sidebar-filter-option-border-width $sidebar-filter-option-border-color solid;
+		
+		&:first-of-type {
+			@include -spacing-outer(15);
+		}
+	}
+
+	&__input {
+		@include -spacing-outer(20);
+		@include -display(block);
+
+		&:first-of-type {
+			@include -spacing-outer(15);
+		}
+	}
+}
