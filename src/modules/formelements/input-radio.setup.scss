@@ -3,12 +3,17 @@
 
 $input-radio-label-line-height: 1.5 !default;
 
-$input-radio-label-before-border-radius: rem(2px) !default;
+$input-radio-label-before-border-radius: 50% !default;
 $input-radio-label-before-dimension: rem(16px) !default;
-$input-radio-label-before-position-left: 0 !default;
+$input-radio-label-before-position-left: 4px !default;
 $input-radio-label-before-position-top: 50% !default;
-$input-radio-label-before-border-width: 1px !default;
-$input-radio-label-before-border-color: $color-palette-blue-02 !default;
+
+$input-radio-label-after-dimension: rem(22px) !default;
+$input-radio-label-after-position-left: 0 !default;
+$input-radio-label-after-position-top: 50% !default;
+$input-radio-label-after-border-radius: 50% !default;
+$input-radio-label-after-border-width: 1px !default;
+$input-radio-label-after-border-color: $color-palette-gray-03 !default;
 
 $input-radio-label-before-border-radius-checked: 50% !default;
 $input-radio-label-before-border-color-disabled: $color-palette-gray-03 !default;

@@ -1,3 +1,4 @@
+@import '../../mixins/background-color.mixin';
 @import '../../mixins/text-color.mixin';
 @import '../../mixins/font-size.mixin';
 @import '../../mixins/animation.mixin';
@@ -8,52 +9,120 @@
 @import 'input-radio.setup';
 
 .input-radio {
-  @include -spacing-inner('right', 10);
   @include -display(inline-block);
-  
+
   $bem-block: &;
-  
+
   &__field {
     @include -display(none);
-    
+
     appearance: none;
   }
 
   &__label {
-    @include -spacing-inner('left', 25);
+    @include -spacing-inner('left', 30);
+    @include -spacing-inner('right', 35);
     @include -text-color-blue-02;
     @include -position(relative);
     @include -font-size(16);
     @include -font-primary;
-    
+
     line-height: $input-radio-label-line-height;
     cursor: pointer;
 
     &::before {
       @include -position(absolute);
       @include -transition(all, .3s);
+      @include -background-color-white;
 
       content: '';
+      //background: transparent;
       left: $input-radio-label-before-position-left;
       top: $input-radio-label-before-position-top;
       width: $input-radio-label-before-dimension;
       height: $input-radio-label-before-dimension;
-      transform: translateY(-$input-radio-label-before-position-top);
-      border-bottom: $input-radio-label-before-border-width $input-radio-label-before-border-color solid;
       border-radius: $input-radio-label-before-border-radius;
+      transform: translateY(-$input-radio-label-before-position-top);
+    }
+
+    &::after {
+      @include -position(absolute);
+      @include -transition(all, .3s);
+
+      content: '';
+      left: $input-radio-label-after-position-left;
+      top: $input-radio-label-after-position-top;
+      width: $input-radio-label-after-dimension;
+      height: $input-radio-label-after-dimension;
+      border-radius: $input-radio-label-after-border-radius;
+      transform: translateY(-$input-radio-label-after-position-top);
+      border: $input-radio-label-after-border-width $input-radio-label-after-border-color solid;
+      z-index: -1;
     }
   }
 
   #{$bem-block}__field:checked + #{$bem-block}__label::before {
     @include -background-color-green-01;
-    border-radius: $input-radio-label-before-border-radius-checked;
   }
 
   #{$bem-block}__field:disabled + #{$bem-block}__label {
     @include -text-color-gray-03;
+    cursor: default;
   }
 
   #{$bem-block}__field:disabled + #{$bem-block}__label::before {
-    border-bottom-color: $input-radio-label-before-border-color-disabled;
+    @include -background-color-gray-03;
+    cursor: default;
   }
 }
+
+// .input-radio {
+//   @include -spacing-inner('right', 10);
+//   @include -display(inline-block);
+  
+//   $bem-block: &;
+  
+//   &__field {
+//     @include -display(none);
+    
+//     appearance: none;
+//   }
+
+//   &__label {
+    // @include -spacing-inner('left', 25);
+    // @include -text-color-blue-02;
+    // @include -position(relative);
+    // @include -font-size(16);
+    // @include -font-primary;
+    
+//     line-height: $input-radio-label-line-height;
+//     cursor: pointer;
+
+//     &::before {
+//       @include -position(absolute);
+//       @include -transition(all, .3s);
+
+//       content: '';
+      // left: $input-radio-label-before-position-left;
+      // top: $input-radio-label-before-position-top;
+//       width: $input-radio-label-before-dimension;
+//       height: $input-radio-label-before-dimension;
+//       transform: translateY(-$input-radio-label-before-position-top);
+//       border-bottom: $input-radio-label-before-border-width $input-radio-label-before-border-color solid;
+//       border-radius: $input-radio-label-before-border-radius;
+//     }
+//   }
+
+//   #{$bem-block}__field:checked + #{$bem-block}__label::before {
+//     @include -background-color-green-01;
+//     border-radius: $input-radio-label-before-border-radius-checked;
+//   }
+
+//   #{$bem-block}__field:disabled + #{$bem-block}__label {
+//     @include -text-color-gray-03;
+//   }
+
+//   #{$bem-block}__field:disabled + #{$bem-block}__label::before {
+//     border-bottom-color: $input-radio-label-before-border-color-disabled;
+//   }
+// }

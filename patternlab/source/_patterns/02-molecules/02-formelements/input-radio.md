@@ -1,5 +1,5 @@
 ---
-title: input radio
+title: Input Radio
 state: complete
 ---
 
