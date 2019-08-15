@@ -1,0 +1,81 @@
+@import '../../mixins/background-color.mixin';
+@import '../../mixins/text-color.mixin';
+@import '../../mixins/text-align.mixin';
+@import '../../mixins/font-size.mixin';
+@import '../../mixins/position.mixin';
+@import '../../mixins/spacing.mixin';
+@import '../../mixins/display.mixin';
+@import '../../mixins/opacity.mixin';
+@import '../../mixins/font.mixin';
+
+@import 'submenu.setup';
+
+.submenu {
+	@include -background-color-white;
+	@include -opacity(0);
+	
+	$bem-block: &;
+
+	width: $submenu-width;
+	height: auto;
+	border-left: 1px #f8f8f8 solid;
+	border-right: 1px #f8f8f8 solid;
+	border-bottom: 1px #f8f8f8 solid;
+	border-radius: $submenu-border-radius;
+	visibility: visible;
+	transition: .5s;
+	z-index: $submenu-z-index;
+	transform: translateY(-100%);
+	
+	&--visible {
+		@include -opacity(1);
+		
+		visibility: visible;
+		transform: translateY(0);
+		z-index: $submenu-z-index-visible;
+	}
+	
+	&__list {
+		width: $submenu-list-width;
+	}
+	
+	&__item {
+		@include -text-align(left);
+		
+		&:not(:last-of-type) {
+			border-bottom: 1px solid #efefef;
+		}
+	}
+	
+	&__link {
+		@include -text-color-blue-02;
+		@include -font-size(16);
+		@include -font-primary;
+		@include -spacing-inner('top', 25);
+		@include -spacing-inner('right', 25);
+		@include -spacing-inner('bottom', 25);
+		@include -spacing-inner('left', 25);
+		@include -display(block);
+		
+		text-decoration: none;
+		transition: .3s ease-in-out;
+		
+		&:hover {
+			@include -spacing-inner('left', 22px);
+			@include -text-color-blue-01;
+		}
+
+		&:hover #{$bem-block}__icon {
+			@include -text-color-blue-01;
+		}
+	}
+	
+	&__icon {
+		@include -text-color-blue-02;
+
+		width: $submenu-icon-dimension;
+		height: $submenu-icon-dimension;
+		margin-right: $submenu-icon-outer-spacing-right;
+		vertical-align: middle;
+	}
+}

@@ -1,0 +1,12 @@
+<div class="profile-info-small">
+	<a href="#"> <img src="{{ profile-info-small_image }}" alt="" class="profile-info-small__image"></a>
+	<div class="profile-info-small__content">
+		<a href="#" class="profile-info-small__title">{{ profile-info-small_title }}</a>
+		<a href="#" class="profile-info-small__subtitle">{{ profile-info-small_subtitle }}</a>
+	</div>
+	<span class="profile-info-small__icon icon icon--chevron-down"></span>
+
+	{{# profile-info-small_submenuOpen }}
+		{{> organisms-submenu:profile-info-small__submenu }}
+	{{/ profile-info-small_submenuOpen }}
+</div>

@@ -27,7 +27,7 @@
   }
 
   &:hover {
-    @include -text-color-gray-01;
+    @include -text-color-green-01;
     
     &::before {
       width: $link-text-before-width-hovered;

@@ -22,6 +22,7 @@
   &__label {
     @include -spacing-inner('left', 30);
     @include -spacing-inner('right', 35);
+    @include -display(inline-block);
     @include -text-color-blue-02;
     @include -position(relative);
     @include -font-size(16);
@@ -42,7 +43,6 @@
       width: $input-radio-label-before-dimension;
       height: $input-radio-label-before-dimension;
       border-radius: $input-radio-label-before-border-radius;
-      transform: translateY(-$input-radio-label-before-position-top);
     }
 
     &::after {
@@ -55,7 +55,6 @@
       width: $input-radio-label-after-dimension;
       height: $input-radio-label-after-dimension;
       border-radius: $input-radio-label-after-border-radius;
-      transform: translateY(-$input-radio-label-after-position-top);
       border: $input-radio-label-after-border-width $input-radio-label-after-border-color solid;
       z-index: -1;
     }

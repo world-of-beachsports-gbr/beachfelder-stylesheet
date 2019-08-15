@@ -6,12 +6,13 @@
           {{> atoms-signet:topbar__signet(signet_color: "green") }}
         </a>
       </div>
-      <div class="column column--10 column--xs-8 column--s-8">
+      <div class="column column--10 column--xs-10 column--s-7">
         {{> molecules-input:topbar__input(input_label: "Suche", input_type: "text", input_icon: "search")}}
       </div>
-      <div class="column column--12 column--xs-2 column--s-2 -align-right -hide--xxs-xs -hide--xs-s">
+      <div class="column column--12 column--xs-2 column--s-3 -align-right -hide--xxs-xs -hide--xs-s">
         {{# topbar_isLoggedIn }}
-          bin drin
+          {{> organisms-profile-info-small }}
+          
         {{/ topbar_isLoggedIn }}
         {{^ topbar_isLoggedIn }}
           {{> molecules-link-icon(link-icon_icon:"heart", link-icon_hasShadow: false) }}

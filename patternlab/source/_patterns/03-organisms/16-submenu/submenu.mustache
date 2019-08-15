@@ -1,0 +1,7 @@
+<div class="submenu {{ styleModifier }} {{# submenu_isVisible }} submenu--visible {{/ submenu_isVisible }}">
+	<ul class="submenu__list">
+		{{# submenu_listItems }}
+			<li class="submenu__item"><a href="#" class="submenu__link"><span class="submenu__icon icon icon--{{icon}}"></span>{{ label }}</a></li>
+		{{/ submenu_listItems }}
+	</ul>
+</div>

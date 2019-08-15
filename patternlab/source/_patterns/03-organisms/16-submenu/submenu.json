@@ -1,0 +1,13 @@
+{
+    "submenu_isVisible": true,
+    "submenu_listItems": [
+        {
+            "icon": "settings",
+            "label": "some submenu Link"
+        },
+        {
+            "icon": "log-out",
+            "label": "some submenu Link"
+        }
+    ]
+}

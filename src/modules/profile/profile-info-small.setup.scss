@@ -1,0 +1,13 @@
+@import '../../setup/pxtorem';
+
+$profile-info-small-border-radius: rem(3px) rem(3px) 0 0 !default;
+$profile-info-small-image-border-radius: 50% !default;
+$profile-info-small-image-max-width: rem(50px) !default;
+$profile-info-small-title-font-weight: 700 !default;
+
+$profile-info-small-icon-dimension: rem(20px) !default;
+$profile-info-small-icon-position-right: rem(20px) !default;
+$profile-info-small-icon-position-top: 50% !default;
+
+$profile-info-small-submenu-position-top: 100% !default;
+$profile-info-small-submenu-position-left: 1px !default;

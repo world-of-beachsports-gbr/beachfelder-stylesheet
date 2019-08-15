@@ -1,0 +1,92 @@
+@import '../../mixins/background-color.mixin';
+@import '../../mixins/text-color.mixin';
+@import '../../mixins/text-align.mixin';
+@import '../../mixins/font-size.mixin';
+@import '../../mixins/position.mixin';
+@import '../../mixins/opacity.mixin';
+@import '../../mixins/spacing.mixin';
+@import '../../mixins/font.mixin';
+@import '../../mixins/flex.mixin';
+
+@import 'profile-info-small.setup';
+
+.profile-info-small {
+    @include -background-color-white;
+    @include -flex;
+    @include -position(relative);
+    @include -flex-align-items(center);
+    @include -spacing-inner('top', 10);
+    @include -spacing-inner('bottom', 10);
+    @include -spacing-inner('left', 20);
+    @include -spacing-inner('right', 65);
+  
+    $bem-block: &;
+    width: auto;
+    cursor: pointer;
+    border: 1px #f8f8f8 solid;
+    border-radius: $profile-info-small-border-radius;
+    
+    &:hover #{$bem-block}__image {
+      @include -opacity(.7);
+
+      transform: scale(1.05);
+    }
+    
+    &:hover #{$bem-block}__title,
+    &:hover #{$bem-block}__subtitle,
+    &:hover #{$bem-block}__icon {
+      @include -text-color-blue-01;
+    }
+    
+    &__image {
+      border-radius: $profile-info-small-image-border-radius;
+      max-width: $profile-info-small-image-max-width;
+      transition: .3s ease-in-out;
+    }
+    
+    &__content {
+      @include -spacing-inner('left', 15);
+    }
+    
+    &__title {
+        @include -text-color-blue-02;
+        @include -font-size(16);
+        @include -font-primary;
+
+        display: block;
+        font-weight: $profile-info-small-title-font-weight;
+        text-decoration: none;
+        transition: color .3s;
+    }
+    
+    &__subtitle {
+        @include -text-color-blue-02;
+        @include -font-size(14);
+        @include -font-primary;
+        @include -text-align(left);
+
+        text-decoration: none;
+        display: block;
+        transition: color .3s;
+    }
+    
+    &__icon {
+      @include -text-color-blue-02;
+      @include -position(absolute);
+      
+      width: $profile-info-small-icon-dimension;
+      height: $profile-info-small-icon-dimension;
+      right: $profile-info-small-icon-position-right;
+      top: $profile-info-small-icon-position-top;
+      transform: translateY(-$profile-info-small-icon-position-top);
+      cursor: pointer;
+      transition: color .3s;
+    }
+
+    &__submenu {
+      @include -position(absolute);
+      
+      top: $profile-info-small-submenu-position-top;
+      left: -$profile-info-small-submenu-position-left;
+    }
+  }

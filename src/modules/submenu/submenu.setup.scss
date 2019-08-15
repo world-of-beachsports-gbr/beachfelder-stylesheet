@@ -1,0 +1,11 @@
+@import '../../setup/pxtorem';
+
+$submenu-width: 100% !default;
+$submenu-z-index: -10 !default;
+$submenu-border-radius: 0 0 rem(3px) rem(3px) !default;
+$submenu-z-index-visible: 100 !default;
+
+$submenu-list-width: 100% !default;
+
+$submenu-icon-dimension: rem(18px) !default;
+$submenu-icon-outer-spacing-right: rem(15px) !default;
