@@ -1,5 +1,5 @@
 ---
-title: input field
+title: Input Field
 state: complete
 ---
 

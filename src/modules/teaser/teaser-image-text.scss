@@ -13,6 +13,9 @@
 
   @include breakpoint('s') {
     @include -flex-direction(row);
+    width: $teaser-image-text-width;
+    max-width: $teaser-image-text-max-width;
+    margin-left: calc( 50% - 50vw);
   }
 
   &__image {

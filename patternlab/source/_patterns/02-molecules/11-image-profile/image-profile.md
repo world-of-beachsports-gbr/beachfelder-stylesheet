@@ -1,5 +1,5 @@
 ---
-title: Iamge Profile
+title: Image Profile
 state: inprogress
 ---
 

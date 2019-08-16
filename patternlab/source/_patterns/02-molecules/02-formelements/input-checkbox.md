@@ -1,4 +1,4 @@
 ---
-title: checkbox
-state: inprogress
+title: Input Checkbox
+state: complete
 ---
