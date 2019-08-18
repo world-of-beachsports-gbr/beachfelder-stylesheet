@@ -1,4 +1,10 @@
 {
-	"notification-sticky_icon": "warning",
-	"notification-sticky_error": true
+	"notification-sticky_items": [
+		{
+			"icon": "alert-octagon",
+			"error": true,
+			"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem quidem eligendi quaerat officia accusantium omnis atque, unde consequatur odio asperiores, ut ea ipsum reprehenderit deleniti, suscipit neque iste eveniet excepturi.",
+			"hasButton": false
+		}
+	]	
 }

@@ -1,5 +1,5 @@
 ---
-title: notification sticky
+title: Notification Sticky
 state: complete
 ---
 

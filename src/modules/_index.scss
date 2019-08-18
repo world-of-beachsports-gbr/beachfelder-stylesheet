@@ -18,6 +18,7 @@
 @import 'topbar/index';
 @import "map/index";
 @import 'page/index';
+@import "notification/index";
 @import "box/index";
 
 @import 'item-beachcourt/index';
@@ -26,8 +27,7 @@
 
 
 //OLD
-@import "header-page/_index";
 @import "navigation/_index";
-@import "notification/_index";
+
 @import "profile/_index";
 @import "row-buttons/_index";

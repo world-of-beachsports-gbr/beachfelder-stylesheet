@@ -1,3 +1,10 @@
 {
-	"notification-sticky_button": true
+	"notification-sticky_items": [
+		{
+			"icon": "check-circle",
+			"error": false,
+			"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem quidem eligendi quaerat officia accusantium omnis atque, unde consequatur odio asperiores, ut ea ipsum reprehenderit deleniti, suscipit neque iste eveniet excepturi.",
+			"hasButton": true
+		}
+	]
 }

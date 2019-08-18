@@ -1,61 +1,77 @@
+@import '../../mixins/background-color.mixin';
+@import '../../mixins/text-color.mixin';
+@import '../../mixins/font-size.mixin';
 @import '../../mixins/font.mixin';
 @import '../../mixins/typo.mixin';
 @import '../../mixins/flex.mixin';
 @import '../../mixins/spacing.mixin';
 @import '../../mixins/text-align.mixin';
 @import '../../mixins/breakpoint.mixin';
+@import '../../mixins/opacity.mixin';
 @import '../../mixins/position.mixin';
 
 @import 'notification-sticky.setup';
 
 .notification-sticky {
 	@include -position(fixed);
-	
+	@include -background-color-green-01;
+
 	top: $notification-sticky-position;
 	left: $notification-sticky-position;
 	right: $notification-sticky-position;
-	background: $notification-sticky-background-color;
 	z-index: $notification-sticky-z-index;
-
-	&--error {
-		background: $notification-sticky-background-color-error;
-	}
 
 	&__content {
 		@include -flex;
 		@include -flex-justify-content(center);
 		@include -flex-align-items(center);
 		@include -text-align(center);
+		@include -spacing-inner('top', 15);
+		@include -spacing-inner('bottom', 15);
+		@include -flex-direction(column);
 
 		@include breakpoint('s') {
 			@include -flex-direction(row);
 			@include -text-align(left);
+			@include -spacing-inner('top', 20);
+			@include -spacing-inner('bottom', 20);
+		}
+	}
+
+	&__item {
+		@include -position(relative);
+		
+		&--error {
+			@include -background-color-red-01;
 		}
 	}
 
 	&__icon {
 		@include -position(relative);
-
-		color: $notification-sticky-icon-text-color;
-		font-size: $notification-sticky-icon-font-size;
+		@include -text-color-white;
+		@include -font-size(28);
 
 		@include breakpoint('s') {
+			@include -font-size(30);
+
 			margin-right: $notification-sticky-icon-spacing-right;
-			font-size: $notification-sticky-icon-font-size-s;
 		}
 
 		&--close {
 			@include -position(absolute);
+			@include -opacity(.6);
+			@include -text-color-white;
 
 			top: $notification-sticky-icon-close-safe-area;
 			right: $notification-sticky-icon-close-safe-area;
 			margin-right: $notification-sticky-icon-spacing-right-close;
 			font-size: $notification-sticky-icon-font-size-close;
-			color: $notification-sticky-icon-text-color-close;
+			transition: .2s ease-in-out;
 			cursor: pointer;
 			
 			&:hover {
-				color: $notification-sticky-icon-text-color-close-hover;
+				@include -opacity(1);
+				transform: scale(1.06);
 			}
 
 			&:after {
@@ -71,17 +87,19 @@
 	}
 
 	&__text {
-		@include -typo-copy;
+		@include -font-size(16);
 		@include -font-primary;
-
-		color: $notification-sticky-text-color;
-
+		@include -text-color-white;
+		@include -spacing-outer(10);
 		@include breakpoint('s') {
+			@include -spacing-outer(0);
 			margin-right: $notification-sticky-text-spacing-right;
 		}
 	}
 
 	&__button {
+		@include -spacing-outer(10);
+
 		max-width: $notification-sticky-button-max-width;
 		
 		@include breakpoint('s') {
