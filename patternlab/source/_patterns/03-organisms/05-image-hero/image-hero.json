@@ -1,4 +1,5 @@
 {
   "image-hero_image": "https://dummyimage.com/1920x800/000/fff.jpg",
-  "image-hero_hasOverlay": false
+  "image-hero_hasOverlay": false,
+  "image-hero_isHalf": false
 }

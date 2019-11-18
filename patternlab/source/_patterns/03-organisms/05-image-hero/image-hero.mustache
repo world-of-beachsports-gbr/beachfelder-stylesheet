@@ -1,4 +1,4 @@
-<div class="image-hero {{ styleModifier }}" style="background-image: url({{image-hero_image}});">
+<div class="image-hero {{ styleModifier }} {{# image-hero_isHalf }} image-hero--half {{/ image-hero_isHalf }}" style="background-image: url({{image-hero_image}});">
   {{# image-hero_hasOverlay }}
     {{> organisms-overlay }}
   {{/ image-hero_hasOverlay }}

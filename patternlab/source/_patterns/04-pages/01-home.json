@@ -3,6 +3,7 @@
   "home_titleCities": "Entdecke deutsche Städte",
   "image-hero_hasOverlay": true,
   "image-hero_image": "http://world-of-beachsports.com/images/martin-misere-BVB-3683.jpg",
+  "image-hero_isHalf": true,
 
   "overlay_hasInput": false,
   "overlay_hasButton": false,
