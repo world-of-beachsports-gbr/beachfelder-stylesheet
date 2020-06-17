@@ -2,6 +2,7 @@
 @import '../../mixins/font-size.mixin';
 @import '../../mixins/position.mixin';
 @import '../../mixins/display.mixin';
+@import '../../mixins/spacing.mixin';
 @import '../../mixins/font.mixin';
 
 @import 'icon-text.setup';
@@ -13,6 +14,7 @@
     @include -text-color-green-01;
     @include -position(absolute);
     @include -font-size(20);
+    @include -spacing-outer(0);
 
     left: $icon-text-icon-position-reset;
     top: $icon-text-icon-position-reset;

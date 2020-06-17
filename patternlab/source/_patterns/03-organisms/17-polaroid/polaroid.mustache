@@ -1,0 +1,17 @@
+<div class="polaroid {{ styleModifier }}">
+  <a href="#" class="polaroid__link">
+    <img src="{{ polaroid_image }}" class="polaroid__image">
+  </a>
+  <div class="polaroid__info">
+    {{# polaroid_hasUser }}
+      {{> organisms-image-text-rounded:polaroid__user }}
+    {{/ polaroid_hasUser }}
+
+    <p class="polaroid__title"> {{ polaroid_title }} </p>
+    <p class="polaroid__date"> hochgeladen am {{ polaroid_date }} </p>
+
+    {{# polaroid_hasLikes }}
+      {{> molecules-link-icon-text:polaroid__likes(link-icon-text_icon:"heart", link-icon-text_label: "234 Usern gefällt dieses Bild") }}
+    {{/ polaroid_hasLikes }}
+  </div>
+</div>

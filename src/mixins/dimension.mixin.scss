@@ -1,6 +1,22 @@
-@import '../setup/pxtorem';
-
 @mixin -dimension($width, $height: $width) {
-  width: rem($width);
-  height: rem($height);
+  
+  @if ($width and $height) {
+    @if unitless($width) { $width: $width + 0px; }
+    @if unitless($height) { $height: $height + 0px; }
+
+    width: $width;
+    height: $height;
+  }
+
+  @else if ($width) {
+    @if unitless($width) { $width: $width + 0px; }
+
+    width: $width;
+  }
+
+  @else {
+    @if unitless($height) { $height: $height + 0px; }
+
+    height: $height;
+  }
 }

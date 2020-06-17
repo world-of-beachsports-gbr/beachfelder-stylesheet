@@ -1,0 +1,63 @@
+@import '../../mixins/background-color.mixin';
+@import '../../mixins/dimension.mixin';
+@import '../../mixins/text-color.mixin';
+@import '../../mixins/position.mixin';
+@import '../../mixins/spacing.mixin';
+@import '../../mixins/display.mixin';
+
+@import 'polaroid.setup';
+
+.polaroid {
+  @include -background-color-white;
+  @include -spacing-inner('top', 20px);
+  @include -spacing-inner('bottom', 20px);
+  @include -spacing-inner('left', 20px);
+  @include -spacing-inner('right', 20px);
+  @include -dimension(100%);
+  
+  border: 1px #f6f6f6 solid;
+  border-radius: $polaroid-border-radius;
+  transition: .3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.05);
+  }
+
+  &__link {
+    @include -display(block);
+    text-decoration: none;
+  }
+
+  &__image{
+    max-width: $polaroid-image-max-width;
+  }
+
+  &__info {
+    @include -position(relative);
+  }
+
+  &__user {
+    @include -position(absolute);
+    @include -spacing-outer(15);
+    top: -50px;
+    left: 5px;
+  }
+
+  &__title {
+    @include -spacing-inner('top', 20px);
+    @include -font-primary;
+    @include -text-color-blue-01;
+    @include -typo-copy-strong;
+  }
+  
+  &__date {
+    @include -font-primary;
+    @include -text-color-blue-02;
+    @include -font-size(12);
+  }
+  
+  &__likes {
+    @include -spacing-outer(20);
+    @include -display(inline-block);
+  }
+}

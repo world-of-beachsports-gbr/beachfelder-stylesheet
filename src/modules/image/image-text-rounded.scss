@@ -1,0 +1,35 @@
+@import '../../mixins/breakpoint.mixin';
+@import '../../mixins/dimension.mixin';
+@import '../../mixins/text-color.mixin';
+@import '../../mixins/font-size.mixin';
+@import '../../mixins/display.mixin';
+@import '../../mixins/spacing.mixin';
+
+@import 'image-text-rounded.setup';
+
+.image-text-rounded {
+  @include -display(block);
+
+  &__link {
+    @include -display(block);
+  }
+
+  &__image {
+    @include -dimension(50);
+    border-radius: $image-text-rounded-image-border-radius;
+    vertical-align: middle;
+  }
+  
+  &__title {
+    @include -display(none);
+    
+    &--is-visible {
+      @include -display(inline);
+      @include -font-primary;
+      @include -font-size(16);
+      @include -text-color-blue-02;
+    
+      margin-left: $image-text-rounded-title-outer-spacing-left;
+    }
+  }
+}

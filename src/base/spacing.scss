@@ -1,24 +1,241 @@
+@import '../mixins/breakpoint.mixin';
 @import '../mixins/spacing.mixin';
 
 .-spacing {
-  &-outer-5 { @include -spacing-outer(5); }
-  &-outer-10 { @include -spacing-outer(10); }
-  &-outer-15 { @include -spacing-outer(15); }
-  &-outer-20 { @include -spacing-outer(20); }
-  &-outer-25 { @include -spacing-outer(25); }
-  &-outer-30 { @include -spacing-outer(30); }
-  &-outer-35 { @include -spacing-outer(35); }
-  &-outer-40 { @include -spacing-outer(40); }
-  &-outer-45 { @include -spacing-outer(45); }
-  &-outer-50 { @include -spacing-outer(50); }
-  &-outer-55 { @include -spacing-outer(55); }
-  &-outer-60 { @include -spacing-outer(60); }
-  &-outer-70 { @include -spacing-outer(70); }
-  &-outer-80 { @include -spacing-outer(80); }
-  &-outer-90 { @include -spacing-outer(90); }
-  &-outer-100 { @include -spacing-outer(100); }
-  &-outer-125 { @include -spacing-outer(125); }
-  &-outer-150 { @include -spacing-outer(150); }
-  &-outer-175 { @include -spacing-outer(175); }
-  &-outer-200 { @include -spacing-outer(200); }
+
+	&-outer {
+		&-5 { @include -spacing-outer(5); }
+		&-10 { @include -spacing-outer(10); }
+		&-15 { @include -spacing-outer(15); }
+		&-20 { @include -spacing-outer(20); }
+		&-25 { @include -spacing-outer(25); }
+		&-30 { @include -spacing-outer(30); }
+		&-35 { @include -spacing-outer(35); }
+		&-40 { @include -spacing-outer(40); }
+		&-45 { @include -spacing-outer(45); }
+		&-50 { @include -spacing-outer(50); }
+		&-60 { @include -spacing-outer(60); }
+		&-70 { @include -spacing-outer(70); }
+		&-80 { @include -spacing-outer(80); }
+		&-90 { @include -spacing-outer(90); }
+		&-100 { @include -spacing-outer(100); }
+		&-125 { @include -spacing-outer(125); }
+		&-150 { @include -spacing-outer(150); }
+		&-175 { @include -spacing-outer(175); }
+		&-200 { @include -spacing-outer(200); }
+
+		// From xxs to xs
+		&-xxs-5 { @include breakpoint('xxs', 'xs') { @include -spacing-outer(5); } }
+		&-xxs-10 { @include breakpoint('xxs', 'xs') { @include -spacing-outer(10); } }
+		&-xxs-15 { @include breakpoint('xxs', 'xs') { @include -spacing-outer(15); } }
+		&-xxs-20 { @include breakpoint('xxs', 'xs') { @include -spacing-outer(20); } }
+		&-xxs-25 { @include breakpoint('xxs', 'xs') { @include -spacing-outer(25); } }
+		&-xxs-30 { @include breakpoint('xxs', 'xs') { @include -spacing-outer(30); } }
+		&-xxs-35 { @include breakpoint('xxs', 'xs') { @include -spacing-outer(35); } }
+		&-xxs-40 { @include breakpoint('xxs', 'xs') { @include -spacing-outer(40); } }
+		&-xxs-50 { @include breakpoint('xxs', 'xs') { @include -spacing-outer(50); } }
+		&-xxs-60 { @include breakpoint('xxs', 'xs') { @include -spacing-outer(60); } }
+		&-xxs-70 { @include breakpoint('xxs', 'xs') { @include -spacing-outer(70); } }
+		&-xxs-80 { @include breakpoint('xxs', 'xs') { @include -spacing-outer(80); } }
+		&-xxs-90 { @include breakpoint('xxs', 'xs') { @include -spacing-outer(90); } }
+		&-xxs-100 { @include breakpoint('xxs', 'xs') { @include -spacing-outer(100); } }
+		&-xxs-125 { @include breakpoint('xxs', 'xs') { @include -spacing-outer(125); } }
+		&-xxs-150 { @include breakpoint('xxs', 'xs') { @include -spacing-outer(150); } }
+		&-xxs-175 { @include breakpoint('xxs', 'xs') { @include -spacing-outer(175); } }
+		&-xxs-200 { @include breakpoint('xxs', 'xs') { @include -spacing-outer(200); } }
+
+		// From xs to s	
+		&-xs-5 { @include breakpoint('xs', 's') { @include -spacing-outer(5); } }
+		&-xs-10 { @include breakpoint('xs', 's') { @include -spacing-outer(10); } }
+		&-xs-15 { @include breakpoint('xs', 's') { @include -spacing-outer(15); } }
+		&-xs-20 { @include breakpoint('xs', 's') { @include -spacing-outer(20); } }
+		&-xs-25 { @include breakpoint('xs', 's') { @include -spacing-outer(25); } }
+		&-xs-30 { @include breakpoint('xs', 's') { @include -spacing-outer(30); } }
+		&-xs-35 { @include breakpoint('xs', 's') { @include -spacing-outer(35); } }
+		&-xs-40 { @include breakpoint('xs', 's') { @include -spacing-outer(40); } }
+		&-xs-50 { @include breakpoint('xs', 's') { @include -spacing-outer(50); } }
+		&-xs-50 { @include breakpoint('xs', 's') { @include -spacing-outer(50); } }
+		&-xs-60 { @include breakpoint('xs', 's') { @include -spacing-outer(60); } }
+		&-xs-70 { @include breakpoint('xs', 's') { @include -spacing-outer(70); } }
+		&-xs-80 { @include breakpoint('xs', 's') { @include -spacing-outer(80); } }
+		&-xs-90 { @include breakpoint('xs', 's') { @include -spacing-outer(90); } }
+		&-xs-100 { @include breakpoint('xs', 's') { @include -spacing-outer(100); } }
+		&-xs-125 { @include breakpoint('xs', 's') { @include -spacing-outer(125); } }
+		&-xs-150 { @include breakpoint('xs', 's') { @include -spacing-outer(150); } }
+		&-xs-175 { @include breakpoint('xs', 's') { @include -spacing-outer(175); } }
+		&-xs-200 { @include breakpoint('xs', 's') { @include -spacing-outer(200); } }
+		
+		// From s to m
+		&-s-5 { @include breakpoint('s', 'm') { @include -spacing-outer(5); } }
+		&-s-10 { @include breakpoint('s', 'm') { @include -spacing-outer(10); } }
+		&-s-15 { @include breakpoint('s', 'm') { @include -spacing-outer(15); } }
+		&-s-20 { @include breakpoint('s', 'm') { @include -spacing-outer(20); } }
+		&-s-25 { @include breakpoint('s', 'm') { @include -spacing-outer(25); } }
+		&-s-30 { @include breakpoint('s', 'm') { @include -spacing-outer(30); } }
+		&-s-35 { @include breakpoint('s', 'm') { @include -spacing-outer(35); } }
+		&-s-40 { @include breakpoint('s', 'm') { @include -spacing-outer(40); } }
+		&-s-50 { @include breakpoint('s', 'm') { @include -spacing-outer(50); } }
+		&-s-50 { @include breakpoint('s', 'm') { @include -spacing-outer(50); } }
+		&-s-60 { @include breakpoint('s', 'm') { @include -spacing-outer(60); } }
+		&-s-70 { @include breakpoint('s', 'm') { @include -spacing-outer(70); } }
+		&-s-80 { @include breakpoint('s', 'm') { @include -spacing-outer(80); } }
+		&-s-90 { @include breakpoint('s', 'm') { @include -spacing-outer(90); } }
+		&-s-100 { @include breakpoint('s', 'm') { @include -spacing-outer(100); } }
+		&-s-125 { @include breakpoint('s', 'm') { @include -spacing-outer(125); } }
+		&-s-150 { @include breakpoint('s', 'm') { @include -spacing-outer(150); } }
+		&-s-175 { @include breakpoint('s', 'm') { @include -spacing-outer(175); } }
+		&-s-200 { @include breakpoint('s', 'm') { @include -spacing-outer(200); } }
+
+		// From m to l
+		&-m-5 { @include breakpoint('m', 'l') { @include -spacing-outer(5); } }
+		&-m-10 { @include breakpoint('m', 'l') { @include -spacing-outer(10); } }
+		&-m-15 { @include breakpoint('m', 'l') { @include -spacing-outer(15); } }
+		&-m-20 { @include breakpoint('m', 'l') { @include -spacing-outer(20); } }
+		&-m-25 { @include breakpoint('m', 'l') { @include -spacing-outer(25); } }
+		&-m-30 { @include breakpoint('m', 'l') { @include -spacing-outer(30); } }
+		&-m-35 { @include breakpoint('m', 'l') { @include -spacing-outer(35); } }
+		&-m-40 { @include breakpoint('m', 'l') { @include -spacing-outer(40); } }
+		&-m-50 { @include breakpoint('m', 'l') { @include -spacing-outer(50); } }
+		&-m-50 { @include breakpoint('m', 'l') { @include -spacing-outer(50); } }
+		&-m-60 { @include breakpoint('m', 'l') { @include -spacing-outer(60); } }
+		&-m-70 { @include breakpoint('m', 'l') { @include -spacing-outer(70); } }
+		&-m-80 { @include breakpoint('m', 'l') { @include -spacing-outer(80); } }
+		&-m-90 { @include breakpoint('m', 'l') { @include -spacing-outer(90); } }
+		&-m-100 { @include breakpoint('m', 'l') { @include -spacing-outer(100); } }
+		&-m-125 { @include breakpoint('m', 'l') { @include -spacing-outer(125); } }
+		&-m-150 { @include breakpoint('m', 'l') { @include -spacing-outer(150); } }
+		&-m-175 { @include breakpoint('m', 'l') { @include -spacing-outer(175); } }
+		&-m-200 { @include breakpoint('m', 'l') { @include -spacing-outer(200); } }
+
+		// From l up
+		&-l-5 { @include breakpoint('l') { @include -spacing-outer(5); } }
+		&-l-10 { @include breakpoint('l') { @include -spacing-outer(10); } }
+		&-l-15 { @include breakpoint('l') { @include -spacing-outer(15); } }
+		&-l-20 { @include breakpoint('l') { @include -spacing-outer(20); } }
+		&-l-25 { @include breakpoint('l') { @include -spacing-outer(25); } }
+		&-l-30 { @include breakpoint('l') { @include -spacing-outer(30); } }
+		&-l-35 { @include breakpoint('l') { @include -spacing-outer(35); } }
+		&-l-40 { @include breakpoint('l') { @include -spacing-outer(40); } }
+		&-l-50 { @include breakpoint('l') { @include -spacing-outer(50); } }
+		&-l-50 { @include breakpoint('l') { @include -spacing-outer(50); } }
+		&-l-60 { @include breakpoint('l') { @include -spacing-outer(60); } }
+		&-l-70 { @include breakpoint('l') { @include -spacing-outer(70); } }
+		&-l-80 { @include breakpoint('l') { @include -spacing-outer(80); } }
+		&-l-90 { @include breakpoint('l') { @include -spacing-outer(90); } }
+		&-l-100 { @include breakpoint('l') { @include -spacing-outer(100); } }
+		&-l-125 { @include breakpoint('l') { @include -spacing-outer(125); } }
+		&-l-150 { @include breakpoint('l') { @include -spacing-outer(150); } }
+		&-l-175 { @include breakpoint('l') { @include -spacing-outer(175); } }
+		&-l-200 { @include breakpoint('l') { @include -spacing-outer(200); } }
+	}
+
+	&-inner {
+		&-5 { @include -spacing-inner('all', 5px); }
+		&-10 { @include -spacing-inner('all', 10px); }
+		&-15 { @include -spacing-inner('all', 15px); }
+		&-20 { @include -spacing-inner('all', 20px); }
+		&-25 { @include -spacing-inner('all', 25px); }
+		&-30 { @include -spacing-inner('all', 30px); }
+		&-35 { @include -spacing-inner('all', 35px); }
+		&-40 { @include -spacing-inner('all', 40px); }
+		&-45 { @include -spacing-inner('all', 45px); }
+		&-50 { @include -spacing-inner('all', 50px); }
+		&-60 { @include -spacing-inner('all', 60px); }
+		&-70 { @include -spacing-inner('all', 70px); }
+		&-80 { @include -spacing-inner('all', 80px); }
+		&-90 { @include -spacing-inner('all', 90px); }
+		&-100 { @include -spacing-inner('all', 100px); }
+		&-125 { @include -spacing-inner('all', 125px); }
+		&-150 { @include -spacing-inner('all', 150px); }
+		&-175 { @include -spacing-inner('all', 175px); }
+		&-200 { @include -spacing-inner('all', 200px); }
+
+		&-top {			
+			&-5 { @include -spacing-inner('top', 5px); }
+			&-10 { @include -spacing-inner('top', 10px); }
+			&-15 { @include -spacing-inner('top', 15px); }
+			&-20 { @include -spacing-inner('top', 20px); }
+			&-25 { @include -spacing-inner('top', 25px); }
+			&-30 { @include -spacing-inner('top', 30px); }
+			&-35 { @include -spacing-inner('top', 35px); }
+			&-40 { @include -spacing-inner('top', 40px); }
+			&-45 { @include -spacing-inner('top', 45px); }
+			&-50 { @include -spacing-inner('top', 50px); }
+			&-60 { @include -spacing-inner('top', 60px); }
+			&-70 { @include -spacing-inner('top', 70px); }
+			&-80 { @include -spacing-inner('top', 80px); }
+			&-90 { @include -spacing-inner('top', 90px); }
+			&-100 { @include -spacing-inner('top', 100px); }
+			&-125 { @include -spacing-inner('top', 125px); }
+			&-150 { @include -spacing-inner('top', 150px); }
+			&-175 { @include -spacing-inner('top', 175px); }
+			&-200 { @include -spacing-inner('top', 200px); }
+		}
+
+		&-bottom {			
+			&-5 { @include -spacing-inner('bottom', 5px); }
+			&-10 { @include -spacing-inner('bottom', 10px); }
+			&-15 { @include -spacing-inner('bottom', 15px); }
+			&-20 { @include -spacing-inner('bottom', 20px); }
+			&-25 { @include -spacing-inner('bottom', 25px); }
+			&-30 { @include -spacing-inner('bottom', 30px); }
+			&-35 { @include -spacing-inner('bottom', 35px); }
+			&-40 { @include -spacing-inner('bottom', 40px); }
+			&-45 { @include -spacing-inner('bottom', 45px); }
+			&-50 { @include -spacing-inner('bottom', 50px); }
+			&-60 { @include -spacing-inner('bottom', 60px); }
+			&-70 { @include -spacing-inner('bottom', 70px); }
+			&-80 { @include -spacing-inner('bottom', 80px); }
+			&-90 { @include -spacing-inner('bottom', 90px); }
+			&-100 { @include -spacing-inner('bottom', 100px); }
+			&-125 { @include -spacing-inner('bottom', 125px); }
+			&-150 { @include -spacing-inner('bottom', 150px); }
+			&-175 { @include -spacing-inner('bottom', 175px); }
+			&-200 { @include -spacing-inner('bottom', 200px); }
+		}
+
+		&-left {			
+			&-5 { @include -spacing-inner('left', 5px); }
+			&-10 { @include -spacing-inner('left', 10px); }
+			&-15 { @include -spacing-inner('left', 15px); }
+			&-20 { @include -spacing-inner('left', 20px); }
+			&-25 { @include -spacing-inner('left', 25px); }
+			&-30 { @include -spacing-inner('left', 30px); }
+			&-35 { @include -spacing-inner('left', 35px); }
+			&-40 { @include -spacing-inner('left', 40px); }
+			&-45 { @include -spacing-inner('left', 45px); }
+			&-50 { @include -spacing-inner('left', 50px); }
+			&-60 { @include -spacing-inner('left', 60px); }
+			&-70 { @include -spacing-inner('left', 70px); }
+			&-80 { @include -spacing-inner('left', 80px); }
+			&-90 { @include -spacing-inner('left', 90px); }
+			&-100 { @include -spacing-inner('left', 100px); }
+			&-125 { @include -spacing-inner('left', 125px); }
+			&-150 { @include -spacing-inner('left', 150px); }
+			&-175 { @include -spacing-inner('left', 175px); }
+			&-200 { @include -spacing-inner('left', 200px); }
+		}
+
+		&-right {			
+			&-5 { @include -spacing-inner('right', 5px); }
+			&-10 { @include -spacing-inner('right', 10px); }
+			&-15 { @include -spacing-inner('right', 15px); }
+			&-20 { @include -spacing-inner('right', 20px); }
+			&-25 { @include -spacing-inner('right', 25px); }
+			&-30 { @include -spacing-inner('right', 30px); }
+			&-35 { @include -spacing-inner('right', 35px); }
+			&-40 { @include -spacing-inner('right', 40px); }
+			&-45 { @include -spacing-inner('right', 45px); }
+			&-50 { @include -spacing-inner('right', 50px); }
+			&-60 { @include -spacing-inner('right', 60px); }
+			&-70 { @include -spacing-inner('right', 70px); }
+			&-80 { @include -spacing-inner('right', 80px); }
+			&-90 { @include -spacing-inner('right', 90px); }
+			&-100 { @include -spacing-inner('right', 100px); }
+			&-125 { @include -spacing-inner('right', 125px); }
+			&-150 { @include -spacing-inner('right', 150px); }
+			&-175 { @include -spacing-inner('right', 175px); }
+			&-200 { @include -spacing-inner('right', 200px); }
+		}
+	}
 }
