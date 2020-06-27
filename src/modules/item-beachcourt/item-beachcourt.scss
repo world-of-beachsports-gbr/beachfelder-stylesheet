@@ -20,7 +20,7 @@
     @include -position(relative);
 
     border-radius: $item-beachcourt-image-box-border-radius;
-    z-index: -$item-beachcourt-image-box-z-index;
+    z-index: $item-beachcourt-image-box-z-index;
   }
 
   &__image {
@@ -47,6 +47,7 @@
     @include -spacing-inner('right', 20px);
     @include -spacing-inner('top', 10px);
     @include -spacing-inner('bottom', 20px);
+    @include -position(relative);
     
     @include breakpoint('xs') {
       @include -spacing-inner('top', 30px);
@@ -67,6 +68,12 @@
 
     line-height: $item-beachcourt-title-line-height;
     text-decoration: none;
+  }
+
+  &__favorite {
+    @include -position(absolute);
+    top: $item-beachcourt-favorite-position-top;
+    right: $item-beachcourt-favorite-position-right;
   }
 
   &__button {

@@ -17,10 +17,12 @@
 @import 'polaroid/index';
 @import 'footer/index';
 @import 'topbar/index';
-@import "map/index";
+@import 'map/index';
+@import 'modal/index';
 @import 'page/index';
-@import "notification/index";
-@import "box/index";
+@import 'notification/index';
+@import 'box/index';
+@import 'tag/index';
 
 @import 'item-beachcourt/index';
 @import 'item-news/index';
@@ -28,7 +30,7 @@
 
 
 //OLD
-@import "navigation/_index";
+@import 'navigation/_index';
 
-@import "profile/_index";
-@import "row-buttons/_index";
+@import 'profile/_index';
+@import 'row-buttons/_index';

@@ -1,0 +1,35 @@
+@import '../../mixins/background-color.mixin';
+@import '../../mixins/text-color.mixin';
+@import '../../mixins/font-size.mixin';
+@import '../../mixins/spacing.mixin';
+@import '../../mixins/display.mixin';
+@import '../../mixins/font.mixin';
+
+@import 'tag.setup';
+
+.tag {
+  @include -font-size(12);
+  @include -font-primary;
+  @include -background-color-blue-01;
+  @include -text-color-white;
+  @include -display(inline-block);
+  @include -spacing-inner('top', 5px);
+  @include -spacing-inner('bottom', 5px);
+  @include -spacing-inner('left', 12px);
+  @include -spacing-inner('right', 12px);
+
+  text-transform: uppercase;
+  border-radius: $tag-border-radius;
+
+  &--d-block {
+    @include -display(block);
+  }
+
+  &--green {
+    @include -background-color-green-01;
+  }
+  
+  &--red {
+    @include -background-color-red-01;
+  }
+}

@@ -1,0 +1,77 @@
+@import '../../mixins/background-color.mixin';
+@import '../../mixins/text-color.mixin';
+@import '../../mixins/font-size.mixin';
+@import '../../mixins/opacity.mixin';
+@import '../../mixins/spacing.mixin';
+@import '../../mixins/dimension.mixin';
+@import '../../mixins/display.mixin';
+@import '../../mixins/flex.mixin';
+@import '../../mixins/font.mixin';
+
+.modal-share {
+  @include -background-color-white;
+  @include -opacity(0);
+  @include -spacing-inner('top', 10px);
+  @include -spacing-inner('bottom', 10px);
+  @include -display(flex);
+  @include -flex-direction(column);
+  @include -position(absolute);
+  @include -dimension(300px);
+  height: auto;
+  transform: scale(0) translate(-50%, -50%);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.16);
+  left: 50%;
+  top: 50%;
+  transition: all .3s cubic-bezier(.8,-.5,.2,1.4);
+  transform-origin: 0 0;
+  border-radius: .375rem;
+  
+  &--open {
+    @include -opacity(1);
+
+    transform: scale(1) translate(-50%, -50%);
+    z-index: 3;
+    transition: .5s;
+  }
+  
+  &__info {
+    @include -text-color-blue-02;
+    @include -font-primary;
+    @include -spacing-inner('top', 30px);
+    @include -spacing-inner('bottom', 30px);
+    @include -spacing-inner('left', 30px);
+    @include -font-size(14);
+  }
+  
+  &__icons{
+    @include -display(flex);
+    @include -flex-align-items(center);
+    @include -flex-justify-content(space-around);
+  }
+  
+  &__icon {
+    
+    &:hover {
+      transform: translateY(-3px);
+    }
+    
+    &--close {
+      @include -text-color-blue-02;
+      @include -position(absolute);
+      @include -spacing-inner('top', 10px);
+      @include -spacing-inner('bottom', 10px);
+      @include -spacing-inner('left', 10px);
+      @include -spacing-inner('right', 10px);
+
+      right: 0;
+      top: 0;
+      cursor: pointer;
+      transition: .3s;
+
+      &:hover {
+        @include -text-color-blue-01;
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
