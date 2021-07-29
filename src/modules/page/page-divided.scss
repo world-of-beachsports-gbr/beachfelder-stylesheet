@@ -53,4 +53,11 @@
       width: auto;
     }
   }
+
+  &__logo {
+    @include -position(absolute);
+
+    top: $page-divided-position-top;
+    left: $page-divided-position-left;
+  }
 }

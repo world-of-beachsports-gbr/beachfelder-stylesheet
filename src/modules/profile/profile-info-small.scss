@@ -29,7 +29,7 @@
     &:hover #{$bem-block}__image {
       @include -opacity(.7);
 
-      transform: scale(1.05);
+      transform: translate(-50%, -50%) scale(1.05);
     }
     
     &:hover #{$bem-block}__title,
@@ -37,11 +37,24 @@
     &:hover #{$bem-block}__icon {
       @include -text-color-blue-01;
     }
+
+    &__imagehold {
+      position: relative;
+      width: $profile-info-small-image-width;
+      height: $profile-info-small-image-width;
+      overflow: hidden;
+      border-radius: $profile-info-small-image-border-radius;
+    }
     
     &__image {
-      border-radius: $profile-info-small-image-border-radius;
-      max-width: $profile-info-small-image-max-width;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 100%;
+      height: 100%;
+      transform: translate(-50%, -50%);
       transition: .3s ease-in-out;
+      object-fit: cover;
     }
     
     &__content {

@@ -40,9 +40,10 @@
       //background: transparent;
       left: $input-radio-label-before-position-left;
       top: $input-radio-label-before-position-top;
-      width: $input-radio-label-before-dimension;
-      height: $input-radio-label-before-dimension;
+      width: 0;
+      height: 0;
       border-radius: $input-radio-label-before-border-radius;
+      transition: .2s ease-in-out;
     }
 
     &::after {
@@ -61,7 +62,13 @@
   }
 
   #{$bem-block}__field:checked + #{$bem-block}__label::before {
-    @include -background-color-green-01;
+    @include -background-color-white;
+    width: $input-radio-label-before-dimension;
+    height: $input-radio-label-before-dimension;
+  }
+  
+  #{$bem-block}__field:checked + #{$bem-block}__label::after {
+    @include -background-color-gray-03;
   }
 
   #{$bem-block}__field:disabled + #{$bem-block}__label {

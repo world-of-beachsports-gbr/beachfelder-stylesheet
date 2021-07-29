@@ -6,6 +6,7 @@
 
 .footer {
   @include -text-align(center);
+  @include -spacing-inner('bottom', 20);
 
   @include breakpoint('s') {
     @include -text-align(right);

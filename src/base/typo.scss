@@ -15,4 +15,6 @@
   &-copy { @include -typo-copy; }
 
   &-copy--strong { @include -typo-copy-strong; }
+
+  &-copy--small { @include -typo-copy-small; }
 }

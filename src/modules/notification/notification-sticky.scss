@@ -14,7 +14,6 @@
 
 .notification-sticky {
 	@include -position(fixed);
-	@include -background-color-green-01;
 
 	top: $notification-sticky-position;
 	left: $notification-sticky-position;
@@ -39,6 +38,7 @@
 	}
 
 	&__item {
+		@include -background-color-green-01;
 		@include -position(relative);
 		
 		&--error {

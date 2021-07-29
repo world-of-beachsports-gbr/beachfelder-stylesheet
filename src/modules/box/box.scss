@@ -1,0 +1,35 @@
+@import 'box.setup';
+
+.box {
+  @include -spacing-inner('all', 10px);
+
+  width: 100%;
+  height: auto;
+  border-radius: $box-border-radius;
+  display: block;
+
+  &--light-gray {
+    @include -background-color-gray-02;
+    @include -text-color-blue-01;
+  }
+  
+  &--dark-gray {
+    @include -background-color-gray-01;
+    @include -text-color-white;
+  }
+  
+  &--blue-gray {
+    @include -background-color-blue-02;
+    @include -text-color-white;
+  }
+  
+  &--green {
+    @include -background-color-green-01;
+    @include -text-color-white;
+  }
+  
+  &--dark-blue {
+    @include -background-color-blue-01;
+    @include -text-color-white;
+  }
+}

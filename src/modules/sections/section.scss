@@ -30,7 +30,6 @@
     @include breakpoint('s') {
       @include -spacing-inner('top', 60px);
       @include -spacing-inner('bottom', 60px);
-      @include -text-align(center)
     }
   }
 }

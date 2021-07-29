@@ -26,10 +26,16 @@
   &__link {
     @include -display(block);
     text-decoration: none;
+    max-height: $polaroid-link-max-height;
+    overflow: hidden;
   }
 
   &__image{
+    width: $polaroid-image-width;
     max-width: $polaroid-image-max-width;
+    height: $polaroid-link-max-height;
+    object-fit: cover;
+    object-position: center 50%;
   }
 
   &__info {

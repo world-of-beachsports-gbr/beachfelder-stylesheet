@@ -1,0 +1,28 @@
+.profile-image-big {
+  $bem-block: &;
+
+  @include -spacing-inner('all', 10);
+
+  width: rem(150px);
+  height: rem(150px);
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.05);
+  transition: .3s ease-in-out;
+  
+  &__image {
+    width: calc(100% - 2 * 10px);
+    height: calc(100% - 2 * 10px);
+    object-fit: cover;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
+
+  &:hover #{$bem-block}__overlay {
+    opacity: 1;
+  }
+}

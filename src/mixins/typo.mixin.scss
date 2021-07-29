@@ -68,3 +68,7 @@
   line-height: $line-height-copy;
   font-weight: 700;
 }
+@mixin -typo-copy-small {
+  font-size: $typo-copy-small;
+  line-height: $line-height-copy-small;
+}

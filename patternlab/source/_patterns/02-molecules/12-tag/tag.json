@@ -1,5 +1,7 @@
 {
   "tag_label": "some tag",
   "tag_color": "",
-  "tag_display": ""
+  "tag_display": "",
+  "tag_has_icon": false,
+  "tag_icon": "cloud-drizzle"
 }

@@ -1,6 +1,10 @@
 <span
       class="tag
       {{# tag_color }} tag--{{tag_color}} {{/ tag_color }} 
+      {{# tag_has_icon }} tag--with-icon {{/ tag_has_icon }}
       {{# tag_display }} tag--{{tag_display}} {{/ tag_display }} " >
+      {{# tag_has_icon }}
+        <span class="tag__icon icon icon--{{ tag_icon }}"></span>
+      {{/ tag_has_icon }}
   {{ tag_label }}
 </span>

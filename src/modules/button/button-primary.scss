@@ -7,6 +7,8 @@
 @import 'button-primary.setup';
 
 .button-primary {
+  $bem-block: &;
+
   @include -transition(background, .2s);
   @include -background-color-blue-01;
   @include -display(inline-block);
@@ -34,6 +36,10 @@
   &--red {
     @include -background-color-red-01;
   }
+
+  &--width-auto {
+    width: auto;
+  }
   
   &--fb-blue {
     background-color: $button-primary-background-color-fb-blue;
@@ -41,6 +47,16 @@
 
   &--white {
     @include -background-color-gray-03;
+  }
+
+  &--outlined {
+    background: transparent;
+    border: 1px $button-primary-outlined-border-color solid;
+    width: auto;
+  }
+
+  &--outlined #{$bem-block}__label {
+    @include -text-color-blue-01;
   }
   
   &:not(:disabled):hover &__label {

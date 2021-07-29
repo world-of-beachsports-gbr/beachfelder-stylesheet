@@ -1,0 +1,20 @@
+<div class="modal-standard {{ styleModifier }} {{# modal-standard_isOpen }} modal-standard--is-open {{/ modal-standard_isOpen }}">
+  <div class="modal-standard__content">
+      
+    <div class="modal-standard__image-hold">
+      <img src="{{ modal-standard_image }}" class="modal-standard__image">
+    </div>
+    
+    <div class="modal-standard__text">
+      <h4 class="modal-standard__title">{{ modal-standard_title }}</h4>
+      <p class="modal-standard__paragraph"> {{ modal-standard_paragraph }}</p>
+
+      {{> molecules-button-primary:-spacing-outer-30|(button-primary_label: "Jetzt kostenlos anmelden") }}
+      
+    </div>
+
+    <span class="modal-standard__icon link-icon">
+      <span class="link-icon__icon icon icon--x"></span>
+    </span>
+  </div>
+</div>

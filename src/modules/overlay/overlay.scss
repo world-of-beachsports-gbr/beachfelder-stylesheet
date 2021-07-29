@@ -13,6 +13,7 @@
 	@include -flex-justify-content(center);
 	@include -flex-align-items(center);
   @include -position(absolute);
+  @include -opacity(0);
 
   padding: 0 7%;
   left: $overlay-position;
@@ -21,6 +22,11 @@
   width: $overlay-dimensions;
   z-index: $overlay-z-index;
   background-color: $overlay-background-color;
+  
+
+  &--open {
+    @include -opacity(1);
+  }
 
   &__icon {
     @include -text-color-white;
@@ -36,6 +42,8 @@
   }
 
   &__input {
+    @include -background-color-white;
+    
     max-width: $overlay-input-max-width;
     border-radius: $overlay-input-border-radius;
     box-shadow: $overlay-input-box-shadow;

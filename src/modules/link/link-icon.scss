@@ -18,6 +18,7 @@
   width: $link-icon-dimension;
   height: $link-icon-dimension;
   border-radius: $link-icon-border-radius;
+  cursor: pointer;
   
   &:not(:first-of-type) {
     margin-left: $link-icon-outer-spacing-left;

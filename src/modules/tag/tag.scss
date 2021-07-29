@@ -32,4 +32,20 @@
   &--red {
     @include -background-color-red-01;
   }
+  
+  &--gray {
+    @include -background-color-gray-03;
+    @include -text-color-blue-02;
+  }
+
+  &--with-icon {
+    @include -font-size(16);
+    text-transform: none
+  }
+
+  &__icon {
+    @include -font-size(16);
+    vertical-align: middle;
+    margin-right: $tag-icon-outer-spacing-right;
+  }
 }

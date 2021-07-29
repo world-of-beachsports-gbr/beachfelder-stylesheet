@@ -1,4 +1,6 @@
 @import '../../setup/pxtorem.scss';
 
 $polaroid-border-radius: rem(6px) !default;
-$polaroid-image-max-width: 100% !default;
+$polaroid-image-width: 100% !default;
+$polaroid-image-max-width: $polaroid-image-width !default;
+$polaroid-link-max-height: rem(225px) !default;

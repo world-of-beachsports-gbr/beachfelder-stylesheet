@@ -12,12 +12,17 @@
 
   &__link {
     @include -display(block);
+    @include -dimension(50);
+
+    border-radius: 50%;
+    overflow: hidden;
   }
 
   &__image {
-    @include -dimension(50);
-    border-radius: $image-text-rounded-image-border-radius;
+    width: 100%;
+    height: 100%;
     vertical-align: middle;
+    object-fit: cover;
   }
   
   &__title {

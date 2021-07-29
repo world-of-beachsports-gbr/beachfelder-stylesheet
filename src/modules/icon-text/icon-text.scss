@@ -14,11 +14,14 @@
     @include -text-color-green-01;
     @include -position(absolute);
     @include -font-size(20);
-    @include -spacing-outer(0);
+    @include -spacing-outer(2);
 
     left: $icon-text-icon-position-reset;
     top: $icon-text-icon-position-reset;
     
+    &--red {
+      @include -text-color-red-01;
+    }
   }
 
   &__label {
@@ -29,5 +32,17 @@
 
     line-height: $icon-text-label-line-height;
     margin-left: $icon-text-label-position-left;
+
+    &--strong {
+      @include -typo-copy-strong;
+    }
+
+    &--italic {
+      font-style: italic;
+    }
+    
+    &--smaller {
+      @include -font-size(14);
+    }
   }
 }

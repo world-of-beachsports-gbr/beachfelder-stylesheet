@@ -1,0 +1,43 @@
+
+.indicator {
+  @include -dimension(6px, 6px);
+  @include -background-color-gray-03;
+  @include -text-color-blue-01;
+  @include -opacity(.7);
+  transition: .3s ease-in-out;
+  display: inline-block;
+  border-radius: 50%;
+  vertical-align: top;
+
+  &:hover {
+    @include -opacity(1);
+  }
+
+  &--has-content {
+    @include -dimension(25px, 25px);
+    @include -font-size(14);
+    @include -font-primary;
+    
+    vertical-align: auto;
+    vertical-align: unset;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  &--red {
+    @include -background-color-red-01;
+    @include -text-color-white;
+  }
+  
+  &--green {
+    @include -text-color-white;
+    @include -background-color-green-01;
+  }
+  
+  &--blue {
+    @include -background-color-blue-01;
+    @include -text-color-white;
+  }
+}
