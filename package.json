@@ -86,7 +86,7 @@
     "gulp": "git+https://github.com/gulpjs/gulp",
     "gulp-run": "^1.7.1",
     "gulp-util": "^3.0.8",
-    "minimist": "^1.2.0",
+    "minimist": "^1.2.6",
     "patternlab-node": "^2.0.0",
     "plugin-node-clipboard": "^1.0.0",
     "plugin-node-data-inheritance": "git+https://github.com/Altinn/plugin-node-data-inheritance.git",
