@@ -82,7 +82,7 @@
     "postcss-unprefix": "^1.0.0"
   },
   "devDependencies": {
-    "browser-sync": "^2.0.0",
+    "browser-sync": "^2.26.7",
     "gulp": "git+https://github.com/gulpjs/gulp",
     "gulp-run": "^1.7.1",
     "gulp-util": "^3.0.8",
